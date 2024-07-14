@@ -1,0 +1,1425 @@
+INFO:root:Plantomio_control started
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.178.26:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.178.26:80
+INFO:root:Plantomio_control started
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+INFO:root:Plantomio_control started
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+INFO:root:Plantomio_control started
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.151:80
+DEBUG:urllib3.connectionpool:http://192.168.188.151:80 "GET /cm?cmnd=Timers%201 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.151:80
+DEBUG:urllib3.connectionpool:http://192.168.188.151:80 "GET /cm?cmnd=Timer1%20%7B%22Enable%22%3A+1%2C+%22Mode%22%3A+0%2C+%22Time%22%3A+%226%3A00%22%2C+%22Window%22%3A+1%2C+%22Days%22%3A+%22SMTWTFS%22%2C+%22Repeat%22%3A+1%2C+%22Output%22%3A+1%2C+%22Action%22%3A+1%7D HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.151:80
+DEBUG:urllib3.connectionpool:http://192.168.188.151:80 "GET /cm?cmnd=Timer2%20%7B%22Enable%22%3A+1%2C+%22Mode%22%3A+0%2C+%22Time%22%3A+%220%3A00%22%2C+%22Window%22%3A+1%2C+%22Days%22%3A+%22SMTWTFS%22%2C+%22Repeat%22%3A+1%2C+%22Output%22%3A+1%2C+%22Action%22%3A+0%7D&%7B%22Enable%22:%201,%20%22Mode%22:%200,%20%22Time%22:%20%220:00%22,%20%22Window%22:%201,%20%22Days%22:%20%22SMTWTFS%22,%20%22Repeat%22:%201,%20%22Output%22:%201,%20%22Action%22:%200%7D HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:c3:80%22%7D%5B60s%5D HTTP/1.1" 200 87
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[]}}
+ERROR:root:Couldn't get sensor data
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b1:04:3c%22%7D%5B60s%5D HTTP/1.1" 200 87
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[]}}
+ERROR:root:Couldn't get sensor data
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b1:01:8f%22%7D%5B60s%5D HTTP/1.1" 200 87
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[]}}
+ERROR:root:Couldn't get sensor data
+INFO:root:Plantomio_control started
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+DEBUG:urllib3.connectionpool:http://192.168.188.152:80 "GET /cm?cmnd=Timers%201 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+DEBUG:urllib3.connectionpool:http://192.168.188.152:80 "GET /cm?cmnd=Timer1%20%7B%22Enable%22%3A+1%2C+%22Mode%22%3A+0%2C+%22Time%22%3A+%226%3A00%22%2C+%22Window%22%3A+1%2C+%22Days%22%3A+%22SMTWTFS%22%2C+%22Repeat%22%3A+1%2C+%22Output%22%3A+1%2C+%22Action%22%3A+1%7D HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+DEBUG:urllib3.connectionpool:http://192.168.188.152:80 "GET /cm?cmnd=Timer2%20%7B%22Enable%22%3A+1%2C+%22Mode%22%3A+0%2C+%22Time%22%3A+%220%3A00%22%2C+%22Window%22%3A+1%2C+%22Days%22%3A+%22SMTWTFS%22%2C+%22Repeat%22%3A+1%2C+%22Output%22%3A+1%2C+%22Action%22%3A+0%7D&%7B%22Enable%22:%201,%20%22Mode%22:%200,%20%22Time%22:%20%220:00%22,%20%22Window%22:%201,%20%22Days%22:%20%22SMTWTFS%22,%20%22Repeat%22:%201,%20%22Output%22:%201,%20%22Action%22:%200%7D HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:7d:33%22%7D%5B60s%5D HTTP/1.1" 200 219
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705678512.697,"34"],[1705678522.697,"34"],[1705678532.697,"34"],[1705678542.697,"34"],[1705678552.697,"34"],[1705678562.697,"34"]]}]}}
+INFO:root:2024-01-19 15:35:12
+INFO:root:Moisture:34
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:c2:dd%22%7D%5B60s%5D HTTP/1.1" 200 220
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705678512.697,"35"],[1705678522.697,"35"],[1705678532.697,"35"],[1705678542.697,"35"],[1705678552.697,"35"],[1705678562.697,"35"]]}]}}
+INFO:root:2024-01-19 15:35:12
+INFO:root:Moisture:35
+INFO:root:Plantomio_control started
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+DEBUG:urllib3.connectionpool:http://192.168.188.152:80 "GET /cm?cmnd=Timers%201 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+DEBUG:urllib3.connectionpool:http://192.168.188.152:80 "GET /cm?cmnd=Timer1%20%7B%22Enable%22%3A+1%2C+%22Mode%22%3A+0%2C+%22Time%22%3A+%226%3A00%22%2C+%22Window%22%3A+1%2C+%22Days%22%3A+%22SMTWTFS%22%2C+%22Repeat%22%3A+1%2C+%22Output%22%3A+1%2C+%22Action%22%3A+1%7D HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+DEBUG:urllib3.connectionpool:http://192.168.188.152:80 "GET /cm?cmnd=Timer2%20%7B%22Enable%22%3A+1%2C+%22Mode%22%3A+0%2C+%22Time%22%3A+%220%3A00%22%2C+%22Window%22%3A+1%2C+%22Days%22%3A+%22SMTWTFS%22%2C+%22Repeat%22%3A+1%2C+%22Output%22%3A+1%2C+%22Action%22%3A+0%7D&%7B%22Enable%22:%201,%20%22Mode%22:%200,%20%22Time%22:%20%220:00%22,%20%22Window%22:%201,%20%22Days%22:%20%22SMTWTFS%22,%20%22Repeat%22:%201,%20%22Output%22:%201,%20%22Action%22:%200%7D HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:7d:33%22%7D%5B60s%5D HTTP/1.1" 200 220
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705678632.697,"34"],[1705678642.697,"34"],[1705678652.697,"34"],[1705678662.697,"34"],[1705678672.697,"34"],[1705678682.697,"34"]]}]}}
+INFO:root:2024-01-19 15:37:12
+INFO:root:Moisture:34
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:c2:dd%22%7D%5B60s%5D HTTP/1.1" 200 220
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705678632.697,"35"],[1705678642.697,"35"],[1705678652.697,"35"],[1705678662.697,"35"],[1705678672.697,"35"],[1705678682.697,"35"]]}]}}
+INFO:root:2024-01-19 15:37:12
+INFO:root:Moisture:35
+INFO:root:Plantomio_control started
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+DEBUG:urllib3.connectionpool:http://192.168.188.152:80 "GET /cm?cmnd=Timers%201 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+DEBUG:urllib3.connectionpool:http://192.168.188.152:80 "GET /cm?cmnd=Timer1%20%7B%22Enable%22%3A+1%2C+%22Mode%22%3A+0%2C+%22Time%22%3A+%226%3A00%22%2C+%22Window%22%3A+1%2C+%22Days%22%3A+%22SMTWTFS%22%2C+%22Repeat%22%3A+1%2C+%22Output%22%3A+1%2C+%22Action%22%3A+1%7D HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.152:80
+DEBUG:urllib3.connectionpool:http://192.168.188.152:80 "GET /cm?cmnd=Timer2%20%7B%22Enable%22%3A+1%2C+%22Mode%22%3A+0%2C+%22Time%22%3A+%220%3A00%22%2C+%22Window%22%3A+1%2C+%22Days%22%3A+%22SMTWTFS%22%2C+%22Repeat%22%3A+1%2C+%22Output%22%3A+1%2C+%22Action%22%3A+0%7D&%7B%22Enable%22:%201,%20%22Mode%22:%200,%20%22Time%22:%20%220:00%22,%20%22Window%22:%201,%20%22Days%22:%20%22SMTWTFS%22,%20%22Repeat%22:%201,%20%22Output%22:%201,%20%22Action%22:%200%7D HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:7d:33%22%7D%5B60s%5D HTTP/1.1" 200 220
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705678732.697,"34"],[1705678742.697,"34"],[1705678752.697,"34"],[1705678762.697,"34"],[1705678772.697,"34"],[1705678782.697,"34"]]}]}}
+INFO:root:2024-01-19 15:38:52
+INFO:root:Moisture:34
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:c2:dd%22%7D%5B60s%5D HTTP/1.1" 200 221
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705678732.697,"35"],[1705678742.697,"35"],[1705678752.697,"35"],[1705678762.697,"35"],[1705678772.697,"35"],[1705678782.697,"35"]]}]}}
+INFO:root:2024-01-19 15:38:52
+INFO:root:Moisture:35
+INFO:root:Running punp
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.151:80
+DEBUG:urllib3.connectionpool:http://192.168.188.151:80 "GET /cm?cmnd=Backlog%20Power%20On%3BDelay%20200%3BPower%20Off%3B HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:7d:33%22%7D%5B60s%5D HTTP/1.1" 200 219
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705678912.697,"34"],[1705678922.697,"34"],[1705678932.697,"34"],[1705678942.697,"34"],[1705678952.697,"34"],[1705678962.697,"34"]]}]}}
+INFO:root:2024-01-19 15:41:52
+INFO:root:Moisture:34
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:c2:dd%22%7D%5B60s%5D HTTP/1.1" 200 220
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705678912.697,"35"],[1705678922.697,"35"],[1705678932.697,"35"],[1705678942.697,"35"],[1705678952.697,"35"],[1705678962.697,"35"]]}]}}
+INFO:root:2024-01-19 15:41:52
+INFO:root:Moisture:35
+INFO:root:Running punp
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.151:80
+DEBUG:urllib3.connectionpool:http://192.168.188.151:80 "GET /cm?cmnd=Backlog%20Power%20On%3BDelay%20200%3BPower%20Off%3B HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:7d:33%22%7D%5B60s%5D HTTP/1.1" 200 221
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705679092.697,"34"],[1705679102.697,"34"],[1705679112.697,"34"],[1705679122.697,"34"],[1705679132.697,"34"],[1705679142.697,"34"]]}]}}
+INFO:root:2024-01-19 15:44:52
+INFO:root:Moisture:34
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:c2:dd%22%7D%5B60s%5D HTTP/1.1" 200 221
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705679092.697,"35"],[1705679102.697,"35"],[1705679112.697,"35"],[1705679122.697,"35"],[1705679132.697,"35"],[1705679142.697,"35"]]}]}}
+INFO:root:2024-01-19 15:44:52
+INFO:root:Moisture:35
+INFO:root:Running punp
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.151:80
+DEBUG:urllib3.connectionpool:http://192.168.188.151:80 "GET /cm?cmnd=Backlog%20Power%20On%3BDelay%20200%3BPower%20Off%3B HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:7d:33%22%7D%5B60s%5D HTTP/1.1" 200 221
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705679272.697,"34"],[1705679282.697,"34"],[1705679292.697,"34"],[1705679302.697,"34"],[1705679312.697,"34"],[1705679322.697,"34"]]}]}}
+INFO:root:2024-01-19 15:47:52
+INFO:root:Moisture:34
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "GET /api/v1/query?query=flowercare_moisture_percent%7Bmacaddress=%225c:85:7e:b0:c2:dd%22%7D%5B60s%5D HTTP/1.1" 200 221
+INFO:root:{"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705679272.697,"35"],[1705679282.697,"35"],[1705679292.697,"35"],[1705679302.697,"35"],[1705679312.697,"35"],[1705679322.697,"35"]]}]}}
+INFO:root:2024-01-19 15:47:52
+INFO:root:Moisture:35
+INFO:root:Running punp
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 192.168.188.151:80
+DEBUG:urllib3.connectionpool:http://192.168.188.151:80 "GET /cm?cmnd=Backlog%20Power%20On%3BDelay%20200%3BPower%20Off%3B HTTP/1.1" 200 None
+2024-01-19 16:12:11,507 ******** Plantomio_control started  :
+2024-01-19 16:12:11,796 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705680672.697,"34"],[1705680682.697,"34"],[1705680692.697,"34"],[1705680702.697,"34"],[1705680712.697,"34"],[1705680722.697,"34"]]}]}}  :
+2024-01-19 16:12:11,797 2024-01-19 16:11:12  :
+2024-01-19 16:12:11,798 Moisture:34  :
+2024-01-19 16:12:11,816 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705680672.697,"35"],[1705680682.697,"35"],[1705680692.697,"35"],[1705680702.697,"35"],[1705680712.697,"35"],[1705680722.697,"35"]]}]}}  :
+2024-01-19 16:12:11,816 2024-01-19 16:11:12  :
+2024-01-19 16:12:11,817 Moisture:35  :
+2024-01-19 16:12:37,853 ******** Plantomio_control started  :
+2024-01-19 16:12:38,194 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705680702.697,"34"],[1705680712.697,"34"],[1705680722.697,"34"],[1705680732.697,"34"],[1705680742.697,"34"],[1705680752.697,"34"]]}]}}  :
+2024-01-19 16:12:38,195 2024-01-19 16:11:42  :
+2024-01-19 16:12:38,196 Moisture:34  :
+2024-01-19 16:12:38,214 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705680702.697,"35"],[1705680712.697,"35"],[1705680722.697,"35"],[1705680732.697,"35"],[1705680742.697,"35"],[1705680752.697,"35"]]}]}}  :
+2024-01-19 16:12:38,215 2024-01-19 16:11:42  :
+2024-01-19 16:12:38,216 Moisture:35  :
+2024-01-19 16:12:38,216 Running pump for 300 seconds  :
+2024-01-19 16:15:38,400 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705680882.697,"34"],[1705680892.697,"34"],[1705680902.697,"34"],[1705680912.697,"34"],[1705680922.697,"34"],[1705680932.697,"34"]]}]}}  :
+2024-01-19 16:15:38,401 2024-01-19 16:14:42  :
+2024-01-19 16:15:38,402 Moisture:34  :
+2024-01-19 16:15:38,420 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705680882.697,"35"],[1705680892.697,"35"],[1705680902.697,"35"],[1705680912.697,"35"],[1705680922.697,"35"],[1705680932.697,"35"]]}]}}  :
+2024-01-19 16:15:38,421 2024-01-19 16:14:42  :
+2024-01-19 16:15:38,422 Moisture:35  :
+2024-01-19 16:15:38,422 Running pump for 300 seconds  :
+2024-01-19 16:18:38,622 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705681062.697,"34"],[1705681072.697,"34"],[1705681082.697,"34"],[1705681092.697,"34"],[1705681102.697,"34"],[1705681112.697,"34"]]}]}}  :
+2024-01-19 16:18:38,623 2024-01-19 16:17:42  :
+2024-01-19 16:18:38,624 Moisture:34  :
+2024-01-19 16:18:38,641 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705681062.697,"35"],[1705681072.697,"35"],[1705681082.697,"35"],[1705681092.697,"35"],[1705681102.697,"35"],[1705681112.697,"35"]]}]}}  :
+2024-01-19 16:18:38,642 2024-01-19 16:17:42  :
+2024-01-19 16:18:38,642 Moisture:35  :
+2024-01-19 16:18:38,643 Running pump for 300 seconds  :
+2024-01-19 16:21:38,778 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705681242.697,"34"],[1705681252.697,"34"],[1705681262.697,"34"],[1705681272.697,"34"],[1705681282.697,"34"],[1705681292.697,"34"]]}]}}  :
+2024-01-19 16:21:38,779 2024-01-19 16:20:42  :
+2024-01-19 16:21:38,779 Moisture:34  :
+2024-01-19 16:21:38,796 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705681242.697,"40"],[1705681252.697,"40"],[1705681262.697,"40"],[1705681272.697,"40"],[1705681282.697,"40"],[1705681292.697,"40"]]}]}}  :
+2024-01-19 16:21:38,797 2024-01-19 16:20:42  :
+2024-01-19 16:21:38,798 Moisture:40  :
+2024-01-19 16:21:38,798 Running pump for 300 seconds  :
+2024-01-19 16:24:39,039 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705681422.697,"35"],[1705681432.697,"35"],[1705681442.697,"35"],[1705681452.697,"35"],[1705681462.697,"35"],[1705681472.697,"35"]]}]}}  :
+2024-01-19 16:24:39,040 2024-01-19 16:23:42  :
+2024-01-19 16:24:39,040 Moisture:35  :
+2024-01-19 16:24:39,057 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705681422.697,"45"],[1705681432.697,"45"],[1705681442.697,"45"],[1705681452.697,"45"],[1705681462.697,"45"],[1705681472.697,"45"]]}]}}  :
+2024-01-19 16:24:39,058 2024-01-19 16:23:42  :
+2024-01-19 16:24:39,059 Moisture:45  :
+2024-01-19 16:24:39,060 Running pump for 300 seconds  :
+2024-01-19 16:27:39,255 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705681602.697,"35"],[1705681612.697,"38"],[1705681622.697,"38"],[1705681632.697,"38"],[1705681642.697,"38"],[1705681652.697,"38"]]}]}}  :
+2024-01-19 16:27:39,256 2024-01-19 16:26:42  :
+2024-01-19 16:27:39,256 Moisture:35  :
+2024-01-19 16:27:39,274 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705681602.697,"53"],[1705681612.697,"53"],[1705681622.697,"53"],[1705681632.697,"53"],[1705681642.697,"53"],[1705681652.697,"53"]]}]}}  :
+2024-01-19 16:27:39,275 2024-01-19 16:26:42  :
+2024-01-19 16:27:39,276 Moisture:53  :
+2024-01-19 16:27:39,276 Running pump for 300 seconds  :
+2024-01-19 16:30:39,450 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705681782.697,"41"],[1705681792.697,"41"],[1705681802.697,"41"],[1705681812.697,"41"],[1705681822.697,"41"],[1705681832.697,"41"]]}]}}  :
+2024-01-19 16:30:39,451 2024-01-19 16:29:42  :
+2024-01-19 16:30:39,452 Moisture:41  :
+2024-01-19 16:30:39,469 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705681782.697,"53"],[1705681792.697,"53"],[1705681802.697,"53"],[1705681812.697,"53"],[1705681822.697,"53"],[1705681832.697,"53"]]}]}}  :
+2024-01-19 16:30:39,470 2024-01-19 16:29:42  :
+2024-01-19 16:30:39,470 Moisture:53  :
+2024-01-19 16:30:39,471 Running pump for 300 seconds  :
+2024-01-19 16:33:39,723 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705681962.697,"41"],[1705681972.697,"41"],[1705681982.697,"51"],[1705681992.697,"51"],[1705682002.697,"51"],[1705682012.697,"51"]]}]}}  :
+2024-01-19 16:33:39,724 2024-01-19 16:32:42  :
+2024-01-19 16:33:39,725 Moisture:41  :
+2024-01-19 16:33:39,741 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-01-19 16:33:39,742 Couldn't get sensor data  :
+2024-01-19 16:33:39,742 Running pump for 300 seconds  :
+2024-01-19 16:36:39,908 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1705682142.697,"55"],[1705682152.697,"55"],[1705682162.697,"55"],[1705682172.697,"55"],[1705682182.697,"55"],[1705682192.697,"55"]]}]}}  :
+2024-01-19 16:36:39,909 2024-01-19 16:35:42  :
+2024-01-19 16:36:39,910 Moisture:55  :
+2024-01-19 16:36:39,926 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1705682142.697,"65"],[1705682152.697,"65"],[1705682162.697,"65"],[1705682172.697,"65"],[1705682182.697,"65"],[1705682192.697,"65"]]}]}}  :
+2024-01-19 16:36:39,927 2024-01-19 16:35:42  :
+2024-01-19 16:36:39,928 Moisture:65  :
+2024-01-23 08:17:13,504 ******** Plantomio_control started  :
+2024-01-26 18:20:22,994 ******** Plantomio_control started  :
+2024-01-26 18:20:23,278 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706293172.699,"26"],[1706293182.699,"26"],[1706293192.699,"26"],[1706293202.699,"26"],[1706293212.699,"26"],[1706293222.699,"26"]]}]}}  :
+2024-01-26 18:20:23,280 2024-01-26 18:19:32  :
+2024-01-26 18:20:23,280 Moisture:26  :
+2024-01-26 18:20:23,299 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706293172.699,"35"],[1706293182.699,"35"],[1706293192.699,"35"],[1706293202.699,"35"],[1706293212.699,"35"],[1706293222.699,"35"]]}]}}  :
+2024-01-26 18:20:23,300 2024-01-26 18:19:32  :
+2024-01-26 18:20:23,300 Moisture:35  :
+2024-01-26 18:20:23,301 Running pump for 300 seconds  :
+2024-01-26 18:28:43,545 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706293672.699,"44"],[1706293682.699,"44"],[1706293692.699,"44"],[1706293702.699,"44"],[1706293712.699,"44"],[1706293722.699,"44"]]}]}}  :
+2024-01-26 18:28:43,546 2024-01-26 18:27:52  :
+2024-01-26 18:28:43,547 Moisture:44  :
+2024-01-26 18:28:43,565 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706293672.699,"35"],[1706293682.699,"35"],[1706293692.699,"35"],[1706293702.699,"35"],[1706293712.699,"35"],[1706293722.699,"35"]]}]}}  :
+2024-01-26 18:28:43,566 2024-01-26 18:27:52  :
+2024-01-26 18:28:43,567 Moisture:35  :
+2024-01-26 18:28:43,567 Running pump for 300 seconds  :
+2024-01-26 18:37:03,736 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706294172.699,"31"],[1706294182.699,"31"],[1706294192.699,"31"],[1706294202.699,"31"],[1706294212.699,"31"],[1706294222.699,"31"]]}]}}  :
+2024-01-26 18:37:03,737 2024-01-26 18:36:12  :
+2024-01-26 18:37:03,738 Moisture:31  :
+2024-01-26 18:37:03,755 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706294172.699,"41"],[1706294182.699,"41"],[1706294192.699,"41"],[1706294202.699,"41"],[1706294212.699,"41"],[1706294222.699,"41"]]}]}}  :
+2024-01-26 18:37:03,756 2024-01-26 18:36:12  :
+2024-01-26 18:37:03,756 Moisture:41  :
+2024-01-26 18:37:03,757 Running pump for 300 seconds  :
+2024-01-26 18:45:23,943 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706294672.699,"33"],[1706294682.699,"33"],[1706294692.699,"34"],[1706294702.699,"34"],[1706294712.699,"34"],[1706294722.699,"34"]]}]}}  :
+2024-01-26 18:45:23,944 2024-01-26 18:44:32  :
+2024-01-26 18:45:23,945 Moisture:33  :
+2024-01-26 18:45:23,963 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706294672.699,"54"],[1706294682.699,"54"],[1706294692.699,"53"],[1706294702.699,"53"],[1706294712.699,"53"],[1706294722.699,"53"]]}]}}  :
+2024-01-26 18:45:23,964 2024-01-26 18:44:32  :
+2024-01-26 18:45:23,964 Moisture:54  :
+2024-01-26 18:45:23,965 Running pump for 300 seconds  :
+2024-01-26 18:53:44,061 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706295172.699,"38"],[1706295182.699,"38"],[1706295192.699,"38"],[1706295202.699,"38"],[1706295212.699,"38"],[1706295222.699,"39"]]}]}}  :
+2024-01-26 18:53:44,062 2024-01-26 18:52:52  :
+2024-01-26 18:53:44,063 Moisture:38  :
+2024-01-26 18:53:44,081 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706295172.699,"60"],[1706295182.699,"60"],[1706295192.699,"60"],[1706295202.699,"60"],[1706295212.699,"60"],[1706295222.699,"57"]]}]}}  :
+2024-01-26 18:53:44,082 2024-01-26 18:52:52  :
+2024-01-26 18:53:44,082 Moisture:60  :
+2024-01-26 18:53:44,083 Running pump for 300 seconds  :
+2024-01-26 19:02:04,253 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-01-26 19:02:04,254 Couldn't get sensor data  :
+2024-01-26 19:02:04,272 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706295672.699,"61"],[1706295682.699,"61"],[1706295692.699,"61"],[1706295702.699,"61"],[1706295712.699,"61"],[1706295722.699,"61"]]}]}}  :
+2024-01-26 19:02:04,273 2024-01-26 19:01:12  :
+2024-01-26 19:02:04,274 Moisture:61  :
+2024-01-29 15:52:12,754 ******** Plantomio_control started  :
+2024-01-29 15:52:13,074 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706543482.699,"31"],[1706543492.699,"31"],[1706543502.699,"31"],[1706543512.699,"31"],[1706543522.699,"31"],[1706543532.699,"31"]]}]}}  :
+2024-01-29 15:52:13,075 2024-01-29 15:51:22  :
+2024-01-29 15:52:13,075 Moisture:31  :
+2024-01-29 15:52:13,093 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706543482.699,"39"],[1706543492.699,"39"],[1706543502.699,"39"],[1706543512.699,"39"],[1706543522.699,"39"],[1706543532.699,"39"]]}]}}  :
+2024-01-29 15:52:13,094 2024-01-29 15:51:22  :
+2024-01-29 15:52:13,094 Moisture:39  :
+2024-01-29 15:53:41,578 ******** Plantomio_control started  :
+2024-01-29 15:53:41,777 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706543562.699,"31"],[1706543572.699,"31"],[1706543582.699,"31"],[1706543592.699,"31"],[1706543602.699,"31"],[1706543612.699,"31"]]}]}}  :
+2024-01-29 15:53:41,778 2024-01-29 15:52:42  :
+2024-01-29 15:53:41,779 Moisture:31  :
+2024-01-29 15:53:41,796 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706543562.699,"39"],[1706543572.699,"39"],[1706543582.699,"39"],[1706543592.699,"39"],[1706543602.699,"39"],[1706543612.699,"39"]]}]}}  :
+2024-01-29 15:53:41,797 2024-01-29 15:52:42  :
+2024-01-29 15:53:41,797 Moisture:39  :
+2024-01-29 15:53:41,798 Running pump for 300 seconds  :
+2024-01-29 16:02:01,988 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706544062.699,"31"],[1706544072.699,"31"],[1706544082.699,"31"],[1706544092.699,"31"],[1706544102.699,"31"],[1706544112.699,"31"]]}]}}  :
+2024-01-29 16:02:01,989 2024-01-29 16:01:02  :
+2024-01-29 16:02:01,989 Moisture:31  :
+2024-01-29 16:02:02,007 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706544062.699,"47"],[1706544072.699,"48"],[1706544082.699,"48"],[1706544092.699,"48"],[1706544102.699,"48"],[1706544112.699,"48"]]}]}}  :
+2024-01-29 16:02:02,008 2024-01-29 16:01:02  :
+2024-01-29 16:02:02,009 Moisture:47  :
+2024-01-29 16:02:02,009 Running pump for 300 seconds  :
+2024-01-29 16:10:22,148 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706544562.699,"35"],[1706544572.699,"35"],[1706544582.699,"35"],[1706544592.699,"35"],[1706544602.699,"35"],[1706544612.699,"35"]]}]}}  :
+2024-01-29 16:10:22,149 2024-01-29 16:09:22  :
+2024-01-29 16:10:22,150 Moisture:35  :
+2024-01-29 16:10:22,167 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-01-29 16:10:22,168 Couldn't get sensor data  :
+2024-01-29 16:10:22,169 Running pump for 300 seconds  :
+2024-01-29 16:18:42,425 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706545062.699,"40"],[1706545072.699,"41"],[1706545082.699,"41"],[1706545092.699,"41"],[1706545102.699,"41"],[1706545112.699,"41"]]}]}}  :
+2024-01-29 16:18:42,427 2024-01-29 16:17:42  :
+2024-01-29 16:18:42,427 Moisture:40  :
+2024-01-29 16:18:42,445 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706545062.699,"58"],[1706545072.699,"58"],[1706545082.699,"58"],[1706545092.699,"58"],[1706545102.699,"58"],[1706545112.699,"58"]]}]}}  :
+2024-01-29 16:18:42,446 2024-01-29 16:17:42  :
+2024-01-29 16:18:42,446 Moisture:58  :
+2024-01-29 16:18:42,447 Running pump for 300 seconds  :
+2024-01-29 16:27:02,652 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706545562.699,"51"],[1706545572.699,"51"],[1706545582.699,"51"],[1706545592.699,"51"],[1706545602.699,"51"],[1706545612.699,"51"]]}]}}  :
+2024-01-29 16:27:02,653 2024-01-29 16:26:02  :
+2024-01-29 16:27:02,654 Moisture:51  :
+2024-01-29 16:27:02,672 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706545562.699,"57"],[1706545572.699,"57"],[1706545582.699,"57"],[1706545592.699,"57"],[1706545602.699,"57"],[1706545612.699,"56"]]}]}}  :
+2024-01-29 16:27:02,673 2024-01-29 16:26:02  :
+2024-01-29 16:27:02,673 Moisture:57  :
+2024-01-31 12:17:11,980 ******** Plantomio_control started  :
+2024-01-31 12:59:52,892 ******** Plantomio_control started  :
+2024-01-31 12:59:53,163 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706705942.696,"33"],[1706705952.696,"33"],[1706705962.696,"33"],[1706705972.696,"33"],[1706705982.696,"33"],[1706705992.696,"33"]]}]}}  :
+2024-01-31 12:59:53,164 2024-01-31 12:59:02  :
+2024-01-31 12:59:53,164 Moisture:33  :
+2024-01-31 12:59:53,182 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706705942.696,"36"],[1706705952.696,"36"],[1706705962.696,"36"],[1706705972.696,"36"],[1706705982.696,"36"],[1706705992.696,"36"]]}]}}  :
+2024-01-31 12:59:53,183 2024-01-31 12:59:02  :
+2024-01-31 12:59:53,184 Moisture:36  :
+2024-01-31 12:59:53,184 Running pump for 300 seconds  :
+2024-01-31 13:08:13,381 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706706442.696,"33"],[1706706452.696,"33"],[1706706462.696,"33"],[1706706472.696,"33"],[1706706482.696,"33"]]}]}}  :
+2024-01-31 13:08:13,382 2024-01-31 13:07:22  :
+2024-01-31 13:08:13,383 Moisture:33  :
+2024-01-31 13:08:13,401 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706706442.696,"39"],[1706706452.696,"39"],[1706706462.696,"39"],[1706706472.696,"39"],[1706706482.696,"39"],[1706706492.696,"39"]]}]}}  :
+2024-01-31 13:08:13,402 2024-01-31 13:07:22  :
+2024-01-31 13:08:13,402 Moisture:39  :
+2024-01-31 13:08:13,403 Running pump for 300 seconds  :
+2024-01-31 13:16:33,534 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706706942.696,"33"],[1706706952.696,"33"],[1706706962.696,"33"],[1706706972.696,"33"],[1706706982.696,"33"],[1706706992.696,"33"]]}]}}  :
+2024-01-31 13:16:33,535 2024-01-31 13:15:42  :
+2024-01-31 13:16:33,536 Moisture:33  :
+2024-01-31 13:16:33,554 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706706942.696,"50"],[1706706952.696,"50"],[1706706962.696,"50"],[1706706972.696,"50"],[1706706982.696,"50"],[1706706992.696,"50"]]}]}}  :
+2024-01-31 13:16:33,555 2024-01-31 13:15:42  :
+2024-01-31 13:16:33,556 Moisture:50  :
+2024-01-31 13:16:33,556 Running pump for 300 seconds  :
+2024-01-31 13:24:53,773 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706707442.696,"37"],[1706707452.696,"37"],[1706707462.696,"37"],[1706707472.696,"37"],[1706707482.696,"37"],[1706707492.696,"37"]]}]}}  :
+2024-01-31 13:24:53,774 2024-01-31 13:24:02  :
+2024-01-31 13:24:53,775 Moisture:37  :
+2024-01-31 13:24:53,793 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706707442.696,"56"],[1706707452.696,"56"],[1706707462.696,"56"],[1706707472.696,"56"],[1706707482.696,"56"],[1706707492.696,"56"]]}]}}  :
+2024-01-31 13:24:53,794 2024-01-31 13:24:02  :
+2024-01-31 13:24:53,794 Moisture:56  :
+2024-01-31 13:24:53,795 Running pump for 300 seconds  :
+2024-01-31 13:33:14,004 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-01-31 13:33:14,005 Couldn't get sensor data  :
+2024-01-31 13:33:14,023 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706707972.696,"54"],[1706707982.696,"54"],[1706707992.696,"54"]]}]}}  :
+2024-01-31 13:33:14,024 2024-01-31 13:32:52  :
+2024-01-31 13:33:14,024 Moisture:54  :
+2024-02-02 11:23:47,304 ******** Plantomio_control started  :
+2024-02-02 11:23:47,665 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706872972.696,"33"],[1706872982.696,"33"],[1706872992.696,"33"],[1706873002.696,"33"],[1706873012.696,"33"],[1706873022.696,"33"]]}]}}  :
+2024-02-02 11:23:47,666 2024-02-02 11:22:52  :
+2024-02-02 11:23:47,667 Moisture:33  :
+2024-02-02 11:23:47,685 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706872972.696,"36"],[1706872982.696,"36"],[1706872992.696,"36"],[1706873002.696,"36"],[1706873012.696,"36"],[1706873022.696,"36"]]}]}}  :
+2024-02-02 11:23:47,687 2024-02-02 11:22:52  :
+2024-02-02 11:23:47,687 Moisture:36  :
+2024-02-02 11:23:47,688 Running pump for 300 seconds  :
+2024-02-02 11:32:07,821 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706873472.696,"33"],[1706873482.696,"33"],[1706873492.696,"33"],[1706873502.696,"33"],[1706873512.696,"33"],[1706873522.696,"33"]]}]}}  :
+2024-02-02 11:32:07,822 2024-02-02 11:31:12  :
+2024-02-02 11:32:07,823 Moisture:33  :
+2024-02-02 11:32:07,841 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706873472.696,"40"],[1706873482.696,"40"],[1706873492.696,"40"],[1706873502.696,"40"],[1706873512.696,"40"],[1706873522.696,"40"]]}]}}  :
+2024-02-02 11:32:07,842 2024-02-02 11:31:12  :
+2024-02-02 11:32:07,843 Moisture:40  :
+2024-02-02 11:32:07,843 Running pump for 300 seconds  :
+2024-02-02 11:40:28,106 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706873972.696,"33"],[1706873982.696,"33"],[1706873992.696,"33"],[1706874002.696,"33"],[1706874012.696,"33"],[1706874022.696,"33"]]}]}}  :
+2024-02-02 11:40:28,107 2024-02-02 11:39:32  :
+2024-02-02 11:40:28,107 Moisture:33  :
+2024-02-02 11:40:28,125 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706873972.696,"51"],[1706873982.696,"51"],[1706873992.696,"51"],[1706874002.696,"51"],[1706874012.696,"51"],[1706874022.696,"51"]]}]}}  :
+2024-02-02 11:40:28,126 2024-02-02 11:39:32  :
+2024-02-02 11:40:28,127 Moisture:51  :
+2024-02-02 11:40:28,127 Running pump for 300 seconds  :
+2024-02-02 11:48:48,350 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706874472.696,"33"],[1706874482.696,"33"],[1706874492.696,"33"],[1706874502.696,"33"],[1706874512.696,"33"],[1706874522.696,"33"]]}]}}  :
+2024-02-02 11:48:48,351 2024-02-02 11:47:52  :
+2024-02-02 11:48:48,352 Moisture:33  :
+2024-02-02 11:48:48,378 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706874472.696,"59"],[1706874482.696,"59"],[1706874492.696,"59"],[1706874502.696,"59"],[1706874512.696,"59"],[1706874522.696,"59"]]}]}}  :
+2024-02-02 11:48:48,379 2024-02-02 11:47:52  :
+2024-02-02 11:48:48,380 Moisture:59  :
+2024-02-02 11:48:48,381 Running pump for 300 seconds  :
+2024-02-02 11:57:08,677 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706874972.696,"35"],[1706874982.696,"35"],[1706874992.696,"35"],[1706875002.696,"35"],[1706875012.696,"35"],[1706875022.696,"35"]]}]}}  :
+2024-02-02 11:57:08,678 2024-02-02 11:56:12  :
+2024-02-02 11:57:08,679 Moisture:35  :
+2024-02-02 11:57:08,697 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706874972.696,"64"],[1706874982.696,"64"],[1706874992.696,"64"],[1706875002.696,"64"],[1706875012.696,"56"],[1706875022.696,"56"]]}]}}  :
+2024-02-02 11:57:08,698 2024-02-02 11:56:12  :
+2024-02-02 11:57:08,698 Moisture:64  :
+2024-02-02 11:57:08,699 Running pump for 300 seconds  :
+2024-02-02 12:05:28,786 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706875472.696,"38"],[1706875482.696,"38"],[1706875492.696,"38"],[1706875502.696,"38"],[1706875512.696,"38"],[1706875522.696,"38"]]}]}}  :
+2024-02-02 12:05:28,787 2024-02-02 12:04:32  :
+2024-02-02 12:05:28,788 Moisture:38  :
+2024-02-02 12:05:28,806 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706875472.696,"64"],[1706875482.696,"64"],[1706875492.696,"64"],[1706875502.696,"64"],[1706875512.696,"64"],[1706875522.696,"56"]]}]}}  :
+2024-02-02 12:05:28,807 2024-02-02 12:04:32  :
+2024-02-02 12:05:28,807 Moisture:64  :
+2024-02-02 12:05:28,808 Running pump for 300 seconds  :
+2024-02-02 12:13:48,982 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706875972.696,"42"],[1706875982.696,"42"],[1706875992.696,"42"],[1706876002.696,"42"],[1706876012.696,"42"],[1706876022.696,"42"]]}]}}  :
+2024-02-02 12:13:48,983 2024-02-02 12:12:52  :
+2024-02-02 12:13:48,983 Moisture:42  :
+2024-02-02 12:13:49,001 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706875972.696,"58"],[1706875982.696,"58"],[1706875992.696,"58"],[1706876002.696,"58"],[1706876012.696,"58"],[1706876022.696,"58"]]}]}}  :
+2024-02-02 12:13:49,002 2024-02-02 12:12:52  :
+2024-02-02 12:13:49,003 Moisture:58  :
+2024-02-02 12:13:49,003 Running pump for 300 seconds  :
+2024-02-02 12:22:09,246 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1706876472.696,"45"],[1706876482.696,"45"],[1706876492.696,"45"]]}]}}  :
+2024-02-02 12:22:09,247 2024-02-02 12:21:12  :
+2024-02-02 12:22:09,248 Moisture:45  :
+2024-02-02 12:22:09,266 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1706876472.696,"61"],[1706876482.696,"61"],[1706876492.696,"61"],[1706876502.696,"61"],[1706876512.696,"61"],[1706876522.696,"61"]]}]}}  :
+2024-02-02 12:22:09,267 2024-02-02 12:21:12  :
+2024-02-02 12:22:09,268 Moisture:61  :
+2024-02-02 12:22:09,268 Running pump for 300 seconds  :
+2024-02-05 10:17:15,239 ******** Plantomio_control started  :
+2024-02-05 11:42:57,383 ******** Plantomio_control started  :
+2024-02-05 11:42:57,681 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707133322.702,"31"],[1707133332.703,"31"],[1707133342.703,"31"],[1707133352.703,"31"],[1707133362.703,"31"],[1707133372.703,"31"]]}]}}  :
+2024-02-05 11:42:57,682 2024-02-05 11:42:02  :
+2024-02-05 11:42:57,683 Moisture:31  :
+2024-02-05 11:42:57,701 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707133322.702,"35"],[1707133332.703,"35"],[1707133342.703,"35"],[1707133352.703,"35"],[1707133362.703,"35"],[1707133372.703,"35"]]}]}}  :
+2024-02-05 11:42:57,702 2024-02-05 11:42:02  :
+2024-02-05 11:42:57,702 Moisture:35  :
+2024-02-05 11:42:57,703 Running pump for 300 seconds  :
+2024-02-05 11:49:44,429 ******** Plantomio_control started  :
+2024-02-05 11:49:44,645 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707133732.703,"30"],[1707133742.703,"30"],[1707133752.702,"30"],[1707133762.703,"30"],[1707133772.703,"30"],[1707133782.702,"30"]]}]}}  :
+2024-02-05 11:49:44,647 2024-02-05 11:48:52  :
+2024-02-05 11:49:44,647 Moisture:30  :
+2024-02-05 11:49:44,667 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707133732.703,"36"],[1707133742.703,"36"],[1707133752.702,"36"],[1707133762.703,"36"],[1707133772.703,"36"],[1707133782.702,"36"]]}]}}  :
+2024-02-05 11:49:44,668 2024-02-05 11:48:52  :
+2024-02-05 11:49:44,669 Moisture:36  :
+2024-02-05 11:49:44,669 Running pump for 300 seconds  :
+2024-02-05 11:58:04,819 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707134232.702,"31"],[1707134242.699,"31"],[1707134252.702,"31"],[1707134262.703,"31"],[1707134272.702,"31"],[1707134282.699,"31"]]}]}}  :
+2024-02-05 11:58:04,820 2024-02-05 11:57:12  :
+2024-02-05 11:58:04,821 Moisture:31  :
+2024-02-05 11:58:04,842 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707134232.702,"50"],[1707134242.699,"50"],[1707134252.702,"50"],[1707134262.703,"50"],[1707134272.702,"50"],[1707134282.699,"50"]]}]}}  :
+2024-02-05 11:58:04,843 2024-02-05 11:57:12  :
+2024-02-05 11:58:04,844 Moisture:50  :
+2024-02-05 11:58:04,844 Running pump for 300 seconds  :
+2024-02-05 12:06:25,054 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707134732.702,"31"],[1707134742.702,"31"],[1707134752.703,"31"],[1707134762.703,"31"],[1707134772.702,"31"],[1707134782.702,"31"]]}]}}  :
+2024-02-05 12:06:25,055 2024-02-05 12:05:32  :
+2024-02-05 12:06:25,056 Moisture:31  :
+2024-02-05 12:06:25,074 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707134732.702,"57"],[1707134742.702,"57"],[1707134752.703,"57"],[1707134762.703,"57"],[1707134772.702,"57"],[1707134782.702,"57"]]}]}}  :
+2024-02-05 12:06:25,075 2024-02-05 12:05:32  :
+2024-02-05 12:06:25,075 Moisture:57  :
+2024-02-05 12:06:25,076 Running pump for 300 seconds  :
+2024-02-05 12:14:45,260 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707135232.699,"34"],[1707135242.699,"34"],[1707135252.702,"34"],[1707135262.699,"34"],[1707135272.699,"34"],[1707135282.702,"34"]]}]}}  :
+2024-02-05 12:14:45,261 2024-02-05 12:13:52  :
+2024-02-05 12:14:45,261 Moisture:34  :
+2024-02-05 12:14:45,279 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707135232.699,"57"],[1707135242.699,"57"],[1707135252.702,"57"],[1707135262.699,"57"],[1707135272.699,"57"],[1707135282.702,"57"]]}]}}  :
+2024-02-05 12:14:45,280 2024-02-05 12:13:52  :
+2024-02-05 12:14:45,281 Moisture:57  :
+2024-02-05 12:14:45,281 Running pump for 300 seconds  :
+2024-02-05 12:23:05,540 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707135732.699,"38"],[1707135742.703,"38"],[1707135752.702,"38"],[1707135762.703,"38"],[1707135772.702,"38"],[1707135782.703,"38"]]}]}}  :
+2024-02-05 12:23:05,541 2024-02-05 12:22:12  :
+2024-02-05 12:23:05,542 Moisture:38  :
+2024-02-05 12:23:05,559 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707135732.699,"60"],[1707135742.703,"60"],[1707135752.702,"60"],[1707135762.703,"60"],[1707135772.702,"60"],[1707135782.703,"54"]]}]}}  :
+2024-02-05 12:23:05,560 2024-02-05 12:22:12  :
+2024-02-05 12:23:05,561 Moisture:60  :
+2024-02-05 12:23:05,561 Running pump for 300 seconds  :
+2024-02-05 12:31:25,844 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707136232.702,"41"],[1707136242.703,"41"],[1707136252.703,"41"],[1707136262.702,"41"],[1707136272.702,"41"],[1707136282.699,"41"]]}]}}  :
+2024-02-05 12:31:25,845 2024-02-05 12:30:32  :
+2024-02-05 12:31:25,846 Moisture:41  :
+2024-02-05 12:31:25,863 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-05 12:31:25,864 Couldn't get sensor data  :
+2024-02-05 12:31:25,865 Running pump for 300 seconds  :
+2024-02-05 12:39:46,064 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707136732.702,"43"],[1707136742.703,"43"],[1707136752.702,"43"],[1707136762.703,"43"],[1707136772.702,"43"],[1707136782.702,"43"]]}]}}  :
+2024-02-05 12:39:46,065 2024-02-05 12:38:52  :
+2024-02-05 12:39:46,066 Moisture:43  :
+2024-02-05 12:39:46,083 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707136732.702,"54"],[1707136742.703,"54"],[1707136752.702,"54"],[1707136762.703,"54"],[1707136772.702,"54"],[1707136782.702,"54"]]}]}}  :
+2024-02-05 12:39:46,084 2024-02-05 12:38:52  :
+2024-02-05 12:39:46,085 Moisture:54  :
+2024-02-05 12:39:46,085 Running pump for 300 seconds  :
+2024-02-09 14:17:15,056 ******** Plantomio_control started  :
+2024-02-09 22:20:39,505 ******** Plantomio_control started  :
+2024-02-09 22:20:39,813 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707517182.696,"27"],[1707517192.696,"27"],[1707517202.696,"28"],[1707517212.696,"28"],[1707517222.696,"28"],[1707517232.696,"28"]]}]}}  :
+2024-02-09 22:20:39,814 2024-02-09 22:19:42  :
+2024-02-09 22:20:39,815 Moisture:27  :
+2024-02-09 22:20:39,833 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707517182.696,"30"],[1707517192.696,"30"],[1707517202.696,"30"],[1707517212.696,"30"],[1707517222.696,"30"],[1707517232.696,"30"]]}]}}  :
+2024-02-09 22:20:39,834 2024-02-09 22:19:42  :
+2024-02-09 22:20:39,834 Moisture:30  :
+2024-02-09 22:20:39,835 Running pump for 300 seconds  :
+2024-02-09 22:29:00,038 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707517682.696,"27"],[1707517692.696,"27"],[1707517702.696,"27"],[1707517712.696,"27"],[1707517722.696,"27"],[1707517732.696,"27"]]}]}}  :
+2024-02-09 22:29:00,039 2024-02-09 22:28:02  :
+2024-02-09 22:29:00,039 Moisture:27  :
+2024-02-09 22:29:00,057 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707517682.696,"30"],[1707517692.696,"30"],[1707517702.696,"30"],[1707517712.696,"30"],[1707517722.696,"30"],[1707517732.696,"30"]]}]}}  :
+2024-02-09 22:29:00,058 2024-02-09 22:28:02  :
+2024-02-09 22:29:00,059 Moisture:30  :
+2024-02-09 22:29:00,059 Running pump for 300 seconds  :
+2024-02-09 22:37:20,223 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707518182.696,"29"],[1707518192.696,"29"],[1707518202.696,"29"],[1707518212.696,"29"],[1707518222.696,"29"],[1707518232.696,"29"]]}]}}  :
+2024-02-09 22:37:20,224 2024-02-09 22:36:22  :
+2024-02-09 22:37:20,225 Moisture:29  :
+2024-02-09 22:37:20,243 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707518182.696,"42"],[1707518192.696,"42"],[1707518202.696,"42"],[1707518212.696,"42"],[1707518222.696,"42"],[1707518232.696,"42"]]}]}}  :
+2024-02-09 22:37:20,244 2024-02-09 22:36:22  :
+2024-02-09 22:37:20,244 Moisture:42  :
+2024-02-09 22:37:20,245 Running pump for 300 seconds  :
+2024-02-09 22:45:40,430 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707518682.696,"32"],[1707518692.696,"32"],[1707518702.696,"32"],[1707518712.696,"32"],[1707518722.696,"32"],[1707518732.696,"32"]]}]}}  :
+2024-02-09 22:45:40,431 2024-02-09 22:44:42  :
+2024-02-09 22:45:40,432 Moisture:32  :
+2024-02-09 22:45:40,450 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707518682.696,"50"],[1707518692.696,"50"],[1707518702.696,"50"],[1707518712.696,"50"],[1707518722.696,"50"],[1707518732.696,"50"]]}]}}  :
+2024-02-09 22:45:40,451 2024-02-09 22:44:42  :
+2024-02-09 22:45:40,451 Moisture:50  :
+2024-02-09 22:45:40,451 Running pump for 300 seconds  :
+2024-02-09 22:54:00,518 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707519182.696,"35"],[1707519192.696,"35"],[1707519202.696,"35"],[1707519212.696,"35"],[1707519222.696,"35"],[1707519232.696,"35"]]}]}}  :
+2024-02-09 22:54:00,519 2024-02-09 22:53:02  :
+2024-02-09 22:54:00,520 Moisture:35  :
+2024-02-09 22:54:00,538 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707519182.696,"51"],[1707519192.696,"51"],[1707519202.696,"51"],[1707519212.696,"51"],[1707519222.696,"51"],[1707519232.696,"51"]]}]}}  :
+2024-02-09 22:54:00,539 2024-02-09 22:53:02  :
+2024-02-09 22:54:00,539 Moisture:51  :
+2024-02-09 22:54:00,540 Running pump for 300 seconds  :
+2024-02-12 11:17:14,869 ******** Plantomio_control started  :
+2024-02-12 12:13:38,734 ******** Plantomio_control started  :
+2024-02-12 12:13:39,094 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707739992.696,"18"],[1707740002.696,"18"],[1707740012.696,"18"]]}]}}  :
+2024-02-12 12:13:39,095 2024-02-12 12:13:12  :
+2024-02-12 12:13:39,096 Moisture:18  :
+2024-02-12 12:13:39,113 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-12 12:13:39,114 Couldn't get sensor data  :
+2024-02-12 12:13:39,114 Running pump for 300 seconds  :
+2024-02-12 12:21:37,421 ******** Plantomio_control started  :
+2024-02-12 12:21:37,622 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707740442.696,"19"],[1707740452.696,"19"],[1707740462.696,"19"],[1707740472.696,"19"],[1707740482.696,"19"],[1707740492.696,"19"]]}]}}  :
+2024-02-12 12:21:37,623 2024-02-12 12:20:42  :
+2024-02-12 12:21:37,623 Moisture:19  :
+2024-02-12 12:21:37,641 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707740442.696,"32"],[1707740452.696,"32"],[1707740462.696,"32"],[1707740472.696,"32"],[1707740482.696,"32"],[1707740492.696,"32"]]}]}}  :
+2024-02-12 12:21:37,642 2024-02-12 12:20:42  :
+2024-02-12 12:21:37,643 Moisture:32  :
+2024-02-12 12:21:37,643 Running pump for 300 seconds  :
+2024-02-12 12:29:57,725 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707740942.696,"19"],[1707740952.696,"19"],[1707740962.698,"19"],[1707740972.696,"19"],[1707740982.696,"19"],[1707740992.696,"19"]]}]}}  :
+2024-02-12 12:29:57,727 2024-02-12 12:29:02  :
+2024-02-12 12:29:57,728 Moisture:19  :
+2024-02-12 12:29:57,750 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707740942.696,"41"],[1707740952.696,"41"],[1707740962.698,"41"],[1707740972.696,"41"],[1707740982.696,"41"],[1707740992.696,"41"]]}]}}  :
+2024-02-12 12:29:57,751 2024-02-12 12:29:02  :
+2024-02-12 12:29:57,752 Moisture:41  :
+2024-02-12 12:29:57,753 Running pump for 300 seconds  :
+2024-02-12 12:38:17,930 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707741442.696,"18"],[1707741452.696,"18"],[1707741462.696,"18"],[1707741472.696,"18"],[1707741482.696,"18"],[1707741492.696,"18"]]}]}}  :
+2024-02-12 12:38:17,931 2024-02-12 12:37:22  :
+2024-02-12 12:38:17,932 Moisture:18  :
+2024-02-12 12:38:17,949 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707741442.696,"50"],[1707741452.696,"50"],[1707741462.696,"50"],[1707741472.696,"50"],[1707741482.696,"50"],[1707741492.696,"50"]]}]}}  :
+2024-02-12 12:38:17,950 2024-02-12 12:37:22  :
+2024-02-12 12:38:17,951 Moisture:50  :
+2024-02-12 12:38:17,951 Running pump for 300 seconds  :
+2024-02-12 12:46:38,145 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707741942.696,"21"],[1707741952.696,"21"],[1707741962.696,"21"],[1707741972.696,"21"],[1707741982.696,"21"],[1707741992.696,"21"]]}]}}  :
+2024-02-12 12:46:38,146 2024-02-12 12:45:42  :
+2024-02-12 12:46:38,147 Moisture:21  :
+2024-02-12 12:46:38,164 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707741942.696,"52"],[1707741952.696,"52"],[1707741962.696,"52"],[1707741972.696,"52"],[1707741982.696,"52"],[1707741992.696,"52"]]}]}}  :
+2024-02-12 12:46:38,165 2024-02-12 12:45:42  :
+2024-02-12 12:46:38,166 Moisture:52  :
+2024-02-12 12:46:38,166 Running pump for 300 seconds  :
+2024-02-12 12:54:58,319 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707742442.696,"45"],[1707742452.696,"45"],[1707742462.696,"45"],[1707742472.696,"45"],[1707742482.696,"45"],[1707742492.696,"45"]]}]}}  :
+2024-02-12 12:54:58,320 2024-02-12 12:54:02  :
+2024-02-12 12:54:58,321 Moisture:45  :
+2024-02-12 12:54:58,337 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707742442.696,"52"],[1707742452.696,"52"],[1707742462.696,"52"],[1707742472.696,"52"],[1707742482.696,"52"],[1707742492.696,"52"]]}]}}  :
+2024-02-12 12:54:58,338 2024-02-12 12:54:02  :
+2024-02-12 12:54:58,339 Moisture:52  :
+2024-02-12 12:54:58,339 Running pump for 300 seconds  :
+2024-02-12 13:03:19,603 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707742942.696,"44"],[1707742952.696,"44"],[1707742962.696,"44"],[1707742972.696,"44"],[1707742982.696,"44"],[1707742992.696,"44"]]}]}}  :
+2024-02-12 13:03:19,604 2024-02-12 13:02:22  :
+2024-02-12 13:03:19,605 Moisture:44  :
+2024-02-12 13:03:19,623 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707742942.696,"54"],[1707742952.696,"54"],[1707742962.696,"54"],[1707742972.696,"54"],[1707742982.696,"54"],[1707742992.696,"54"]]}]}}  :
+2024-02-12 13:03:19,624 2024-02-12 13:02:22  :
+2024-02-12 13:03:19,625 Moisture:54  :
+2024-02-12 13:03:19,625 Running pump for 300 seconds  :
+2024-02-12 13:11:39,786 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707743442.696,"43"],[1707743452.696,"43"],[1707743462.696,"43"],[1707743472.696,"43"],[1707743482.696,"42"],[1707743492.696,"42"]]}]}}  :
+2024-02-12 13:11:39,787 2024-02-12 13:10:42  :
+2024-02-12 13:11:39,788 Moisture:43  :
+2024-02-12 13:11:39,805 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707743442.696,"53"],[1707743452.696,"53"],[1707743462.696,"53"],[1707743472.696,"52"],[1707743482.696,"52"],[1707743492.696,"52"]]}]}}  :
+2024-02-12 13:11:39,806 2024-02-12 13:10:42  :
+2024-02-12 13:11:39,807 Moisture:53  :
+2024-02-12 13:11:39,807 Running pump for 300 seconds  :
+2024-02-12 13:19:59,898 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707743942.696,"43"],[1707743952.696,"43"],[1707743962.696,"43"],[1707743972.696,"43"],[1707743982.696,"41"],[1707743992.696,"41"]]}]}}  :
+2024-02-12 13:19:59,899 2024-02-12 13:19:02  :
+2024-02-12 13:19:59,900 Moisture:43  :
+2024-02-12 13:19:59,917 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707743942.696,"53"],[1707743952.696,"53"],[1707743962.696,"53"],[1707743972.696,"53"],[1707743982.696,"53"],[1707743992.696,"53"]]}]}}  :
+2024-02-12 13:19:59,918 2024-02-12 13:19:02  :
+2024-02-12 13:19:59,919 Moisture:53  :
+2024-02-12 13:19:59,919 Running pump for 300 seconds  :
+2024-02-14 14:09:34,182 ******** Plantomio_control started  :
+2024-02-14 14:09:34,506 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707919722.696,"21"],[1707919732.696,"21"],[1707919742.696,"21"],[1707919752.696,"21"],[1707919762.696,"21"],[1707919772.696,"21"]]}]}}  :
+2024-02-14 14:09:34,507 2024-02-14 14:08:42  :
+2024-02-14 14:09:34,508 Moisture:21  :
+2024-02-14 14:09:34,525 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707919722.696,"40"],[1707919732.696,"40"],[1707919742.696,"40"],[1707919752.696,"40"],[1707919762.696,"40"],[1707919772.696,"40"]]}]}}  :
+2024-02-14 14:09:34,527 2024-02-14 14:08:42  :
+2024-02-14 14:09:34,527 Moisture:40  :
+2024-02-14 14:09:48,054 ******** Plantomio_control started  :
+2024-02-14 14:09:48,387 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707919732.696,"21"],[1707919742.696,"21"],[1707919752.696,"21"],[1707919762.696,"21"],[1707919772.696,"21"],[1707919782.696,"21"]]}]}}  :
+2024-02-14 14:09:48,388 2024-02-14 14:08:52  :
+2024-02-14 14:09:48,388 Moisture:21  :
+2024-02-14 14:09:48,406 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707919732.696,"40"],[1707919742.696,"40"],[1707919752.696,"40"],[1707919762.696,"40"],[1707919772.696,"40"],[1707919782.696,"40"]]}]}}  :
+2024-02-14 14:09:48,407 2024-02-14 14:08:52  :
+2024-02-14 14:09:48,408 Moisture:40  :
+2024-02-14 14:10:56,904 ******** Plantomio_control started  :
+2024-02-14 14:10:57,163 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707919802.696,"21"],[1707919812.696,"21"],[1707919822.696,"21"],[1707919832.696,"21"],[1707919842.696,"21"],[1707919852.696,"21"]]}]}}  :
+2024-02-14 14:10:57,164 2024-02-14 14:10:02  :
+2024-02-14 14:10:57,165 Moisture:21  :
+2024-02-14 14:10:57,182 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707919802.696,"40"],[1707919812.696,"40"],[1707919822.696,"40"],[1707919832.696,"40"],[1707919842.696,"40"],[1707919852.696,"40"]]}]}}  :
+2024-02-14 14:10:57,183 2024-02-14 14:10:02  :
+2024-02-14 14:10:57,184 Moisture:40  :
+2024-02-14 14:11:45,226 ******** Plantomio_control started  :
+2024-02-14 14:11:45,458 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707919852.696,"21"],[1707919862.696,"21"],[1707919872.698,"21"],[1707919882.696,"21"],[1707919892.696,"21"],[1707919902.696,"21"]]}]}}  :
+2024-02-14 14:11:45,459 2024-02-14 14:10:52  :
+2024-02-14 14:11:45,460 Moisture:21  :
+2024-02-14 14:11:45,477 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707919852.696,"40"],[1707919862.696,"40"],[1707919872.698,"40"],[1707919882.696,"40"],[1707919892.696,"40"],[1707919902.696,"40"]]}]}}  :
+2024-02-14 14:11:45,478 2024-02-14 14:10:52  :
+2024-02-14 14:11:45,478 Moisture:40  :
+2024-02-14 14:11:45,479 Running pump for 300 seconds  :
+2024-02-14 14:20:05,670 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707920352.696,"33"],[1707920362.696,"33"],[1707920372.696,"33"],[1707920382.696,"33"],[1707920392.696,"36"],[1707920402.696,"36"]]}]}}  :
+2024-02-14 14:20:05,671 2024-02-14 14:19:12  :
+2024-02-14 14:20:05,671 Moisture:33  :
+2024-02-14 14:20:05,689 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707920352.696,"40"],[1707920362.696,"40"],[1707920372.696,"40"],[1707920382.696,"40"],[1707920392.696,"42"],[1707920402.696,"42"]]}]}}  :
+2024-02-14 14:20:05,690 2024-02-14 14:19:12  :
+2024-02-14 14:20:05,691 Moisture:40  :
+2024-02-14 14:20:05,691 Running pump for 300 seconds  :
+2024-02-14 14:28:25,787 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707920852.696,"41"],[1707920862.696,"41"],[1707920872.696,"41"],[1707920882.696,"41"],[1707920892.696,"41"],[1707920902.696,"41"]]}]}}  :
+2024-02-14 14:28:25,788 2024-02-14 14:27:32  :
+2024-02-14 14:28:25,789 Moisture:41  :
+2024-02-14 14:28:25,812 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707920852.696,"50"],[1707920862.696,"50"],[1707920872.696,"50"],[1707920882.696,"50"],[1707920892.696,"50"],[1707920902.696,"50"]]}]}}  :
+2024-02-14 14:28:25,813 2024-02-14 14:27:32  :
+2024-02-14 14:28:25,813 Moisture:50  :
+2024-02-14 14:28:25,814 Running pump for 300 seconds  :
+2024-02-14 14:36:45,986 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707921352.696,"50"],[1707921362.696,"50"],[1707921372.696,"50"],[1707921382.696,"50"],[1707921392.696,"50"],[1707921402.698,"50"]]}]}}  :
+2024-02-14 14:36:45,987 2024-02-14 14:35:52  :
+2024-02-14 14:36:45,987 Moisture:50  :
+2024-02-14 14:36:46,005 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-14 14:36:46,006 Couldn't get sensor data  :
+2024-02-14 14:36:46,007 Running pump for 300 seconds  :
+2024-02-14 14:45:06,184 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1707921852.696,"42"],[1707921862.696,"42"],[1707921872.696,"42"],[1707921882.696,"41"],[1707921892.696,"41"],[1707921902.696,"41"]]}]}}  :
+2024-02-14 14:45:06,185 2024-02-14 14:44:12  :
+2024-02-14 14:45:06,186 Moisture:42  :
+2024-02-14 14:45:06,204 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1707921852.696,"52"],[1707921862.696,"52"],[1707921872.696,"52"],[1707921882.696,"52"],[1707921892.696,"52"],[1707921902.696,"52"]]}]}}  :
+2024-02-14 14:45:06,205 2024-02-14 14:44:12  :
+2024-02-14 14:45:06,205 Moisture:52  :
+2024-02-14 14:45:06,206 Running pump for 300 seconds  :
+2024-02-16 12:29:09,115 ******** Plantomio_control started  :
+2024-02-16 12:29:09,412 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708086492.696,"20"],[1708086502.696,"20"],[1708086512.696,"20"],[1708086522.696,"20"],[1708086532.696,"20"],[1708086542.696,"20"]]}]}}  :
+2024-02-16 12:29:09,413 2024-02-16 12:28:12  :
+2024-02-16 12:29:09,413 Moisture:20  :
+2024-02-16 12:29:09,431 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708086492.696,"38"],[1708086502.696,"38"],[1708086512.696,"38"],[1708086522.696,"38"],[1708086532.696,"38"],[1708086542.696,"38"]]}]}}  :
+2024-02-16 12:29:09,432 2024-02-16 12:28:12  :
+2024-02-16 12:29:09,433 Moisture:38  :
+2024-02-16 12:29:09,433 Running pump for 300 seconds  :
+2024-02-16 12:37:29,656 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708086992.696,"38"],[1708087002.696,"38"],[1708087012.696,"38"],[1708087022.696,"38"],[1708087032.696,"37"],[1708087042.696,"37"]]}]}}  :
+2024-02-16 12:37:29,658 2024-02-16 12:36:32  :
+2024-02-16 12:37:29,658 Moisture:38  :
+2024-02-16 12:37:29,676 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708086992.696,"41"],[1708087002.696,"41"],[1708087012.696,"41"],[1708087022.696,"41"],[1708087032.696,"42"],[1708087042.696,"42"]]}]}}  :
+2024-02-16 12:37:29,677 2024-02-16 12:36:32  :
+2024-02-16 12:37:29,678 Moisture:41  :
+2024-02-16 12:37:29,678 Running pump for 300 seconds  :
+2024-02-16 12:45:49,869 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708087492.696,"50"],[1708087502.696,"50"],[1708087512.696,"50"],[1708087522.696,"50"]]}]}}  :
+2024-02-16 12:45:49,870 2024-02-16 12:44:52  :
+2024-02-16 12:45:49,871 Moisture:50  :
+2024-02-16 12:45:49,889 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708087492.696,"46"],[1708087502.696,"46"],[1708087512.696,"46"]]}]}}  :
+2024-02-16 12:45:49,890 2024-02-16 12:44:52  :
+2024-02-16 12:45:49,890 Moisture:46  :
+2024-02-16 12:45:49,891 Running pump for 300 seconds  :
+2024-02-16 12:54:10,109 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708087992.696,"41"],[1708088002.696,"41"],[1708088012.696,"41"],[1708088022.696,"41"],[1708088032.696,"41"],[1708088042.696,"41"]]}]}}  :
+2024-02-16 12:54:10,111 2024-02-16 12:53:12  :
+2024-02-16 12:54:10,111 Moisture:41  :
+2024-02-16 12:54:10,129 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708087992.696,"56"],[1708088002.696,"56"],[1708088012.696,"56"],[1708088022.696,"56"],[1708088032.696,"56"],[1708088042.696,"56"]]}]}}  :
+2024-02-16 12:54:10,130 2024-02-16 12:53:12  :
+2024-02-16 12:54:10,131 Moisture:56  :
+2024-02-16 12:54:10,131 Running pump for 300 seconds  :
+2024-02-18 15:41:03,986 ******** Plantomio_control started  :
+2024-02-18 15:41:04,271 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708270812.696,"20"],[1708270822.696,"20"],[1708270832.696,"20"],[1708270842.696,"20"],[1708270852.696,"20"],[1708270862.696,"20"]]}]}}  :
+2024-02-18 15:41:04,272 2024-02-18 15:40:12  :
+2024-02-18 15:41:04,273 Moisture:20  :
+2024-02-18 15:41:04,291 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708270812.696,"35"],[1708270822.696,"35"],[1708270832.696,"35"],[1708270842.696,"35"],[1708270852.696,"35"],[1708270862.696,"35"]]}]}}  :
+2024-02-18 15:41:04,292 2024-02-18 15:40:12  :
+2024-02-18 15:41:04,292 Moisture:35  :
+2024-02-18 15:42:17,188 ******** Plantomio_control started  :
+2024-02-18 15:42:17,422 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708270882.696,"20"],[1708270892.696,"20"],[1708270902.696,"20"],[1708270912.696,"20"],[1708270922.698,"20"],[1708270932.698,"20"]]}]}}  :
+2024-02-18 15:42:17,423 2024-02-18 15:41:22  :
+2024-02-18 15:42:17,424 Moisture:20  :
+2024-02-18 15:42:17,442 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708270882.696,"35"],[1708270892.696,"35"],[1708270902.696,"35"],[1708270912.696,"35"],[1708270922.698,"35"],[1708270932.698,"35"]]}]}}  :
+2024-02-18 15:42:17,443 2024-02-18 15:41:22  :
+2024-02-18 15:42:17,443 Moisture:35  :
+2024-02-18 15:42:17,444 Running pump for 150 seconds  :
+2024-02-18 15:46:27,676 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708271132.696,"20"],[1708271142.696,"20"],[1708271152.696,"20"],[1708271162.696,"20"],[1708271172.696,"20"],[1708271182.696,"20"]]}]}}  :
+2024-02-18 15:46:27,677 2024-02-18 15:45:32  :
+2024-02-18 15:46:27,678 Moisture:20  :
+2024-02-18 15:46:27,696 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708271132.696,"35"],[1708271142.696,"35"],[1708271152.696,"35"],[1708271162.696,"35"],[1708271172.696,"35"],[1708271182.696,"35"]]}]}}  :
+2024-02-18 15:46:27,697 2024-02-18 15:45:32  :
+2024-02-18 15:46:27,697 Moisture:35  :
+2024-02-18 15:46:27,698 Running pump for 150 seconds  :
+2024-02-18 15:50:37,910 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708271382.696,"27"],[1708271392.696,"32"],[1708271402.696,"32"],[1708271412.696,"32"],[1708271422.696,"32"],[1708271432.696,"32"]]}]}}  :
+2024-02-18 15:50:37,911 2024-02-18 15:49:42  :
+2024-02-18 15:50:37,912 Moisture:27  :
+2024-02-18 15:50:37,930 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708271382.696,"38"],[1708271392.696,"38"],[1708271402.696,"38"],[1708271412.696,"38"],[1708271422.696,"38"],[1708271432.696,"38"]]}]}}  :
+2024-02-18 15:50:37,931 2024-02-18 15:49:42  :
+2024-02-18 15:50:37,931 Moisture:38  :
+2024-02-18 15:50:37,932 Running pump for 150 seconds  :
+2024-02-18 15:54:48,299 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708271632.696,"32"],[1708271642.696,"34"],[1708271652.696,"34"],[1708271662.696,"34"],[1708271672.696,"34"],[1708271682.696,"34"]]}]}}  :
+2024-02-18 15:54:48,300 2024-02-18 15:53:52  :
+2024-02-18 15:54:48,300 Moisture:32  :
+2024-02-18 15:54:48,318 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708271632.696,"39"],[1708271642.696,"44"],[1708271652.696,"44"],[1708271662.696,"44"],[1708271672.696,"44"],[1708271682.696,"44"]]}]}}  :
+2024-02-18 15:54:48,319 2024-02-18 15:53:52  :
+2024-02-18 15:54:48,320 Moisture:39  :
+2024-02-18 15:54:48,320 Running pump for 150 seconds  :
+2024-02-18 15:58:58,543 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708271882.696,"35"],[1708271892.696,"35"],[1708271902.696,"35"],[1708271912.696,"35"],[1708271922.696,"35"],[1708271932.696,"35"]]}]}}  :
+2024-02-18 15:58:58,544 2024-02-18 15:58:02  :
+2024-02-18 15:58:58,544 Moisture:35  :
+2024-02-18 15:58:58,563 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708271882.696,"44"],[1708271892.696,"44"],[1708271902.696,"44"],[1708271912.696,"44"],[1708271922.696,"44"],[1708271932.696,"44"]]}]}}  :
+2024-02-18 15:58:58,564 2024-02-18 15:58:02  :
+2024-02-18 15:58:58,564 Moisture:44  :
+2024-02-18 15:58:58,565 Running pump for 150 seconds  :
+2024-02-18 16:03:08,803 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708272132.696,"37"],[1708272142.696,"37"],[1708272152.696,"37"],[1708272162.696,"37"],[1708272172.696,"37"],[1708272182.696,"37"]]}]}}  :
+2024-02-18 16:03:08,804 2024-02-18 16:02:12  :
+2024-02-18 16:03:08,805 Moisture:37  :
+2024-02-18 16:03:08,841 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708272132.696,"50"],[1708272142.696,"50"],[1708272152.696,"50"],[1708272162.696,"50"],[1708272172.696,"50"],[1708272182.696,"50"]]}]}}  :
+2024-02-18 16:03:08,843 2024-02-18 16:02:12  :
+2024-02-18 16:03:08,843 Moisture:50  :
+2024-02-18 16:03:08,844 Running pump for 150 seconds  :
+2024-02-18 16:07:19,003 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708272382.696,"36"],[1708272392.696,"36"],[1708272402.696,"36"],[1708272412.696,"36"],[1708272422.696,"36"],[1708272432.696,"36"]]}]}}  :
+2024-02-18 16:07:19,004 2024-02-18 16:06:22  :
+2024-02-18 16:07:19,005 Moisture:36  :
+2024-02-18 16:07:19,023 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708272382.696,"50"],[1708272392.696,"50"],[1708272402.696,"50"],[1708272412.696,"50"],[1708272422.696,"50"],[1708272432.696,"50"]]}]}}  :
+2024-02-18 16:07:19,024 2024-02-18 16:06:22  :
+2024-02-18 16:07:19,024 Moisture:50  :
+2024-02-18 16:07:19,025 Running pump for 150 seconds  :
+2024-02-18 16:11:29,250 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708272632.696,"37"],[1708272642.696,"37"],[1708272652.696,"37"],[1708272662.696,"37"],[1708272672.696,"37"],[1708272682.696,"37"]]}]}}  :
+2024-02-18 16:11:29,251 2024-02-18 16:10:32  :
+2024-02-18 16:11:29,252 Moisture:37  :
+2024-02-18 16:11:29,270 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708272632.696,"51"],[1708272642.696,"51"],[1708272652.696,"51"],[1708272662.696,"51"],[1708272672.696,"51"],[1708272682.696,"51"]]}]}}  :
+2024-02-18 16:11:29,271 2024-02-18 16:10:32  :
+2024-02-18 16:11:29,271 Moisture:51  :
+2024-02-18 16:11:29,272 Running pump for 150 seconds  :
+2024-02-18 16:15:39,467 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708272882.696,"38"],[1708272892.696,"38"],[1708272902.696,"38"],[1708272912.696,"38"],[1708272922.696,"38"],[1708272932.696,"38"]]}]}}  :
+2024-02-18 16:15:39,468 2024-02-18 16:14:42  :
+2024-02-18 16:15:39,469 Moisture:38  :
+2024-02-18 16:15:39,487 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708272882.696,"53"],[1708272892.696,"53"],[1708272902.696,"53"],[1708272912.696,"53"],[1708272922.696,"53"],[1708272932.696,"53"]]}]}}  :
+2024-02-18 16:15:39,488 2024-02-18 16:14:42  :
+2024-02-18 16:15:39,488 Moisture:53  :
+2024-02-18 16:15:39,489 Running pump for 150 seconds  :
+2024-02-18 16:19:49,771 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708273132.696,"39"],[1708273142.696,"39"],[1708273152.696,"39"],[1708273162.696,"39"],[1708273172.696,"39"],[1708273182.696,"39"]]}]}}  :
+2024-02-18 16:19:49,772 2024-02-18 16:18:52  :
+2024-02-18 16:19:49,772 Moisture:39  :
+2024-02-18 16:19:49,790 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708273132.696,"53"],[1708273142.696,"53"],[1708273152.696,"53"],[1708273162.696,"53"],[1708273172.696,"53"],[1708273182.696,"55"]]}]}}  :
+2024-02-18 16:19:49,791 2024-02-18 16:18:52  :
+2024-02-18 16:19:49,792 Moisture:53  :
+2024-02-18 16:19:49,792 Running pump for 150 seconds  :
+2024-02-18 16:24:00,028 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708273382.696,"39"],[1708273392.696,"39"],[1708273402.696,"39"],[1708273412.696,"39"],[1708273422.696,"39"],[1708273432.696,"39"]]}]}}  :
+2024-02-18 16:24:00,029 2024-02-18 16:23:02  :
+2024-02-18 16:24:00,030 Moisture:39  :
+2024-02-18 16:24:00,048 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708273382.696,"54"],[1708273392.696,"54"],[1708273402.696,"54"],[1708273412.696,"54"],[1708273422.696,"54"],[1708273432.696,"54"]]}]}}  :
+2024-02-18 16:24:00,049 2024-02-18 16:23:02  :
+2024-02-18 16:24:00,049 Moisture:54  :
+2024-02-18 16:24:00,050 Running pump for 150 seconds  :
+2024-02-18 16:28:10,226 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708273632.696,"40"],[1708273642.696,"40"],[1708273652.696,"40"],[1708273662.696,"40"],[1708273672.696,"40"],[1708273682.696,"40"]]}]}}  :
+2024-02-18 16:28:10,227 2024-02-18 16:27:12  :
+2024-02-18 16:28:10,228 Moisture:40  :
+2024-02-18 16:28:10,245 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-18 16:28:10,246 Couldn't get sensor data  :
+2024-02-18 16:28:10,247 Reached max. pumping cycle but still not enough  :
+2024-02-20 11:17:15,089 ******** Plantomio_control started  :
+2024-02-20 12:23:18,167 ******** Plantomio_control started  :
+2024-02-20 12:23:18,486 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708431742.696,"21"],[1708431752.696,"21"],[1708431762.696,"21"],[1708431772.696,"21"],[1708431782.696,"21"],[1708431792.696,"21"]]}]}}  :
+2024-02-20 12:23:18,487 2024-02-20 12:22:22  :
+2024-02-20 12:23:18,488 Moisture:21  :
+2024-02-20 12:23:18,505 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708431742.696,"37"],[1708431752.696,"37"],[1708431762.696,"37"],[1708431772.696,"37"],[1708431782.696,"37"],[1708431792.696,"37"]]}]}}  :
+2024-02-20 12:23:18,506 2024-02-20 12:22:22  :
+2024-02-20 12:23:18,507 Moisture:37  :
+2024-02-20 12:23:30,484 ******** Plantomio_control started  :
+2024-02-20 12:23:30,720 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708431752.696,"21"],[1708431762.696,"21"],[1708431772.696,"21"],[1708431782.696,"21"],[1708431792.696,"21"],[1708431802.696,"21"]]}]}}  :
+2024-02-20 12:23:30,721 2024-02-20 12:22:32  :
+2024-02-20 12:23:30,722 Moisture:21  :
+2024-02-20 12:23:30,739 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708431752.696,"37"],[1708431762.696,"37"],[1708431772.696,"37"],[1708431782.696,"37"],[1708431792.696,"37"],[1708431802.696,"37"]]}]}}  :
+2024-02-20 12:23:30,740 2024-02-20 12:22:32  :
+2024-02-20 12:23:30,741 Moisture:37  :
+2024-02-20 12:24:21,945 ******** Plantomio_control started  :
+2024-02-20 12:24:22,245 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708431802.696,"21"],[1708431812.696,"21"],[1708431822.696,"21"],[1708431832.696,"21"],[1708431842.696,"21"],[1708431852.696,"21"]]}]}}  :
+2024-02-20 12:24:22,246 2024-02-20 12:23:22  :
+2024-02-20 12:24:22,246 Moisture:21  :
+2024-02-20 12:24:22,263 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708431802.696,"37"],[1708431812.696,"37"],[1708431822.696,"37"],[1708431832.696,"37"],[1708431842.696,"37"],[1708431852.696,"37"]]}]}}  :
+2024-02-20 12:24:22,264 2024-02-20 12:23:22  :
+2024-02-20 12:24:22,265 Moisture:37  :
+2024-02-20 12:24:22,265 Running pump for 150 seconds  :
+2024-02-20 12:28:32,523 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708432052.696,"21"],[1708432062.696,"21"],[1708432072.696,"25"],[1708432082.696,"25"],[1708432092.696,"25"],[1708432102.696,"25"]]}]}}  :
+2024-02-20 12:28:32,524 2024-02-20 12:27:32  :
+2024-02-20 12:28:32,525 Moisture:21  :
+2024-02-20 12:28:32,543 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708432062.696,"37"],[1708432072.696,"37"],[1708432082.696,"37"],[1708432092.696,"37"],[1708432102.696,"37"]]}]}}  :
+2024-02-20 12:28:32,544 2024-02-20 12:27:42  :
+2024-02-20 12:28:32,544 Moisture:37  :
+2024-02-20 12:28:32,545 Running pump for 150 seconds  :
+2024-02-20 12:32:42,717 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708432312.696,"30"],[1708432322.696,"30"],[1708432332.696,"30"],[1708432342.696,"30"],[1708432352.696,"30"],[1708432362.696,"30"]]}]}}  :
+2024-02-20 12:32:42,718 2024-02-20 12:31:52  :
+2024-02-20 12:32:42,719 Moisture:30  :
+2024-02-20 12:32:42,736 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708432312.696,"39"],[1708432322.696,"39"],[1708432332.696,"39"],[1708432342.696,"39"],[1708432352.696,"39"],[1708432362.696,"39"]]}]}}  :
+2024-02-20 12:32:42,737 2024-02-20 12:31:52  :
+2024-02-20 12:32:42,738 Moisture:39  :
+2024-02-20 12:32:42,738 Running pump for 150 seconds  :
+2024-02-20 12:36:52,877 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708432562.696,"36"],[1708432572.696,"36"],[1708432582.696,"36"],[1708432592.696,"36"],[1708432602.696,"36"],[1708432612.696,"36"]]}]}}  :
+2024-02-20 12:36:52,878 2024-02-20 12:36:02  :
+2024-02-20 12:36:52,879 Moisture:36  :
+2024-02-20 12:36:52,896 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708432562.696,"48"],[1708432572.696,"48"],[1708432582.696,"48"],[1708432592.696,"48"],[1708432602.696,"48"],[1708432612.696,"48"]]}]}}  :
+2024-02-20 12:36:52,897 2024-02-20 12:36:02  :
+2024-02-20 12:36:52,898 Moisture:48  :
+2024-02-20 12:36:52,898 Running pump for 150 seconds  :
+2024-02-20 12:41:03,056 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708432812.696,"38"],[1708432822.696,"38"],[1708432832.696,"38"],[1708432842.696,"38"],[1708432852.696,"38"],[1708432862.696,"38"]]}]}}  :
+2024-02-20 12:41:03,057 2024-02-20 12:40:12  :
+2024-02-20 12:41:03,058 Moisture:38  :
+2024-02-20 12:41:03,075 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-20 12:41:03,076 Couldn't get sensor data  :
+2024-02-20 12:41:03,077 Running pump for 150 seconds  :
+2024-02-20 12:45:13,284 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708433062.696,"0"],[1708433072.696,"0"],[1708433082.696,"0"],[1708433092.696,"0"],[1708433102.696,"0"],[1708433112.696,"0"]]}]}}  :
+2024-02-20 12:45:13,286 2024-02-20 12:44:22  :
+2024-02-20 12:45:13,286 Moisture:0  :
+2024-02-20 12:45:13,304 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708433062.696,"55"],[1708433072.696,"55"],[1708433082.696,"55"],[1708433092.696,"55"],[1708433102.696,"55"],[1708433112.696,"55"]]}]}}  :
+2024-02-20 12:45:13,305 2024-02-20 12:44:22  :
+2024-02-20 12:45:13,306 Moisture:55  :
+2024-02-20 12:45:13,306 Running pump for 150 seconds  :
+2024-02-20 12:49:23,567 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708433312.696,"16"],[1708433322.696,"16"],[1708433332.696,"16"],[1708433342.696,"16"],[1708433352.696,"16"],[1708433362.696,"16"]]}]}}  :
+2024-02-20 12:49:23,568 2024-02-20 12:48:32  :
+2024-02-20 12:49:23,568 Moisture:16  :
+2024-02-20 12:49:23,586 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-20 12:49:23,587 Couldn't get sensor data  :
+2024-02-20 12:49:23,587 Running pump for 150 seconds  :
+2024-02-20 12:53:33,822 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708433562.696,"22"],[1708433572.696,"22"],[1708433582.696,"22"],[1708433592.696,"22"],[1708433602.696,"22"],[1708433612.696,"22"]]}]}}  :
+2024-02-20 12:53:33,823 2024-02-20 12:52:42  :
+2024-02-20 12:53:33,824 Moisture:22  :
+2024-02-20 12:53:33,840 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708433562.696,"68"],[1708433572.696,"68"],[1708433582.696,"68"],[1708433592.696,"68"],[1708433602.696,"68"],[1708433612.696,"68"]]}]}}  :
+2024-02-20 12:53:33,841 2024-02-20 12:52:42  :
+2024-02-20 12:53:33,842 Moisture:68  :
+2024-02-20 12:53:33,842 Running pump for 150 seconds  :
+2024-02-20 12:57:44,084 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708433812.696,"23"],[1708433822.696,"23"],[1708433832.696,"23"],[1708433842.696,"23"],[1708433852.696,"23"],[1708433862.696,"23"]]}]}}  :
+2024-02-20 12:57:44,086 2024-02-20 12:56:52  :
+2024-02-20 12:57:44,086 Moisture:23  :
+2024-02-20 12:57:44,104 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708433812.696,"68"],[1708433822.696,"68"],[1708433832.696,"68"],[1708433842.696,"68"],[1708433852.696,"68"],[1708433862.696,"68"]]}]}}  :
+2024-02-20 12:57:44,105 2024-02-20 12:56:52  :
+2024-02-20 12:57:44,106 Moisture:68  :
+2024-02-20 12:57:44,106 Running pump for 150 seconds  :
+2024-02-20 13:01:54,295 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708434062.696,"23"],[1708434072.696,"21"],[1708434082.696,"21"],[1708434092.696,"21"],[1708434102.696,"21"],[1708434112.696,"21"]]}]}}  :
+2024-02-20 13:01:54,297 2024-02-20 13:01:02  :
+2024-02-20 13:01:54,297 Moisture:23  :
+2024-02-20 13:01:54,314 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708434062.696,"66"],[1708434072.696,"66"],[1708434082.696,"66"],[1708434092.696,"66"],[1708434102.696,"66"],[1708434112.696,"66"]]}]}}  :
+2024-02-20 13:01:54,315 2024-02-20 13:01:02  :
+2024-02-20 13:01:54,316 Moisture:66  :
+2024-02-20 13:01:54,316 Running pump for 150 seconds  :
+2024-02-20 13:06:04,497 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708434312.696,"46"],[1708434322.696,"46"],[1708434332.696,"46"],[1708434342.696,"46"],[1708434352.696,"46"],[1708434362.696,"46"]]}]}}  :
+2024-02-20 13:06:04,498 2024-02-20 13:05:12  :
+2024-02-20 13:06:04,498 Moisture:46  :
+2024-02-20 13:06:04,515 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708434312.696,"66"],[1708434322.696,"66"],[1708434332.696,"66"],[1708434342.696,"66"],[1708434352.696,"66"],[1708434362.696,"66"]]}]}}  :
+2024-02-20 13:06:04,516 2024-02-20 13:05:12  :
+2024-02-20 13:06:04,517 Moisture:66  :
+2024-02-21 13:17:12,547 ******** Plantomio_control started  :
+2024-02-21 17:43:44,349 ******** Plantomio_control started  :
+2024-02-21 17:43:44,619 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708537372.696,"23"],[1708537382.696,"23"],[1708537392.696,"23"],[1708537402.696,"23"],[1708537412.696,"23"],[1708537422.696,"23"]]}]}}  :
+2024-02-21 17:43:44,620 2024-02-21 17:42:52  :
+2024-02-21 17:43:44,621 Moisture:23  :
+2024-02-21 17:43:44,639 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708537372.696,"41"],[1708537382.696,"41"],[1708537392.696,"41"],[1708537402.696,"41"],[1708537412.696,"41"],[1708537422.696,"41"]]}]}}  :
+2024-02-21 17:43:44,640 2024-02-21 17:42:52  :
+2024-02-21 17:43:44,641 Moisture:41  :
+2024-02-21 17:44:48,965 ******** Plantomio_control started  :
+2024-02-21 17:44:49,292 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708537432.696,"23"],[1708537442.696,"23"],[1708537452.696,"23"],[1708537462.696,"23"],[1708537472.696,"23"],[1708537482.696,"23"]]}]}}  :
+2024-02-21 17:44:49,293 2024-02-21 17:43:52  :
+2024-02-21 17:44:49,294 Moisture:23  :
+2024-02-21 17:44:49,311 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708537432.696,"41"],[1708537442.696,"41"],[1708537452.696,"41"],[1708537462.696,"41"],[1708537472.696,"41"],[1708537482.696,"41"]]}]}}  :
+2024-02-21 17:44:49,312 2024-02-21 17:43:52  :
+2024-02-21 17:44:49,313 Moisture:41  :
+2024-02-21 17:44:49,313 Running pump for 150 seconds  :
+2024-02-21 17:48:59,503 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708537682.696,"23"],[1708537692.696,"23"],[1708537702.696,"23"],[1708537712.696,"23"],[1708537722.696,"23"],[1708537732.696,"23"]]}]}}  :
+2024-02-21 17:48:59,504 2024-02-21 17:48:02  :
+2024-02-21 17:48:59,505 Moisture:23  :
+2024-02-21 17:48:59,523 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708537682.696,"41"],[1708537692.696,"41"],[1708537702.696,"41"],[1708537712.696,"41"],[1708537722.696,"41"],[1708537732.696,"41"]]}]}}  :
+2024-02-21 17:48:59,524 2024-02-21 17:48:02  :
+2024-02-21 17:48:59,524 Moisture:41  :
+2024-02-21 17:48:59,525 Running pump for 150 seconds  :
+2024-02-21 17:53:09,717 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708537942.696,"30"],[1708537952.696,"30"],[1708537962.696,"31"],[1708537972.696,"31"],[1708537982.696,"31"]]}]}}  :
+2024-02-21 17:53:09,719 2024-02-21 17:52:22  :
+2024-02-21 17:53:09,719 Moisture:30  :
+2024-02-21 17:53:09,737 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708537952.696,"51"],[1708537962.696,"51"],[1708537972.696,"51"],[1708537982.696,"51"]]}]}}  :
+2024-02-21 17:53:09,738 2024-02-21 17:52:32  :
+2024-02-21 17:53:09,738 Moisture:51  :
+2024-02-21 17:53:09,739 Running pump for 150 seconds  :
+2024-02-21 17:57:20,005 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708538182.696,"38"],[1708538192.696,"38"],[1708538202.696,"38"],[1708538212.696,"38"],[1708538222.696,"38"],[1708538232.696,"38"]]}]}}  :
+2024-02-21 17:57:20,006 2024-02-21 17:56:22  :
+2024-02-21 17:57:20,006 Moisture:38  :
+2024-02-21 17:57:20,024 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708538182.696,"58"],[1708538192.696,"61"],[1708538202.696,"61"],[1708538212.696,"61"],[1708538222.696,"61"],[1708538232.696,"61"]]}]}}  :
+2024-02-21 17:57:20,025 2024-02-21 17:56:22  :
+2024-02-21 17:57:20,026 Moisture:58  :
+2024-02-21 17:57:20,026 Running pump for 150 seconds  :
+2024-02-21 18:01:30,267 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708538432.696,"43"],[1708538442.696,"43"],[1708538452.696,"43"],[1708538462.696,"43"],[1708538472.696,"43"],[1708538482.696,"43"]]}]}}  :
+2024-02-21 18:01:30,268 2024-02-21 18:00:32  :
+2024-02-21 18:01:30,269 Moisture:43  :
+2024-02-21 18:01:30,287 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708538432.696,"64"],[1708538442.696,"64"],[1708538452.696,"64"],[1708538462.696,"64"],[1708538472.696,"64"],[1708538482.696,"64"]]}]}}  :
+2024-02-21 18:01:30,288 2024-02-21 18:00:32  :
+2024-02-21 18:01:30,288 Moisture:64  :
+2024-02-21 18:01:30,289 Running pump for 150 seconds  :
+2024-02-21 18:05:40,522 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708538682.696,"45"],[1708538692.696,"45"],[1708538702.696,"45"],[1708538712.696,"45"],[1708538722.696,"45"],[1708538732.696,"45"]]}]}}  :
+2024-02-21 18:05:40,523 2024-02-21 18:04:42  :
+2024-02-21 18:05:40,524 Moisture:45  :
+2024-02-21 18:05:40,542 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708538682.696,"64"],[1708538692.696,"64"],[1708538702.696,"64"],[1708538712.696,"64"],[1708538722.696,"64"],[1708538732.696,"64"]]}]}}  :
+2024-02-21 18:05:40,543 2024-02-21 18:04:42  :
+2024-02-21 18:05:40,543 Moisture:64  :
+2024-02-21 18:05:40,544 Running pump for 150 seconds  :
+2024-02-21 18:09:50,764 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708538932.696,"44"],[1708538942.696,"44"],[1708538952.696,"44"],[1708538962.696,"44"],[1708538972.696,"44"],[1708538982.696,"44"]]}]}}  :
+2024-02-21 18:09:50,765 2024-02-21 18:08:52  :
+2024-02-21 18:09:50,766 Moisture:44  :
+2024-02-21 18:09:50,784 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708538932.696,"63"],[1708538942.696,"63"],[1708538952.696,"63"],[1708538962.696,"63"],[1708538972.696,"63"],[1708538982.696,"63"]]}]}}  :
+2024-02-21 18:09:50,785 2024-02-21 18:08:52  :
+2024-02-21 18:09:50,785 Moisture:63  :
+2024-02-21 18:09:50,786 Running pump for 150 seconds  :
+2024-02-21 18:14:01,005 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708539182.696,"47"],[1708539192.696,"47"],[1708539202.696,"47"],[1708539212.696,"47"],[1708539222.696,"47"],[1708539232.696,"47"]]}]}}  :
+2024-02-21 18:14:01,006 2024-02-21 18:13:02  :
+2024-02-21 18:14:01,006 Moisture:47  :
+2024-02-21 18:14:01,024 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708539182.696,"63"],[1708539192.696,"63"],[1708539202.696,"63"],[1708539212.696,"63"],[1708539222.696,"63"],[1708539232.696,"63"]]}]}}  :
+2024-02-21 18:14:01,025 2024-02-21 18:13:02  :
+2024-02-21 18:14:01,026 Moisture:63  :
+2024-02-21 18:14:01,026 Running pump for 150 seconds  :
+2024-02-21 18:18:11,244 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708539432.696,"44"],[1708539442.696,"44"],[1708539452.696,"44"],[1708539462.696,"45"],[1708539472.696,"45"],[1708539482.696,"45"]]}]}}  :
+2024-02-21 18:18:11,245 2024-02-21 18:17:12  :
+2024-02-21 18:18:11,246 Moisture:44  :
+2024-02-21 18:18:11,263 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708539432.696,"62"],[1708539442.696,"62"],[1708539452.696,"64"],[1708539462.696,"64"],[1708539472.696,"64"],[1708539482.696,"64"]]}]}}  :
+2024-02-21 18:18:11,264 2024-02-21 18:17:12  :
+2024-02-21 18:18:11,264 Moisture:62  :
+2024-02-21 18:18:11,265 Running pump for 150 seconds  :
+2024-02-21 18:22:21,511 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708539682.696,"45"],[1708539692.696,"46"],[1708539702.696,"46"],[1708539712.696,"46"],[1708539722.696,"46"],[1708539732.696,"46"]]}]}}  :
+2024-02-21 18:22:21,512 2024-02-21 18:21:22  :
+2024-02-21 18:22:21,513 Moisture:45  :
+2024-02-21 18:22:21,531 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708539682.696,"64"],[1708539692.696,"64"],[1708539702.696,"64"],[1708539712.696,"64"],[1708539722.696,"64"],[1708539732.696,"64"]]}]}}  :
+2024-02-21 18:22:21,532 2024-02-21 18:21:22  :
+2024-02-21 18:22:21,532 Moisture:64  :
+2024-02-21 18:22:21,533 Running pump for 150 seconds  :
+2024-02-21 18:26:31,695 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708539932.696,"45"],[1708539942.696,"45"],[1708539952.696,"45"],[1708539962.696,"45"],[1708539972.696,"46"],[1708539982.696,"46"]]}]}}  :
+2024-02-21 18:26:31,696 2024-02-21 18:25:32  :
+2024-02-21 18:26:31,697 Moisture:45  :
+2024-02-21 18:26:31,714 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708539952.696,"65"],[1708539962.696,"65"],[1708539972.696,"65"],[1708539982.696,"63"]]}]}}  :
+2024-02-21 18:26:31,715 2024-02-21 18:25:52  :
+2024-02-21 18:26:31,716 Moisture:65  :
+2024-02-21 18:26:31,716 Running pump for 150 seconds  :
+2024-02-21 18:30:41,783 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:7d:33"},"values":[[1708540182.696,"45"],[1708540192.696,"46"],[1708540202.696,"46"],[1708540212.696,"46"],[1708540222.696,"46"],[1708540232.696,"46"]]}]}}  :
+2024-02-21 18:30:41,784 2024-02-21 18:29:42  :
+2024-02-21 18:30:41,784 Moisture:45  :
+2024-02-21 18:30:41,802 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708540182.696,"66"],[1708540192.696,"66"],[1708540202.696,"66"],[1708540212.696,"66"],[1708540222.696,"66"],[1708540232.696,"66"]]}]}}  :
+2024-02-21 18:30:41,803 2024-02-21 18:29:42  :
+2024-02-21 18:30:41,803 Moisture:66  :
+2024-02-21 18:30:41,804 Reached max. pumping cycle but still not enough  :
+2024-02-23 15:17:12,691 ******** Plantomio_control started  :
+2024-02-23 15:17:13,183 ******** Plantomio_control started  :
+2024-02-23 16:00:59,210 ******** Plantomio_control started  :
+2024-02-23 16:00:59,562 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-23 16:00:59,563 Couldn't get sensor data  :
+2024-02-23 16:00:59,580 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708704003.657,"41"],[1708704013.657,"41"],[1708704023.657,"41"],[1708704033.657,"41"],[1708704043.657,"41"],[1708704053.657,"41"]]}]}}  :
+2024-02-23 16:00:59,581 2024-02-23 16:00:03  :
+2024-02-23 16:00:59,582 Moisture:41  :
+2024-02-23 16:00:59,582 Running pump for 150 seconds  :
+2024-02-23 16:05:09,720 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-23 16:05:09,721 Couldn't get sensor data  :
+2024-02-23 16:05:09,738 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708704253.657,"41"],[1708704263.657,"41"],[1708704273.657,"41"],[1708704283.657,"41"],[1708704293.657,"41"],[1708704303.657,"41"]]}]}}  :
+2024-02-23 16:05:09,740 2024-02-23 16:04:13  :
+2024-02-23 16:05:09,740 Moisture:41  :
+2024-02-23 16:05:09,741 Running pump for 150 seconds  :
+2024-02-23 16:09:19,937 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-23 16:09:19,938 Couldn't get sensor data  :
+2024-02-23 16:09:19,955 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708704503.657,"46"],[1708704513.657,"46"],[1708704523.657,"46"],[1708704533.657,"46"],[1708704543.657,"46"],[1708704553.657,"46"]]}]}}  :
+2024-02-23 16:09:19,956 2024-02-23 16:08:23  :
+2024-02-23 16:09:19,956 Moisture:46  :
+2024-02-23 16:09:19,957 Running pump for 150 seconds  :
+2024-02-23 16:13:30,138 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-23 16:13:30,139 Couldn't get sensor data  :
+2024-02-23 16:13:30,155 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708704753.657,"54"],[1708704763.657,"54"],[1708704773.657,"54"],[1708704783.657,"54"],[1708704793.657,"54"],[1708704803.657,"54"]]}]}}  :
+2024-02-23 16:13:30,156 2024-02-23 16:12:33  :
+2024-02-23 16:13:30,157 Moisture:54  :
+2024-02-26 09:30:15,602 ******** Plantomio_control started  :
+2024-02-26 09:30:15,872 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 09:30:15,873 Couldn't get sensor data  :
+2024-02-26 09:30:15,890 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708939763.657,"28"],[1708939773.657,"28"],[1708939783.657,"28"],[1708939793.657,"28"],[1708939803.657,"28"],[1708939813.657,"28"]]}]}}  :
+2024-02-26 09:30:15,892 2024-02-26 09:29:23  :
+2024-02-26 09:30:15,892 Moisture:28  :
+2024-02-26 09:30:15,893 Running pump for 150 seconds  :
+2024-02-26 15:01:28,927 ******** Plantomio_control started  :
+2024-02-26 15:01:29,184 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 15:01:29,185 Couldn't get sensor data  :
+2024-02-26 15:01:29,203 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708959633.657,"28"],[1708959643.657,"28"],[1708959653.657,"28"],[1708959663.657,"28"],[1708959673.657,"28"],[1708959683.657,"28"]]}]}}  :
+2024-02-26 15:01:29,204 2024-02-26 15:00:33  :
+2024-02-26 15:01:29,205 Moisture:28  :
+2024-02-26 15:01:29,205 Running pump for 150 seconds  :
+2024-02-26 15:05:39,529 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 15:05:39,529 Couldn't get sensor data  :
+2024-02-26 15:05:39,547 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 15:05:39,548 Couldn't get sensor data  :
+2024-02-26 15:05:39,548 Running pump for 150 seconds  :
+2024-02-26 15:09:49,720 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 15:09:49,721 Couldn't get sensor data  :
+2024-02-26 15:09:49,739 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708960133.657,"31"],[1708960143.657,"31"],[1708960153.657,"35"],[1708960163.657,"35"],[1708960173.657,"35"],[1708960183.657,"35"]]}]}}  :
+2024-02-26 15:09:49,740 2024-02-26 15:08:53  :
+2024-02-26 15:09:49,740 Moisture:31  :
+2024-02-26 15:09:49,741 Running pump for 150 seconds  :
+2024-02-26 15:14:00,040 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 15:14:00,041 Couldn't get sensor data  :
+2024-02-26 15:14:00,059 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708960383.657,"35"],[1708960393.657,"35"],[1708960403.657,"35"],[1708960413.657,"41"],[1708960423.657,"41"],[1708960433.657,"41"]]}]}}  :
+2024-02-26 15:14:00,060 2024-02-26 15:13:03  :
+2024-02-26 15:14:00,061 Moisture:35  :
+2024-02-26 15:14:00,061 Running pump for 150 seconds  :
+2024-02-26 15:18:10,249 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 15:18:10,249 Couldn't get sensor data  :
+2024-02-26 15:18:10,267 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708960633.657,"41"],[1708960643.657,"41"],[1708960653.657,"41"],[1708960663.657,"41"],[1708960673.657,"41"],[1708960683.657,"41"]]}]}}  :
+2024-02-26 15:18:10,268 2024-02-26 15:17:13  :
+2024-02-26 15:18:10,269 Moisture:41  :
+2024-02-26 15:18:10,269 Running pump for 150 seconds  :
+2024-02-26 15:22:20,424 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 15:22:20,425 Couldn't get sensor data  :
+2024-02-26 15:22:20,443 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708960883.657,"51"],[1708960893.657,"51"],[1708960903.657,"51"],[1708960913.657,"51"],[1708960923.657,"51"],[1708960933.657,"51"]]}]}}  :
+2024-02-26 15:22:20,444 2024-02-26 15:21:23  :
+2024-02-26 15:22:20,445 Moisture:51  :
+2024-02-26 17:19:02,279 ******** Plantomio_control started  :
+2024-02-26 17:19:02,526 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 17:19:02,527 Couldn't get sensor data  :
+2024-02-26 17:19:02,545 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708967883.657,"43"],[1708967893.657,"43"],[1708967903.657,"43"],[1708967913.657,"43"],[1708967923.657,"43"],[1708967933.657,"43"]]}]}}  :
+2024-02-26 17:19:02,546 2024-02-26 17:18:03  :
+2024-02-26 17:19:02,546 Moisture:43  :
+2024-02-26 17:19:02,547 Running pump for 150 seconds  :
+2024-02-26 17:23:12,769 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 17:23:12,770 Couldn't get sensor data  :
+2024-02-26 17:23:12,788 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708968133.657,"46"],[1708968143.657,"46"],[1708968153.657,"46"],[1708968163.657,"46"],[1708968173.657,"46"],[1708968183.657,"46"]]}]}}  :
+2024-02-26 17:23:12,789 2024-02-26 17:22:13  :
+2024-02-26 17:23:12,789 Moisture:46  :
+2024-02-26 17:23:12,790 Running pump for 150 seconds  :
+2024-02-26 17:27:22,953 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 17:27:22,954 Couldn't get sensor data  :
+2024-02-26 17:27:22,971 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708968383.657,"49"],[1708968393.657,"49"],[1708968403.657,"49"],[1708968413.657,"49"],[1708968423.657,"49"],[1708968433.657,"49"]]}]}}  :
+2024-02-26 17:27:22,972 2024-02-26 17:26:23  :
+2024-02-26 17:27:22,973 Moisture:49  :
+2024-02-26 17:27:22,973 Running pump for 150 seconds  :
+2024-02-26 17:31:33,332 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 17:31:33,333 Couldn't get sensor data  :
+2024-02-26 17:31:33,350 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708968633.657,"49"],[1708968643.657,"49"],[1708968653.657,"49"],[1708968663.657,"49"],[1708968673.657,"49"]]}]}}  :
+2024-02-26 17:31:33,351 2024-02-26 17:30:33  :
+2024-02-26 17:31:33,352 Moisture:49  :
+2024-02-26 17:31:33,352 Running pump for 150 seconds  :
+2024-02-26 17:35:43,593 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 17:35:43,594 Couldn't get sensor data  :
+2024-02-26 17:35:43,611 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708968883.657,"51"],[1708968893.657,"51"],[1708968903.657,"51"],[1708968913.657,"51"],[1708968923.657,"51"],[1708968933.657,"51"]]}]}}  :
+2024-02-26 17:35:43,612 2024-02-26 17:34:43  :
+2024-02-26 17:35:43,613 Moisture:51  :
+2024-02-26 17:35:43,613 Running pump for 150 seconds  :
+2024-02-26 17:39:53,811 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 17:39:53,812 Couldn't get sensor data  :
+2024-02-26 17:39:53,833 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708969143.657,"53"],[1708969153.657,"53"],[1708969163.657,"53"],[1708969173.657,"53"],[1708969183.657,"53"],[1708969193.657,"53"]]}]}}  :
+2024-02-26 17:39:53,834 2024-02-26 17:39:03  :
+2024-02-26 17:39:53,835 Moisture:53  :
+2024-02-26 17:39:53,835 Running pump for 150 seconds  :
+2024-02-26 17:44:03,999 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 17:44:04,000 Couldn't get sensor data  :
+2024-02-26 17:44:04,017 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 17:44:04,018 Couldn't get sensor data  :
+2024-02-26 17:44:04,018 Running pump for 150 seconds  :
+2024-02-26 17:48:14,174 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 17:48:14,175 Couldn't get sensor data  :
+2024-02-26 17:48:14,193 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708969643.657,"53"],[1708969653.657,"53"],[1708969663.657,"53"],[1708969673.657,"53"],[1708969683.657,"53"],[1708969693.657,"53"]]}]}}  :
+2024-02-26 17:48:14,194 2024-02-26 17:47:23  :
+2024-02-26 17:48:14,194 Moisture:53  :
+2024-02-26 17:48:14,195 Running pump for 150 seconds  :
+2024-02-26 17:52:24,454 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 17:52:24,455 Couldn't get sensor data  :
+2024-02-26 17:52:24,473 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708969893.657,"54"],[1708969903.657,"54"],[1708969913.657,"54"],[1708969923.657,"54"],[1708969933.657,"54"],[1708969943.657,"54"]]}]}}  :
+2024-02-26 17:52:24,474 2024-02-26 17:51:33  :
+2024-02-26 17:52:24,474 Moisture:54  :
+2024-02-26 17:52:24,475 Running pump for 150 seconds  :
+2024-02-26 17:56:34,635 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 17:56:34,636 Couldn't get sensor data  :
+2024-02-26 17:56:34,656 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708970143.657,"55"],[1708970153.657,"55"],[1708970163.657,"55"],[1708970173.657,"55"],[1708970183.657,"55"],[1708970193.657,"55"]]}]}}  :
+2024-02-26 17:56:34,658 2024-02-26 17:55:43  :
+2024-02-26 17:56:34,658 Moisture:55  :
+2024-02-26 17:56:34,659 Running pump for 150 seconds  :
+2024-02-26 18:00:44,891 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 18:00:44,892 Couldn't get sensor data  :
+2024-02-26 18:00:44,910 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708970393.657,"55"],[1708970403.657,"58"],[1708970413.657,"58"],[1708970423.657,"58"],[1708970433.657,"58"],[1708970443.657,"58"]]}]}}  :
+2024-02-26 18:00:44,912 2024-02-26 17:59:53  :
+2024-02-26 18:00:44,912 Moisture:55  :
+2024-02-26 18:00:44,913 Running pump for 150 seconds  :
+2024-02-26 18:04:54,992 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-26 18:04:54,993 Couldn't get sensor data  :
+2024-02-26 18:04:55,011 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1708970643.657,"58"],[1708970653.657,"58"],[1708970663.657,"58"],[1708970673.657,"58"],[1708970683.657,"58"],[1708970693.657,"58"]]}]}}  :
+2024-02-26 18:04:55,012 2024-02-26 18:04:03  :
+2024-02-26 18:04:55,013 Moisture:58  :
+2024-02-26 18:04:55,013 Reached max. pumping cycle but still not enough  :
+2024-02-28 12:05:13,843 ******** Plantomio_control started  :
+2024-02-28 12:05:14,142 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 12:05:14,143 Couldn't get sensor data  :
+2024-02-28 12:05:14,160 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709121863.657,"31"],[1709121873.657,"31"],[1709121883.657,"31"],[1709121893.657,"31"],[1709121903.657,"31"],[1709121913.657,"31"]]}]}}  :
+2024-02-28 12:05:14,161 2024-02-28 12:04:23  :
+2024-02-28 12:05:14,162 Moisture:31  :
+2024-02-28 12:05:14,162 Running pump for 150 seconds  :
+2024-02-28 12:09:24,348 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 12:09:24,349 Couldn't get sensor data  :
+2024-02-28 12:09:24,367 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709122113.657,"31"],[1709122123.657,"31"],[1709122133.657,"31"],[1709122143.657,"31"],[1709122153.657,"31"],[1709122163.657,"31"]]}]}}  :
+2024-02-28 12:09:24,368 2024-02-28 12:08:33  :
+2024-02-28 12:09:24,369 Moisture:31  :
+2024-02-28 12:09:24,369 Running pump for 150 seconds  :
+2024-02-28 12:13:34,649 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 12:13:34,650 Couldn't get sensor data  :
+2024-02-28 12:13:34,667 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709122363.657,"31"],[1709122373.657,"31"],[1709122383.657,"31"],[1709122393.657,"31"],[1709122403.657,"31"],[1709122413.657,"31"]]}]}}  :
+2024-02-28 12:13:34,668 2024-02-28 12:12:43  :
+2024-02-28 12:13:34,668 Moisture:31  :
+2024-02-28 12:13:34,669 Running pump for 150 seconds  :
+2024-02-28 12:17:44,909 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 12:17:44,910 Couldn't get sensor data  :
+2024-02-28 12:17:44,927 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709122613.657,"31"],[1709122623.657,"31"],[1709122633.657,"31"],[1709122643.657,"31"],[1709122653.657,"31"],[1709122663.657,"31"]]}]}}  :
+2024-02-28 12:17:44,928 2024-02-28 12:16:53  :
+2024-02-28 12:17:44,929 Moisture:31  :
+2024-02-28 12:17:44,929 Running pump for 150 seconds  :
+2024-02-28 12:21:55,165 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 12:21:55,166 Couldn't get sensor data  :
+2024-02-28 12:21:55,183 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709122863.657,"35"],[1709122873.657,"35"],[1709122883.657,"35"],[1709122893.657,"35"],[1709122903.657,"35"],[1709122913.657,"35"]]}]}}  :
+2024-02-28 12:21:55,184 2024-02-28 12:21:03  :
+2024-02-28 12:21:55,185 Moisture:35  :
+2024-02-28 12:21:55,185 Running pump for 150 seconds  :
+2024-02-28 13:01:18,465 ******** Plantomio_control started  :
+2024-02-28 13:01:18,766 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 13:01:18,767 Couldn't get sensor data  :
+2024-02-28 13:01:18,785 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709125223.657,"40"],[1709125233.657,"40"],[1709125243.657,"40"],[1709125253.657,"40"],[1709125263.657,"40"],[1709125273.657,"40"]]}]}}  :
+2024-02-28 13:01:18,786 2024-02-28 13:00:23  :
+2024-02-28 13:01:18,787 Moisture:40  :
+2024-02-28 13:01:18,787 Running pump for 150 seconds  :
+2024-02-28 13:05:29,031 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 13:05:29,032 Couldn't get sensor data  :
+2024-02-28 13:05:29,049 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709125473.657,"40"],[1709125483.657,"40"],[1709125493.657,"40"],[1709125503.657,"40"],[1709125513.657,"40"],[1709125523.657,"40"]]}]}}  :
+2024-02-28 13:05:29,050 2024-02-28 13:04:33  :
+2024-02-28 13:05:29,051 Moisture:40  :
+2024-02-28 13:05:29,052 Running pump for 150 seconds  :
+2024-02-28 13:09:39,236 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 13:09:39,237 Couldn't get sensor data  :
+2024-02-28 13:09:39,256 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709125723.657,"44"],[1709125733.657,"44"],[1709125743.657,"44"],[1709125753.657,"44"],[1709125763.657,"44"],[1709125773.657,"44"]]}]}}  :
+2024-02-28 13:09:39,257 2024-02-28 13:08:43  :
+2024-02-28 13:09:39,258 Moisture:44  :
+2024-02-28 13:09:39,259 Running pump for 150 seconds  :
+2024-02-28 13:13:49,443 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 13:13:49,447 Couldn't get sensor data  :
+2024-02-28 13:13:49,463 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709125973.657,"47"],[1709125983.657,"47"],[1709125993.657,"47"],[1709126003.657,"49"],[1709126013.657,"49"],[1709126023.657,"49"]]}]}}  :
+2024-02-28 13:13:49,464 2024-02-28 13:12:53  :
+2024-02-28 13:13:49,465 Moisture:47  :
+2024-02-28 13:13:49,466 Running pump for 150 seconds  :
+2024-02-28 13:17:59,730 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 13:17:59,731 Couldn't get sensor data  :
+2024-02-28 13:17:59,748 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709126223.657,"49"],[1709126233.657,"49"],[1709126243.657,"49"],[1709126253.657,"49"],[1709126263.657,"49"],[1709126273.657,"50"]]}]}}  :
+2024-02-28 13:17:59,749 2024-02-28 13:17:03  :
+2024-02-28 13:17:59,750 Moisture:49  :
+2024-02-28 13:17:59,750 Running pump for 150 seconds  :
+2024-02-28 13:22:10,033 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 13:22:10,034 Couldn't get sensor data  :
+2024-02-28 13:22:10,054 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709126473.657,"51"],[1709126483.657,"51"],[1709126493.657,"51"],[1709126503.657,"51"],[1709126513.657,"51"],[1709126523.657,"51"]]}]}}  :
+2024-02-28 13:22:10,055 2024-02-28 13:21:13  :
+2024-02-28 13:22:10,056 Moisture:51  :
+2024-02-28 13:22:10,057 Running pump for 150 seconds  :
+2024-02-28 13:26:20,295 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 13:26:20,296 Couldn't get sensor data  :
+2024-02-28 13:26:20,314 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709126723.657,"53"],[1709126733.657,"53"],[1709126743.657,"53"],[1709126753.657,"53"],[1709126763.657,"53"],[1709126773.657,"53"]]}]}}  :
+2024-02-28 13:26:20,315 2024-02-28 13:25:23  :
+2024-02-28 13:26:20,315 Moisture:53  :
+2024-02-28 13:26:20,316 Running pump for 150 seconds  :
+2024-02-28 13:30:30,533 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-28 13:30:30,534 Couldn't get sensor data  :
+2024-02-28 13:30:30,551 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709126973.657,"53"],[1709126983.657,"53"],[1709126993.657,"53"],[1709127003.657,"53"],[1709127013.657,"53"],[1709127023.657,"53"]]}]}}  :
+2024-02-28 13:30:30,552 2024-02-28 13:29:33  :
+2024-02-28 13:30:30,553 Moisture:53  :
+2024-02-28 13:30:30,553 Running pump for 150 seconds  :
+2024-02-29 14:20:24,205 ******** Plantomio_control started  :
+2024-02-29 14:20:24,482 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 14:20:24,483 Couldn't get sensor data  :
+2024-02-29 14:20:24,501 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709216373.657,"33"],[1709216383.657,"33"],[1709216393.657,"33"],[1709216403.657,"33"],[1709216413.657,"33"],[1709216423.657,"33"]]}]}}  :
+2024-02-29 14:20:24,502 2024-02-29 14:19:33  :
+2024-02-29 14:20:24,502 Moisture:33  :
+2024-02-29 14:20:24,503 Running pump for 150 seconds  :
+2024-02-29 14:24:34,859 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 14:24:34,860 Couldn't get sensor data  :
+2024-02-29 14:24:34,878 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709216623.657,"33"],[1709216633.657,"33"],[1709216643.657,"33"],[1709216653.657,"33"],[1709216663.657,"33"],[1709216673.657,"33"]]}]}}  :
+2024-02-29 14:24:34,879 2024-02-29 14:23:43  :
+2024-02-29 14:24:34,880 Moisture:33  :
+2024-02-29 14:24:34,880 Running pump for 150 seconds  :
+2024-02-29 14:28:45,139 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 14:28:45,140 Couldn't get sensor data  :
+2024-02-29 14:28:45,159 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709216873.657,"33"],[1709216883.657,"33"],[1709216893.657,"33"],[1709216903.657,"33"],[1709216913.657,"33"],[1709216923.657,"33"]]}]}}  :
+2024-02-29 14:28:45,160 2024-02-29 14:27:53  :
+2024-02-29 14:28:45,161 Moisture:33  :
+2024-02-29 14:28:45,161 Running pump for 150 seconds  :
+2024-02-29 14:32:55,336 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 14:32:55,337 Couldn't get sensor data  :
+2024-02-29 14:32:55,355 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709217123.657,"36"],[1709217133.657,"36"],[1709217143.657,"36"],[1709217153.657,"36"],[1709217163.657,"36"],[1709217173.657,"36"]]}]}}  :
+2024-02-29 14:32:55,356 2024-02-29 14:32:03  :
+2024-02-29 14:32:55,357 Moisture:36  :
+2024-02-29 14:32:55,357 Running pump for 150 seconds  :
+2024-02-29 14:37:05,480 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 14:37:05,481 Couldn't get sensor data  :
+2024-02-29 14:37:05,499 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709217373.657,"39"],[1709217383.657,"39"],[1709217393.657,"39"],[1709217403.657,"39"],[1709217413.657,"39"],[1709217423.657,"39"]]}]}}  :
+2024-02-29 14:37:05,500 2024-02-29 14:36:13  :
+2024-02-29 14:37:05,501 Moisture:39  :
+2024-02-29 14:37:05,501 Running pump for 150 seconds  :
+2024-02-29 17:05:24,179 ******** Plantomio_control started  :
+2024-02-29 17:05:24,648 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 17:05:24,649 Couldn't get sensor data  :
+2024-02-29 17:05:24,667 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709226273.657,"40"],[1709226283.657,"40"],[1709226293.657,"40"],[1709226303.657,"40"],[1709226313.657,"40"],[1709226323.657,"40"]]}]}}  :
+2024-02-29 17:05:24,668 2024-02-29 17:04:33  :
+2024-02-29 17:05:24,668 Moisture:40  :
+2024-02-29 17:05:24,669 Running pump for 150 seconds  :
+2024-02-29 17:09:34,928 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 17:09:34,929 Couldn't get sensor data  :
+2024-02-29 17:09:34,947 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709226523.657,"40"],[1709226533.657,"40"],[1709226543.657,"40"],[1709226553.657,"41"],[1709226563.657,"41"],[1709226573.657,"41"]]}]}}  :
+2024-02-29 17:09:34,948 2024-02-29 17:08:43  :
+2024-02-29 17:09:34,949 Moisture:40  :
+2024-02-29 17:09:34,949 Running pump for 150 seconds  :
+2024-02-29 17:13:45,343 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 17:13:45,344 Couldn't get sensor data  :
+2024-02-29 17:13:45,361 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709226773.657,"42"],[1709226783.657,"42"],[1709226793.657,"42"],[1709226803.657,"42"],[1709226813.657,"42"],[1709226823.657,"42"]]}]}}  :
+2024-02-29 17:13:45,362 2024-02-29 17:12:53  :
+2024-02-29 17:13:45,363 Moisture:42  :
+2024-02-29 17:13:45,363 Running pump for 150 seconds  :
+2024-02-29 17:17:55,575 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 17:17:55,576 Couldn't get sensor data  :
+2024-02-29 17:17:55,594 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709227023.657,"46"],[1709227033.657,"46"],[1709227043.657,"46"],[1709227053.657,"46"],[1709227063.657,"46"],[1709227073.657,"46"]]}]}}  :
+2024-02-29 17:17:55,595 2024-02-29 17:17:03  :
+2024-02-29 17:17:55,595 Moisture:46  :
+2024-02-29 17:17:55,596 Running pump for 150 seconds  :
+2024-02-29 17:22:05,871 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 17:22:05,872 Couldn't get sensor data  :
+2024-02-29 17:22:05,889 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709227273.657,"52"],[1709227283.657,"52"],[1709227293.657,"52"],[1709227303.657,"52"],[1709227313.657,"52"],[1709227323.657,"52"]]}]}}  :
+2024-02-29 17:22:05,891 2024-02-29 17:21:13  :
+2024-02-29 17:22:05,891 Moisture:52  :
+2024-02-29 17:22:05,892 Running pump for 150 seconds  :
+2024-02-29 17:26:16,104 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 17:26:16,105 Couldn't get sensor data  :
+2024-02-29 17:26:16,125 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709227523.657,"52"],[1709227553.657,"57"],[1709227563.657,"57"],[1709227573.657,"57"]]}]}}  :
+2024-02-29 17:26:16,126 2024-02-29 17:25:23  :
+2024-02-29 17:26:16,126 Moisture:52  :
+2024-02-29 17:26:16,127 Running pump for 150 seconds  :
+2024-02-29 17:30:26,472 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 17:30:26,473 Couldn't get sensor data  :
+2024-02-29 17:30:26,491 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709227773.657,"57"],[1709227783.657,"57"],[1709227793.657,"57"],[1709227803.657,"57"],[1709227813.657,"57"],[1709227823.657,"57"]]}]}}  :
+2024-02-29 17:30:26,492 2024-02-29 17:29:33  :
+2024-02-29 17:30:26,493 Moisture:57  :
+2024-02-29 17:30:26,493 Running pump for 150 seconds  :
+2024-02-29 17:34:36,747 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 17:34:36,748 Couldn't get sensor data  :
+2024-02-29 17:34:36,765 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709228023.657,"60"],[1709228033.657,"60"],[1709228043.657,"60"],[1709228053.657,"60"],[1709228063.657,"60"],[1709228073.657,"60"]]}]}}  :
+2024-02-29 17:34:36,766 2024-02-29 17:33:43  :
+2024-02-29 17:34:36,767 Moisture:60  :
+2024-02-29 17:34:36,767 Running pump for 150 seconds  :
+2024-02-29 17:38:46,985 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-02-29 17:38:46,985 Couldn't get sensor data  :
+2024-02-29 17:38:47,003 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709228273.657,"61"],[1709228283.657,"61"],[1709228293.657,"61"],[1709228303.657,"61"],[1709228313.657,"61"],[1709228323.657,"61"]]}]}}  :
+2024-02-29 17:38:47,004 2024-02-29 17:37:53  :
+2024-02-29 17:38:47,005 Moisture:61  :
+2024-03-02 11:11:43,989 ******** Plantomio_control started  :
+2024-03-02 11:11:44,182 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-02 11:11:44,183 Couldn't get sensor data  :
+2024-03-02 11:11:44,202 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709377853.657,"30"],[1709377863.657,"30"],[1709377873.657,"30"],[1709377883.657,"30"],[1709377893.657,"30"],[1709377903.657,"30"]]}]}}  :
+2024-03-02 11:11:44,204 2024-03-02 11:10:53  :
+2024-03-02 11:11:44,204 Moisture:30  :
+2024-03-02 11:11:44,205 Running pump for 150 seconds  :
+2024-03-02 11:15:54,400 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-02 11:15:54,401 Couldn't get sensor data  :
+2024-03-02 11:15:54,419 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709378103.657,"30"],[1709378113.657,"30"],[1709378123.657,"30"],[1709378133.657,"30"],[1709378143.657,"30"],[1709378153.657,"30"]]}]}}  :
+2024-03-02 11:15:54,420 2024-03-02 11:15:03  :
+2024-03-02 11:15:54,420 Moisture:30  :
+2024-03-02 11:15:54,421 Running pump for 150 seconds  :
+2024-03-02 11:20:04,616 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-02 11:20:04,617 Couldn't get sensor data  :
+2024-03-02 11:20:04,635 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709378353.657,"30"],[1709378363.657,"30"],[1709378373.657,"30"],[1709378383.657,"30"],[1709378393.657,"30"],[1709378403.657,"30"]]}]}}  :
+2024-03-02 11:20:04,636 2024-03-02 11:19:13  :
+2024-03-02 11:20:04,636 Moisture:30  :
+2024-03-02 11:20:04,637 Running pump for 150 seconds  :
+2024-03-02 11:24:14,719 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-02 11:24:14,720 Couldn't get sensor data  :
+2024-03-02 11:24:14,737 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709378603.657,"33"],[1709378613.657,"33"],[1709378623.657,"33"],[1709378633.657,"33"],[1709378643.657,"33"],[1709378653.657,"33"]]}]}}  :
+2024-03-02 11:24:14,738 2024-03-02 11:23:23  :
+2024-03-02 11:24:14,739 Moisture:33  :
+2024-03-02 11:24:14,739 Running pump for 150 seconds  :
+2024-03-02 11:28:24,953 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-02 11:28:24,954 Couldn't get sensor data  :
+2024-03-02 11:28:24,972 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709378853.657,"35"],[1709378863.657,"35"],[1709378873.657,"35"],[1709378883.657,"35"],[1709378893.657,"35"],[1709378903.657,"35"]]}]}}  :
+2024-03-02 11:28:24,973 2024-03-02 11:27:33  :
+2024-03-02 11:28:24,974 Moisture:35  :
+2024-03-02 11:28:24,974 Running pump for 150 seconds  :
+2024-03-02 11:32:35,238 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-02 11:32:35,239 Couldn't get sensor data  :
+2024-03-02 11:32:35,257 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709379103.657,"35"],[1709379113.657,"35"],[1709379123.657,"35"],[1709379133.657,"35"],[1709379143.657,"35"]]}]}}  :
+2024-03-02 11:32:35,258 2024-03-02 11:31:43  :
+2024-03-02 11:32:35,259 Moisture:35  :
+2024-03-02 11:32:35,259 Running pump for 150 seconds  :
+2024-03-02 11:36:45,478 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-02 11:36:45,479 Couldn't get sensor data  :
+2024-03-02 11:36:45,496 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709379353.657,"38"],[1709379363.657,"38"],[1709379373.657,"38"],[1709379383.657,"38"],[1709379393.657,"38"],[1709379403.657,"38"]]}]}}  :
+2024-03-02 11:36:45,497 2024-03-02 11:35:53  :
+2024-03-02 11:36:45,498 Moisture:38  :
+2024-03-02 11:36:45,498 Running pump for 150 seconds  :
+2024-03-02 11:40:55,651 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-02 11:40:55,652 Couldn't get sensor data  :
+2024-03-02 11:40:55,673 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709379603.657,"38"]]}]}}  :
+2024-03-02 11:40:55,674 2024-03-02 11:40:03  :
+2024-03-02 11:40:55,675 Moisture:38  :
+2024-03-02 11:40:55,675 Running pump for 150 seconds  :
+2024-03-02 11:45:05,941 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-02 11:45:05,942 Couldn't get sensor data  :
+2024-03-02 11:45:05,960 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709379853.657,"46"],[1709379863.657,"46"],[1709379873.657,"46"],[1709379883.657,"46"],[1709379893.657,"46"],[1709379903.657,"46"]]}]}}  :
+2024-03-02 11:45:05,961 2024-03-02 11:44:13  :
+2024-03-02 11:45:05,961 Moisture:46  :
+2024-03-02 11:45:05,962 Running pump for 150 seconds  :
+2024-03-02 11:49:16,190 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-02 11:49:16,191 Couldn't get sensor data  :
+2024-03-02 11:49:16,210 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709380103.657,"50"],[1709380113.657,"50"],[1709380123.657,"50"],[1709380133.657,"50"],[1709380143.657,"50"],[1709380153.657,"50"]]}]}}  :
+2024-03-02 11:49:16,211 2024-03-02 11:48:23  :
+2024-03-02 11:49:16,212 Moisture:50  :
+2024-03-02 11:49:16,212 Running pump for 150 seconds  :
+2024-03-02 11:53:26,409 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-02 11:53:26,410 Couldn't get sensor data  :
+2024-03-02 11:53:26,428 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709380353.657,"51"],[1709380363.657,"51"],[1709380373.657,"51"],[1709380383.657,"51"],[1709380393.657,"51"],[1709380403.657,"51"]]}]}}  :
+2024-03-02 11:53:26,429 2024-03-02 11:52:33  :
+2024-03-02 11:53:26,429 Moisture:51  :
+2024-03-02 11:53:26,430 Running pump for 150 seconds  :
+2024-03-02 11:57:36,583 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-02 11:57:36,584 Couldn't get sensor data  :
+2024-03-02 11:57:36,602 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709380603.657,"51"],[1709380613.657,"51"],[1709380623.657,"51"],[1709380633.657,"51"],[1709380643.657,"51"],[1709380653.657,"51"]]}]}}  :
+2024-03-02 11:57:36,603 2024-03-02 11:56:43  :
+2024-03-02 11:57:36,603 Moisture:51  :
+2024-03-02 11:57:36,604 Reached max. pumping cycle but still not enough  :
+2024-03-03 14:09:40,980 ******** Plantomio_control started  :
+2024-03-03 14:09:41,312 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 14:09:41,313 Couldn't get sensor data  :
+2024-03-03 14:09:41,331 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709474923.657,"34"],[1709474933.657,"34"],[1709474943.657,"34"],[1709474953.657,"34"],[1709474963.657,"34"],[1709474973.657,"34"]]}]}}  :
+2024-03-03 14:09:41,332 2024-03-03 14:08:43  :
+2024-03-03 14:09:41,333 Moisture:34  :
+2024-03-03 14:09:41,333 Running pump for 150 seconds  :
+2024-03-03 14:13:51,473 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 14:13:51,474 Couldn't get sensor data  :
+2024-03-03 14:13:51,492 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709475173.657,"34"],[1709475183.657,"34"],[1709475193.657,"34"],[1709475203.657,"34"],[1709475213.657,"34"],[1709475223.657,"34"]]}]}}  :
+2024-03-03 14:13:51,493 2024-03-03 14:12:53  :
+2024-03-03 14:13:51,494 Moisture:34  :
+2024-03-03 14:13:51,494 Running pump for 150 seconds  :
+2024-03-03 14:18:01,673 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 14:18:01,674 Couldn't get sensor data  :
+2024-03-03 14:18:01,691 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709475423.657,"34"],[1709475433.657,"34"],[1709475443.657,"34"],[1709475453.657,"34"],[1709475463.657,"34"],[1709475473.657,"34"]]}]}}  :
+2024-03-03 14:18:01,693 2024-03-03 14:17:03  :
+2024-03-03 14:18:01,693 Moisture:34  :
+2024-03-03 14:18:01,694 Running pump for 150 seconds  :
+2024-03-03 14:22:11,984 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 14:22:11,985 Couldn't get sensor data  :
+2024-03-03 14:22:12,003 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709475673.657,"35"],[1709475683.657,"35"],[1709475693.657,"35"],[1709475703.657,"35"],[1709475713.657,"37"],[1709475723.657,"37"]]}]}}  :
+2024-03-03 14:22:12,004 2024-03-03 14:21:13  :
+2024-03-03 14:22:12,004 Moisture:35  :
+2024-03-03 14:22:12,005 Running pump for 150 seconds  :
+2024-03-03 14:26:22,244 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 14:26:22,245 Couldn't get sensor data  :
+2024-03-03 14:26:22,263 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709475923.657,"37"],[1709475933.657,"37"],[1709475943.657,"40"],[1709475953.657,"40"],[1709475963.657,"40"],[1709475973.657,"40"]]}]}}  :
+2024-03-03 14:26:22,264 2024-03-03 14:25:23  :
+2024-03-03 14:26:22,265 Moisture:37  :
+2024-03-03 14:26:22,265 Running pump for 150 seconds  :
+2024-03-03 14:30:32,420 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 14:30:32,421 Couldn't get sensor data  :
+2024-03-03 14:30:32,439 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709476173.657,"40"],[1709476183.657,"40"],[1709476193.657,"40"],[1709476203.657,"40"],[1709476213.657,"40"],[1709476223.657,"40"]]}]}}  :
+2024-03-03 14:30:32,440 2024-03-03 14:29:33  :
+2024-03-03 14:30:32,441 Moisture:40  :
+2024-03-03 14:30:32,441 Running pump for 150 seconds  :
+2024-03-03 18:26:10,069 ******** Plantomio_control started  :
+2024-03-03 18:26:10,334 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 18:26:10,335 Couldn't get sensor data  :
+2024-03-03 18:26:10,353 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709490313.657,"41"],[1709490323.657,"41"],[1709490333.657,"41"],[1709490343.657,"41"],[1709490353.657,"41"],[1709490363.657,"41"]]}]}}  :
+2024-03-03 18:26:10,354 2024-03-03 18:25:13  :
+2024-03-03 18:26:10,354 Moisture:41  :
+2024-03-03 18:26:10,355 Running pump for 150 seconds  :
+2024-03-03 18:30:24,468 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 18:30:24,469 Couldn't get sensor data  :
+2024-03-03 18:30:24,486 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709490573.657,"41"],[1709490583.657,"41"]]}]}}  :
+2024-03-03 18:30:24,487 2024-03-03 18:29:33  :
+2024-03-03 18:30:24,488 Moisture:41  :
+2024-03-03 18:30:24,489 Running pump for 150 seconds  :
+2024-03-03 18:34:34,649 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 18:34:34,650 Couldn't get sensor data  :
+2024-03-03 18:34:34,667 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709490823.657,"44"],[1709490833.657,"44"],[1709490843.657,"44"],[1709490853.657,"44"],[1709490863.657,"44"],[1709490873.657,"44"]]}]}}  :
+2024-03-03 18:34:34,668 2024-03-03 18:33:43  :
+2024-03-03 18:34:34,669 Moisture:44  :
+2024-03-03 18:34:34,669 Running pump for 150 seconds  :
+2024-03-03 18:38:44,859 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 18:38:44,860 Couldn't get sensor data  :
+2024-03-03 18:38:44,877 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709491073.657,"48"],[1709491083.657,"48"],[1709491093.657,"48"],[1709491103.657,"48"],[1709491113.657,"48"],[1709491123.657,"48"]]}]}}  :
+2024-03-03 18:38:44,878 2024-03-03 18:37:53  :
+2024-03-03 18:38:44,879 Moisture:48  :
+2024-03-03 18:38:44,879 Running pump for 150 seconds  :
+2024-03-03 18:42:55,032 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 18:42:55,033 Couldn't get sensor data  :
+2024-03-03 18:42:55,051 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709491323.657,"48"],[1709491333.657,"48"],[1709491343.657,"48"],[1709491353.657,"48"]]}]}}  :
+2024-03-03 18:42:55,052 2024-03-03 18:42:03  :
+2024-03-03 18:42:55,053 Moisture:48  :
+2024-03-03 18:42:55,053 Running pump for 150 seconds  :
+2024-03-03 18:47:05,289 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 18:47:05,289 Couldn't get sensor data  :
+2024-03-03 18:47:05,307 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709491573.657,"56"],[1709491583.657,"56"],[1709491593.657,"56"],[1709491603.657,"56"],[1709491613.657,"56"],[1709491623.657,"56"]]}]}}  :
+2024-03-03 18:47:05,308 2024-03-03 18:46:13  :
+2024-03-03 18:47:05,309 Moisture:56  :
+2024-03-03 18:47:05,309 Running pump for 150 seconds  :
+2024-03-03 18:51:15,569 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 18:51:15,570 Couldn't get sensor data  :
+2024-03-03 18:51:15,588 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709491823.657,"56"],[1709491833.657,"56"],[1709491843.657,"56"],[1709491853.657,"56"],[1709491863.657,"56"],[1709491873.657,"56"]]}]}}  :
+2024-03-03 18:51:15,589 2024-03-03 18:50:23  :
+2024-03-03 18:51:15,589 Moisture:56  :
+2024-03-03 18:51:15,590 Running pump for 150 seconds  :
+2024-03-03 18:55:25,746 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 18:55:25,747 Couldn't get sensor data  :
+2024-03-03 18:55:25,765 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709492073.657,"60"],[1709492083.657,"60"],[1709492093.657,"60"],[1709492103.657,"60"],[1709492113.657,"60"],[1709492123.657,"60"]]}]}}  :
+2024-03-03 18:55:25,766 2024-03-03 18:54:33  :
+2024-03-03 18:55:25,766 Moisture:60  :
+2024-03-03 18:55:25,767 Running pump for 150 seconds  :
+2024-03-03 18:59:35,978 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-03 18:59:35,979 Couldn't get sensor data  :
+2024-03-03 18:59:35,997 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709492323.657,"61"],[1709492333.657,"61"],[1709492343.657,"61"],[1709492353.657,"61"],[1709492363.657,"61"],[1709492373.657,"61"]]}]}}  :
+2024-03-03 18:59:35,998 2024-03-03 18:58:43  :
+2024-03-03 18:59:35,999 Moisture:61  :
+2024-03-04 13:09:00,450 ******** Plantomio_control started  :
+2024-03-04 13:09:00,818 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:09:00,819 Couldn't get sensor data  :
+2024-03-04 13:09:00,837 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709557683.657,"41"],[1709557693.657,"41"],[1709557703.657,"41"],[1709557713.657,"41"],[1709557723.657,"41"],[1709557733.657,"41"]]}]}}  :
+2024-03-04 13:09:00,838 2024-03-04 13:08:03  :
+2024-03-04 13:09:00,838 Moisture:41  :
+2024-03-04 13:09:00,839 Running pump for 150 seconds  :
+2024-03-04 13:13:10,998 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:13:11,000 Couldn't get sensor data  :
+2024-03-04 13:13:11,018 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709557933.657,"41"],[1709557943.657,"41"],[1709557953.657,"41"],[1709557963.657,"41"],[1709557973.657,"41"],[1709557983.657,"41"]]}]}}  :
+2024-03-04 13:13:11,019 2024-03-04 13:12:13  :
+2024-03-04 13:13:11,019 Moisture:41  :
+2024-03-04 13:13:11,020 Running pump for 150 seconds  :
+2024-03-04 13:17:21,224 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:17:21,225 Couldn't get sensor data  :
+2024-03-04 13:17:21,243 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709558183.657,"41"]]}]}}  :
+2024-03-04 13:17:21,244 2024-03-04 13:16:23  :
+2024-03-04 13:17:21,245 Moisture:41  :
+2024-03-04 13:17:21,245 Running pump for 150 seconds  :
+2024-03-04 13:21:31,431 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:21:31,432 Couldn't get sensor data  :
+2024-03-04 13:21:31,450 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709558433.657,"45"],[1709558443.657,"45"],[1709558453.657,"45"],[1709558463.657,"45"],[1709558473.657,"45"],[1709558483.657,"45"]]}]}}  :
+2024-03-04 13:21:31,451 2024-03-04 13:20:33  :
+2024-03-04 13:21:31,452 Moisture:45  :
+2024-03-04 13:21:31,452 Running pump for 150 seconds  :
+2024-03-04 13:25:41,628 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:25:41,629 Couldn't get sensor data  :
+2024-03-04 13:25:41,646 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709558683.657,"50"],[1709558693.657,"50"],[1709558703.657,"50"],[1709558713.657,"50"],[1709558723.657,"50"],[1709558733.657,"50"]]}]}}  :
+2024-03-04 13:25:41,648 2024-03-04 13:24:43  :
+2024-03-04 13:25:41,648 Moisture:50  :
+2024-03-04 13:25:41,649 Running pump for 150 seconds  :
+2024-03-04 13:29:51,900 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:29:51,901 Couldn't get sensor data  :
+2024-03-04 13:29:51,919 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709558933.657,"53"],[1709558943.657,"53"],[1709558953.657,"53"],[1709558963.657,"53"],[1709558973.657,"53"],[1709558983.657,"53"]]}]}}  :
+2024-03-04 13:29:51,920 2024-03-04 13:28:53  :
+2024-03-04 13:29:51,920 Moisture:53  :
+2024-03-04 13:29:51,921 Running pump for 150 seconds  :
+2024-03-04 13:34:02,196 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:34:02,197 Couldn't get sensor data  :
+2024-03-04 13:34:02,214 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709559183.657,"55"],[1709559193.657,"55"],[1709559203.657,"55"],[1709559213.657,"56"],[1709559223.657,"56"],[1709559233.657,"56"]]}]}}  :
+2024-03-04 13:34:02,215 2024-03-04 13:33:03  :
+2024-03-04 13:34:02,216 Moisture:55  :
+2024-03-04 13:34:02,217 Running pump for 150 seconds  :
+2024-03-04 13:38:12,424 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:38:12,425 Couldn't get sensor data  :
+2024-03-04 13:38:12,443 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709559433.657,"56"],[1709559443.657,"56"],[1709559453.657,"56"],[1709559463.657,"56"],[1709559473.657,"56"],[1709559483.657,"58"]]}]}}  :
+2024-03-04 13:38:12,444 2024-03-04 13:37:13  :
+2024-03-04 13:38:12,445 Moisture:56  :
+2024-03-04 13:38:12,445 Running pump for 150 seconds  :
+2024-03-04 13:42:22,728 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:42:22,729 Couldn't get sensor data  :
+2024-03-04 13:42:22,747 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709559683.657,"58"],[1709559693.657,"58"],[1709559703.657,"58"],[1709559713.657,"58"],[1709559723.657,"58"],[1709559733.657,"58"]]}]}}  :
+2024-03-04 13:42:22,748 2024-03-04 13:41:23  :
+2024-03-04 13:42:22,749 Moisture:58  :
+2024-03-04 13:42:22,749 Running pump for 150 seconds  :
+2024-03-04 13:46:33,112 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:46:33,113 Couldn't get sensor data  :
+2024-03-04 13:46:33,130 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709559933.657,"58"],[1709559943.657,"58"],[1709559953.657,"58"],[1709559963.657,"60"],[1709559973.657,"60"],[1709559983.657,"60"]]}]}}  :
+2024-03-04 13:46:33,131 2024-03-04 13:45:33  :
+2024-03-04 13:46:33,132 Moisture:58  :
+2024-03-04 13:46:33,132 Running pump for 150 seconds  :
+2024-03-04 13:50:43,302 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:50:43,303 Couldn't get sensor data  :
+2024-03-04 13:50:43,321 {"status":"success","data":{"resultType":"matrix","result":[{"metric":{"__name__":"flowercare_moisture_percent","instance":"localhost:9294","job":"node_flowercare","macaddress":"5c:85:7e:b0:c2:dd"},"values":[[1709560183.657,"59"],[1709560193.657,"59"],[1709560203.657,"59"],[1709560213.657,"59"],[1709560223.657,"59"],[1709560233.657,"59"]]}]}}  :
+2024-03-04 13:50:43,322 2024-03-04 13:49:43  :
+2024-03-04 13:50:43,322 Moisture:59  :
+2024-03-04 13:50:43,323 Running pump for 150 seconds  :
+2024-03-04 13:54:53,499 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:54:53,500 Couldn't get sensor data  :
+2024-03-04 13:54:53,518 {"status":"success","data":{"resultType":"matrix","result":[]}}  :
+2024-03-04 13:54:53,518 Couldn't get sensor data  :
+2024-03-04 13:54:53,519 Reached max. pumping cycle but still not enough  :

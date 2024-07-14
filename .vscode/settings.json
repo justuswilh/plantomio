@@ -1,0 +1,5 @@
+{
+    "github.copilot.chat.localeOverride": "de",
+    "github.copilot.chat.scopeSelection": true,
+    "github.copilot.editor.enableCodeActions": true
+}

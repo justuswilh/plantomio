@@ -1,0 +1,6 @@
+docker run \
+    -p 9090:9090 \
+    --restart no \
+    --volume "$(pwd)"/prometheus-config/prometheus.yml:/etc/prometheus/prometheus.yml \
+    --network host \
+    prom/prometheus

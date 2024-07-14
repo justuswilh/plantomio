@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Plantomio Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        #nav {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            padding: 10px 0;
+        }
+        #nav > div {
+            position: relative;
+        }
+        #nav ul {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            background-color: black;
+            padding: 10px;
+            list-style-type: none;
+            transition: opacity 0.5s linear, visibility 0s 0.5s;
+        }
+
+        #nav div:hover ul {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.5s linear, visibility 0s 0s;
+        }
+        #nav button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #nav button:hover {
+            background-color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #csvTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            table-layout: auto;
+        }
+        #csvTable th, #csvTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        #csvTable th {
+            background-color: #f2f2f2;
+        }
+        #csvTable td input {
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            background-color: transparent;
+            padding: 5px;
+        }
+        #csvTable td input:focus {
+            outline: none;
+            background-color: #e8f0fe;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #entryForm {
+            margin: 20px 0;
+            text-align: center;
+        }
+        #entryForm input, #entryForm select {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Plantomio Solutions</h1>
+        <div id="nav">
+            <button>Meine Pflanzen</button>
+            <div>
+                <button>Pflanzplan</button>
+                <ul>
+                    <li><button onclick="loadCsv('biodata_source.csv')">Cannabisplan 1</button></li>
+                    <li><button onclick="loadCsv('biodata_source.csv')">Eigener Plan 1</button></li>
+                </ul>
+            </div>
+            <button onclick="loadCsv('devicelist_source.csv')">Geräte</button>
+            <button onclick="loadCsv('plantlog_source.csv')">Protokoll</button>
+        </div>
+    </div>
+    <button onclick="saveCsv()">Speichern</button>
+    <table id="csvTable"></table>
+    
+    <div id="entryForm">
+        <input type="date" id="entryDate" value="">
+        <select id="entryType">
+            <option value="start_seedling">start_seedling</option>
+            <option value="start_grow">start_grow</option>
+            <option value="start_bloom">start_bloom</option>
+            <option value="notice">notice</option>
+            <option value="low_stress_training">low_stress_training</option>
+            <option value="high_stress_training">high_stress_training</option>
+            <option value="repotting">repotting</option>
+            <option value="flush">flush</option>
+            <option value="harvest">harvest</option>
+        </select>
+        <input type="text" id="entryText" placeholder="Eintrag">
+        <button onclick="addEntry()">Übernehmen</button>
+    </div>
+
+    <script>
+        let csvData = [];
+        let currentFileName = '';
+
+        window.onload = function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('entryDate').value = today;
+            loadCsv('biodata_source.csv');
+        };
+
+        function loadCsv(fileName) {
+            currentFileName = fileName;
+            fetch(`http://127.0.0.1:5001/load-csv?file=${fileName}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('Fehler:', data.error);
+                } else {
+                    csvData = data.csv.split('\n').map(row => row.split(';'));
+                    displayCsv(csvData);
+                }
+                // Eingabeformular nur anzeigen, wenn die Datei plantlog_source.csv geladen ist
+                document.getElementById('entryForm').style.display = fileName === 'plantlog_source.csv' ? 'block' : 'none';
+            })
+            .catch((error) => {
+                console.error('Fehler beim Laden der CSV-Datei:', error);
+            });
+        }
+
+        function displayCsv(data) {
+            const table = document.getElementById('csvTable');
+            table.innerHTML = '';
+            data.forEach((row, rowIndex) => {
+                const tr = document.createElement('tr');
+                row.forEach((cell, cellIndex) => {
+                    const td = document.createElement('td');
+                    const input = document.createElement('input');
+                    input.value = cell;
+                    input.onchange = function() {
+                        csvData[rowIndex][cellIndex] = input.value;
+                    };
+                    td.appendChild(input);
+                    tr.appendChild(td);
+                });
+                table.appendChild(tr);
+            });
+        }
+
+        function saveCsv() {
+            const csvContent = csvData.map(row => row.join(';')).join('\n');
+            fetch('http://127.0.0.1:5001/save-csv', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ csv: csvContent, file: currentFileName })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            })
+            .catch((error) => {
+                console.error('Fehler beim Speichern der CSV-Datei:', error);
+            });
+        }
+
+        function addEntry() {
+            const date = document.getElementById('entryDate').value;
+            const type = document.getElementById('entryType').value;
+            const text = document.getElementById('entryText').value;
+
+            csvData.push([date, type, text]);
+            displayCsv(csvData);
+
+            // Eingabefelder zurücksetzen
+            document.getElementById('entryDate').value = new Date().toISOString().split('T')[0];
+            document.getElementById('entryType').value = 'start_grow';
+            document.getElementById('entryText').value = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/olimex/change.py", line 54, in <module>
+    data['plant_config'][0]['current_phase'] = str(row[current_phase_index])
+TypeError: 'NoneType' object is not subscriptable
