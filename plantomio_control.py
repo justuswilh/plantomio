@@ -103,11 +103,9 @@ def loadDevices():
                 'address': row[adress_index],
                 'group': row[group_index]   
             }
-    #print(plant_monitors)            
+    print(plant_monitors)            
     return plant_monitors, pump_plugs, light_plugs
     
-    print(plant_monitors)
-    #print(light_plugs['light_plug_1']['address'])
 
 # 3. organise devices
 def groupDevices(devices):
