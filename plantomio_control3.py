@@ -80,7 +80,7 @@ def loadDevices():
         if row[role_index] == 'plant_monitor':
             device_count = len(plant_monitors) + 1
             plant_monitors[f'plant_monitor_{device_count}'] = {
-                'device_id': 'plantmonitor_g' + row[group_index] + '_d' + str(device_count),
+                'device_id': 'plantmonitor_' + str(device_count) + '_g' + row[group_index] ,
                 'name': row[name_index],
                 'address': row[adress_index],
                 'group': row[group_index]
@@ -89,7 +89,7 @@ def loadDevices():
         if row[role_index] == 'pump_plug':
             device_count = len(pump_plugs) + 1
             pump_plugs[f'pump_plug_{device_count}'] = {
-                'device_id': 'pump_plug_g' + row[group_index] + '_d' + str(device_count),  
+                'device_id': 'pump_plug_' + str(device_count) + '_g' + row[group_index] ,
                 'name': row[name_index],
                 'address': row[adress_index],
                 'group': row[group_index]
@@ -98,7 +98,7 @@ def loadDevices():
         if row[role_index] == 'light_plug':
             device_count = len(light_plugs) + 1
             light_plugs[f'light_plug_{device_count}'] = {
-                'device_id': 'light_plug_g' + row[group_index] + '_d' + str(device_count),
+                'device_id': 'light_plug_' + str(device_count) + '_g' + row[group_index] ,
                 'name': row[name_index],
                 'address': row[adress_index],
                 'group': row[group_index]   
@@ -117,7 +117,7 @@ def groupDevices(devices):
         if device_group_value not in device_group:
             device_group[device_group_value] = []
         device_group[device_group_value].append(device_info)
-    print(device_group)
+#    print(device_group)
     return device_group
 
 def organiseDevices():
@@ -195,36 +195,39 @@ def configLight_supply():
 configLight_supply()
 
 def getMoisture(device):
-    try:
-        querystring="http://" + (configdata['system_config']['prometheus_ip']) +':9090/api/v1/query?query=flowercare_moisture_percent{macaddress="'+ str(device['address']) + '"}[60s]'
-        #print(querystring)
+    sensor_moisture=10
+    return(sensor_moisture)
+    #print(device)
+#    try:
+        # querystring="http://" + (configdata['system_config']['prometheus_ip']) +':9090/api/v1/query?query=flowercare_moisture_percent{macaddress="'+ str(device['address']) + '"}[60s]'
+        # #print(querystring)
 
-        r = requests.get(querystring)
-        #print(r.text)
+        # r = requests.get(querystring)
+        # #print(r.text)
 
-        if ((r.status_code>=200) & (r.status_code<230)):           
-            logging.info(r.text)
-            try:
-                results=r.json()['data']['result']
-            except ValueError:  # includes simplejson.decoder.JSONDecodeError
-                logging.error("Error decoding JSON response from database")    
-                results=''   
-            if (len(results)>0):
-                try:
-                    vals=r.json()['data']['result'][0]['values']
-                    logging.info(datetime.datetime.fromtimestamp(int(vals[0][0])).strftime('%Y-%m-%d %H:%M:%S'))
-                    sensor_moisture=int(vals[0][1])
-                    return(sensor_moisture)
+        # if ((r.status_code>=200) & (r.status_code<230)):           
+        #     logging.info(r.text)
+        #     try:
+        #         results=r.json()['data']['result']
+        #     except ValueError:  # includes simplejson.decoder.JSONDecodeError
+        #         logging.error("Error decoding JSON response from database")    
+        #         results=''   
+        #     if (len(results)>0):
+        #         try:
+        #             vals=r.json()['data']['result'][0]['values']
+        #             logging.info(datetime.datetime.fromtimestamp(int(vals[0][0])).strftime('%Y-%m-%d %H:%M:%S'))
+        #             sensor_moisture=int(vals[0][1])
+        #             return(sensor_moisture)
                 
-                except Exception as e:
-                    logging.error("Fehler beim Verarbeiten der Ergebnisse: ", e)
-    except requests.exceptions.RequestException as err:
-        logging.error("Fehler bei der Anfrage: ", err)
+        #         except Exception as e:
+        #             logging.error("Fehler beim Verarbeiten der Ergebnisse: ", e)
+#    except requests.exceptions.RequestException as err:
+      #  logging.error("Fehler bei der Anfrage: ", err)
 
 
 # 4.2. config pump supply
 def checkMoisture():
-    group_moistures=[]
+    group_moistures={}
     group_moisture_gaps=[]
     sensorCount=0
     moistureDefizit=0
@@ -237,42 +240,45 @@ def checkMoisture():
     for group in plant_monitor_group.values():
         for device in group:
             group = device['group']
-            devive_key = device['']
+            pump_adress = pump_plug_group[group][0]['address']
+            print (pump_adress)
+            device_id = device['device_id']
             sensor_moisture = getMoisture(device)
-            print(sensor_moisture)
+#            print(device_id, ': ', sensor_moisture)
             sensorCount+=1
-            print(sensorCount)
             if (sensor_moisture is None):
                 logging.error("Couldn't get sensor data")
             else:
                 logging.info("Moisture:"+str(sensor_moisture))
-                print("Moisture:"+str(sensor_moisture))
-                group_moistures.append(sensor_moisture)
+#                print("Moisture:"+str(sensor_moisture))
+                group_moistures[device_id] = sensor_moisture
                 group_moisture_gaps.append(sensor_moisture-targetMoisture)
-            print(group_moistures)
-            print(group_moisture_gaps)
-    # check values
-    if (sensorCount == 0):
-        print("No sensor data available")
-        logging.error("No sensor data available")
-        sys.exit()
-    
-    if (sensorCount > 0):
-        for value in group_moistures:
-            pump_adress= pump_plug_group[group]['address']
-            print(pump_adress)
+#            print(group_moistures)
+#            print(group_moisture_gaps)
+        # check values
+        if sensorCount == 0:
+            print("No sensor data available")
+            logging.error("No sensor data available")
+            sys.exit()
+        
+        if sensorCount > 0:
+            print (group_moistures)
+            for device, value in group_moistures.items():
+                print(device, value)
+                if (value<(dry_soil_border)):
+                    irrigationProgram=4
+                if (value<(targetMoisture + targetHysteresisBot)):    
+                    moistureDefizit+=1
+            if (moistureDefizit >= sensorCount/2) and irrigationProgram < 1:
+                    irrigationProgram=1
 
-            if (value<(dry_soil_border)):
-                irrigationProgram+=1
-                subprocess.Popen(["python", "runPump.py", str(irrigationProgram), str(pump_adress)])
-            if (value<( targetMoisture + targetHysteresisBot)):    
-                moistureDefizit=1
-        if (moistureDefizit >= sensorCount/2):
-                irrigationProgram=3
-                subprocess.Popen(["python", "runPump.py", str(irrigationProgram), str(pump_adress)])
-        if (moistureDefizit < sensorCount/2):
+        if irrigationProgram == 0:
             print("Moisture OK")
             logging.info("Moisture OK")
             sys.exit()
 
-    checkMoisture()
+        if irrigationProgram > 0:
+            subprocess.Popen(["python3", "run_pump.py", str(irrigationProgram), str(pump_adress), str(plant_monitor_group[group])])
+        
+
+checkMoisture()
