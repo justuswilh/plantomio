@@ -80,6 +80,7 @@ def loadDevices():
         if row[role_index] == 'plant_monitor':
             device_count = len(plant_monitors) + 1
             plant_monitors[f'plant_monitor_{device_count}'] = {
+                'device_id': 'plantmonitor_g' + row[group_index] + '_d' + str(device_count),
                 'name': row[name_index],
                 'address': row[adress_index],
                 'group': row[group_index]
@@ -88,6 +89,7 @@ def loadDevices():
         if row[role_index] == 'pump_plug':
             device_count = len(pump_plugs) + 1
             pump_plugs[f'pump_plug_{device_count}'] = {
+                'device_id': 'pump_plug_g' + row[group_index] + '_d' + str(device_count),  
                 'name': row[name_index],
                 'address': row[adress_index],
                 'group': row[group_index]
@@ -96,43 +98,46 @@ def loadDevices():
         if row[role_index] == 'light_plug':
             device_count = len(light_plugs) + 1
             light_plugs[f'light_plug_{device_count}'] = {
+                'device_id': 'light_plug_g' + row[group_index] + '_d' + str(device_count),
                 'name': row[name_index],
                 'address': row[adress_index],
                 'group': row[group_index]   
             }
-                    
+    #print(plant_monitors)            
     return plant_monitors, pump_plugs, light_plugs
-    #print(plant_monitors)
+    
+    print(plant_monitors)
     #print(light_plugs['light_plug_1']['address'])
 
 # 3. organise devices
-def group_devices(devices):
+def groupDevices(devices):
     device_group = {}
-    for device_key, device_value in devices.items():
-        device_group_value = device_value['group']
+    for info_type, device_info in devices.items():
+        device_group_value = device_info['group']
         if device_group_value not in device_group:
             device_group[device_group_value] = []
-        device_group[device_group_value].append(device_value)
+        device_group[device_group_value].append(device_info)
+    print(device_group)
     return device_group
 
 def organiseDevices():
     plant_monitors, pump_plugs, light_plugs = loadDevices()
-    plant_monitor_group = group_devices(plant_monitors)
-    pump_plug_group = group_devices(pump_plugs)
-    light_plug_group = group_devices(light_plugs)
+    plant_monitor_group = groupDevices(plant_monitors)
+    pump_plug_group = groupDevices(pump_plugs)
+    light_plug_group = groupDevices(light_plugs)
     return plant_monitor_group, pump_plug_group, light_plug_group
 
 plant_monitor_group, pump_plug_group, light_plug_group = organiseDevices()
 
-def device_group_adresses(device_group):
-    addresses = []
-    for device in device_group:
-        device_address = device['address']
-        device_group = device['group']
-        addresses.append(f"{device_address}")
-    return device_group + ':{' + ','.join(addresses) + '}'
+#def device_group_adresses(device_group):
+#    addresses = []
+#    for device in device_group:
+#        device_address = device['address']
+#        device_group = device['group']
+#        addresses.append(f"{device_address}")
+#    return device_group + ':{' + ','.join(addresses) + '}'
 
-print (device_group_adresses(plant_monitor_group['1']))
+#print (device_group_adresses(plant_monitor_group['1']))
 
 #print(light_plug_group)
 
@@ -209,9 +214,7 @@ def getMoisture(device):
                     vals=r.json()['data']['result'][0]['values']
                     logging.info(datetime.datetime.fromtimestamp(int(vals[0][0])).strftime('%Y-%m-%d %H:%M:%S'))
                     sensor_moisture=int(vals[0][1])
-                    group = device['group']
-                    print(sensor_moisture, device['address'])
-                    return(sensor_moisture, group)
+                    return(sensor_moisture)
                 
                 except Exception as e:
                     logging.error("Fehler beim Verarbeiten der Ergebnisse: ", e)
@@ -233,7 +236,9 @@ def checkMoisture():
     # get values
     for group in plant_monitor_group.values():
         for device in group:
-            sensor_moisture, group = getMoisture(device)
+            group = device['group']
+            devive_key = device['']
+            sensor_moisture = getMoisture(device)
             print(sensor_moisture)
             sensorCount+=1
             print(sensorCount)
