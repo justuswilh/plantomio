@@ -40,6 +40,7 @@
         "moisture_measure_interval_minutes": "60",
         "moisture_measure_after_pump_minutes": "1",
         "prometheus_ip": "localhost",
+        
         "control_device": "Olimex ",
         "control_device_adress": "192.168.188.150",
         "messurement_device.1": "flowercare_1",

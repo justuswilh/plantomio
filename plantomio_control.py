@@ -30,7 +30,7 @@ def checkConfig():
         local_time = time.ctime(modification_time)
         logging.info("config file last modification time (local time):", time.ctime(modification_time))
     except OSError:
-        logging.error("Path '%s' for the config file does not exists or is inaccessible" %path)
+        logging.error("Path '%s' for the config file does not exists or is inaccessible")
         sys.exit()
     if (modification_time!=configfile_modification_time):
         configfile_modification_time=modification_time

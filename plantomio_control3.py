@@ -15,6 +15,8 @@ import urllib.parse
 import logging
 import sys
 import sqlite3
+import subprocess
+
 
 config_filename='config.json'
 config_logfile='plantomio_start.log'
@@ -122,13 +124,15 @@ def organiseDevices():
 
 plant_monitor_group, pump_plug_group, light_plug_group = organiseDevices()
 
-def device_group_adresses(devices):
+def device_group_adresses(device_group):
     addresses = []
-    for device in devices:
+    for device in device_group:
         device_address = device['address']
-        addresses.append(device_address)
-    return addresses
-    #print(device_group_adresses(pump_plug_group['1']))
+        device_group = device['group']
+        addresses.append(f"{device_address}")
+    return device_group + ':{' + ','.join(addresses) + '}'
+
+print (device_group_adresses(plant_monitor_group['1']))
 
 #print(light_plug_group)
 
@@ -205,50 +209,15 @@ def getMoisture(device):
                     vals=r.json()['data']['result'][0]['values']
                     logging.info(datetime.datetime.fromtimestamp(int(vals[0][0])).strftime('%Y-%m-%d %H:%M:%S'))
                     sensor_moisture=int(vals[0][1])
+                    group = device['group']
                     print(sensor_moisture, device['address'])
-                    return(sensor_moisture)
+                    return(sensor_moisture, group)
                 
                 except Exception as e:
                     logging.error("Fehler beim Verarbeiten der Ergebnisse: ", e)
     except requests.exceptions.RequestException as err:
         logging.error("Fehler bei der Anfrage: ", err)
 
-def runPump(irrigationProgram,pump_adress):
-    pumping_required = True
-    maxPumpingCycle= 7
-    pumpCycleDelay= 250  
-    pump_duration= 100      
-    dry_soil_border=int (35)
-    wet_soil_border=int (40)
-    flooded_soil_border=int (55)
-    targetHysteresisTop= 10  
-    global pumpingCycle
-    print (pumpingCycle)
-
-    run20s="cm?cmnd=Backlog%20Power%20On%3BDelay%20200%3BPower%20Off%3b"
-    runpump1="cm?cmnd=Backlog%20Power%20On%3BDelay%20"
-    runpump2="%3BPower%20Off%3b"
-
-
-    if pumping_required & pumpingCycle < maxPumpingCycle:
-        pumpingCycle+=1                                
-        print("Pumping cycle: "+str(pumpingCycle))
-        if irrigationProgram == 1 or 3:
-            print("Pumping cycle: "+str(pumpingCycle))
-            logging.info("Running pump for "+str(pump_duration)+" seconds")
-            # Tasmota delay is in units of 0.1 seconds for a value between 2..3600
-            if (pump_duration<3600): 
-                pump_duration_tasmota=pump_duration*10
-            else:
-                pump_duration_tasmota=3600*10
-                logging.error("Pump duration out of range; truncated to 3600")
-            pump_cmd_string=runpump1+str(pump_duration_tasmota)+runpump2
-            print("running pump using Plug "+('192.168.188.151'))
-            pumpstring="http://"+('192.168.188.151')+'/'+pump_cmd_string
-            r1=requests.get(pumpstring)
-            print("wait pumpCycleDelay:"+str(pumpCycleDelay))
-            time.sleep(pumpCycleDelay)
-            checkMoisture()
 
 # 4.2. config pump supply
 def checkMoisture():
@@ -256,7 +225,6 @@ def checkMoisture():
     group_moisture_gaps=[]
     sensorCount=0
     moistureDefizit=0
-    pump_adress= ('192.168.188.151')   
     targetMoisture= 50
     targetHysteresisBot= -10   
     dry_soil_border= int (35)
@@ -265,7 +233,7 @@ def checkMoisture():
     # get values
     for group in plant_monitor_group.values():
         for device in group:
-            sensor_moisture = getMoisture(device)
+            sensor_moisture, group = getMoisture(device)
             print(sensor_moisture)
             sensorCount+=1
             print(sensorCount)
@@ -286,18 +254,20 @@ def checkMoisture():
     
     if (sensorCount > 0):
         for value in group_moistures:
+            pump_adress= pump_plug_group[group]['address']
+            print(pump_adress)
+
             if (value<(dry_soil_border)):
                 irrigationProgram+=1
-                runPump(irrigationProgram,pump_adress)
+                subprocess.Popen(["python", "runPump.py", str(irrigationProgram), str(pump_adress)])
             if (value<( targetMoisture + targetHysteresisBot)):    
                 moistureDefizit=1
         if (moistureDefizit >= sensorCount/2):
                 irrigationProgram=3
-                runPump(irrigationProgram,pump_adress)
+                subprocess.Popen(["python", "runPump.py", str(irrigationProgram), str(pump_adress)])
         if (moistureDefizit < sensorCount/2):
             print("Moisture OK")
             logging.info("Moisture OK")
             sys.exit()
-   
-checkMoisture()
 
+    checkMoisture()
