@@ -238,10 +238,14 @@ def checkMoisture():
            
     # get values
     for group in plant_monitor_group.values():
+        pump_adress = 'not found'
         for device in group:
             group = device['group']
-            pump_adress = pump_plug_group[group][0]['address']
-            print (pump_adress)
+            if group in pump_plug_group:
+                pump_adress = pump_plug_group[group][0]['address']
+                #print  (pump_adress)
+            else:
+                print(f"Group {group} not found in pump_plug_group")            
             device_id = device['device_id']
             sensor_moisture = getMoisture(device)
 #            print(device_id, ': ', sensor_moisture)
@@ -262,9 +266,9 @@ def checkMoisture():
             sys.exit()
         
         if sensorCount > 0:
-            print (group_moistures)
+            #print (group_moistures)
             for device, value in group_moistures.items():
-                print(device, value)
+                #print(device, value)
                 if (value<(dry_soil_border)):
                     irrigationProgram=4
                 if (value<(targetMoisture + targetHysteresisBot)):    
