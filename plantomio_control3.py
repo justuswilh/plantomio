@@ -74,11 +74,15 @@ def get_latest_start_grow_date(csv_file):
 
 # Jüngstes "start_grow"-Datum aus der plantlog_source.csv-Datei ermitteln
 start_date = get_latest_start_grow_date('plantlog_source.csv')
-
+today = datetime.date.today()
+delta = today - start_date
+current_week = delta.days // 7
+current_week_day = delta.days % 7
+plant_plan_table = 'cannabis1'
 
 def loadBiadata():
-    plant_plan_table = 'cannabis1'
-    current_week = 4
+    global current_week
+    global plant_plan_table
     try:
         conn = sqlite3.connect('biodata.db')
         cursor = conn.cursor()
@@ -110,9 +114,27 @@ def loadBiadata():
         cursor.execute(f'SELECT * FROM {plant_plan_table} WHERE week = ?', (current_week,))
         row = cursor.fetchone()
         print(row)
+        phase = row[phase_index]
         target_moisture = int(row[target_moisture_index])
+        target_moisture_hysteresis_top = int(row[target_moisture_hysteresis_top_index])
+        target_moisture_hysteresis_bot = int(row[target_moisture_hysteresis_bot_index])
+        target_brightness = int(row[target_brightness_index])
+        light_hours = int(row[light_hours_index])
+        target_ec = int(row[target_ec_index])
+        target_ec_hysteresis = int(row[target_ec_hysteresis_index])
+        target_ph = int(row[target_ph_index])
+        target_ph_hysteresis = int(row[target_ph_hysteresis_index])
+        target_temperature = int(row[target_temperature_index])
+        target_temperature_hysteresis = int(row[target_temperature_hysteresis_index])
+        target_humidity = int(row[target_humidity_index])
+        target_humidity_hysteresis_top = int(row[target_humidity_hysteresis_top_index])
+        target_humidity_hysteresis_bot = int(row[target_humidity_hysteresis_bot_index])
+        to_do = row[to_do_index]
+        return phase, target_moisture, target_moisture_hysteresis_top, target_moisture_hysteresis_bot, target_brightness, light_hours, target_ec, target_ec_hysteresis, target_ph, target_ph_hysteresis, target_temperature, target_temperature_hysteresis, target_humidity, target_humidity_hysteresis_top, target_humidity_hysteresis_bot, to_do
 
     except: logging.error("Config file '%s' could not be loaded" %config_filename)
+
+#phase, target_moisture, target_moisture_hysteresis_top, target_moisture_hysteresis_bot, target_brightness, light_hours, target_ec, target_ec_hysteresis, target_ph, target_ph_hysteresis, target_temperature, target_temperature_hysteresis, target_humidity, target_humidity_hysteresis_top, target_humidity_hysteresis_bot, to_do = loadBiadata()
 
 # 2. load devices
 def loadDevices():
