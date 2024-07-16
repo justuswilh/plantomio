@@ -43,16 +43,78 @@ def checkChanges():
     
 # 1. load system configurations    
 def loadConfig():    
-        try:
-            with open(config_filename) as f:
-                configdata = json.load(f)
-            return configdata
-        
-        except OSError:
-            logging.error("Config file '%s' could not be loaded" %config_filename)
-            sys.exit()
-configdata=loadConfig()
+    try:
+        with open(config_filename) as f:
+            configdata = json.load(f)
+        return configdata
     
+    except OSError:
+        logging.error("Config file '%s' could not be loaded" %config_filename)
+        sys.exit()
+configdata=loadConfig()
+
+
+
+def loadBiadata():
+    plant_plan_table = 'cannabis1'
+    current_week = 4
+    try:
+        conn = sqlite3.connect('biodata.db')
+        cursor = conn.cursor()
+
+        # Daten abrufen
+        cursor.execute(f'SELECT * FROM {plant_plan_table} LIMIT 1')
+        column_names = [description[0] for description in cursor.description]
+
+
+        # Finden Sie die Position der relevanten Spalten
+        phase_index = column_names.index('phase')
+        target_moisture_index = column_names.index('target_moisture')
+        target_moisture_hysteresis_top_index = column_names.index('target_moisture_hysteresis_top')
+        target_moisture_hysteresis_bot_index = column_names.index('target_moisture_hysteresis_bot')
+        target_brightness_index = column_names.index('target_brightness')
+        light_hours_index = column_names.index('light_hours')
+        target_ec_index = column_names.index('target_ec')
+        target_ec_hysteresis_index = column_names.index('target_ec_hysteresis')
+        target_ph_index = column_names.index('target_ph')
+        target_ph_hysteresis_index = column_names.index('target_ph_hysteresis')
+        target_temperature_index = column_names.index('target_temperature')
+        target_temperature_hysteresis_index = column_names.index('target_temperature_hysteresis')
+        target_humidity_index = column_names.index('target_humidity')
+        target_humidity_hysteresis_top_index = column_names.index('target_humidity_hysteresis_top')
+        target_humidity_hysteresis_bot_index = column_names.index('target_humidity_hysteresis_bot')
+        to_do_index = column_names.index('to_do')
+
+        # Daten abrufen
+        cursor.execute(f'SELECT * FROM {plant_plan_table} WHERE week = ?', (current_week,))
+        row = cursor.fetchone()
+        print(row)
+        target_moisture = int(row[target_moisture_index])
+
+    except logging.error("Config file '%s' could not be loaded" %config_filename)
+
+    
+
+# Funktion, um das jüngste "start_grow"-Datum aus der CSV-Datei zu ermitteln
+def get_latest_start_grow_date(csv_file):
+    latest_date = None    
+    try:
+        with open(csv_file, newline='') as f:
+            reader = csv.DictReader(f, delimiter=';')
+            headers = reader.fieldnames  # List of field names
+            #print(f"CSV-Spalten: {headers}")  # Debugging-Ausgabe der Spaltennamen
+            for row in reader:
+                #print(f"Zeile: {row}")  # Debugging-Ausgabe jeder Zeile
+                if 'Typ' in row and row['Typ'] == 'start_grow':
+                    entry_date = datetime.datetime.strptime(row['Datum'], '%d.%m.%Y').date()
+                    if latest_date is None or entry_date > latest_date:
+                        latest_date = entry_date
+        return latest_date
+    except logging.error("Config file '%s' could not be loaded" %config_filename)
+
+# Jüngstes "start_grow"-Datum aus der plantlog_source.csv-Datei ermitteln
+start_date = get_latest_start_grow_date('plantlog_source.csv')
+
 # 2. load devices
 def loadDevices():
     # Verbindung zur SQLite-Datenbank herstellen
