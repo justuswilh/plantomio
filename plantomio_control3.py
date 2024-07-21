@@ -8,51 +8,51 @@
 
 import requests
 import datetime
-import time
 import json
-import os
 import urllib.parse
 import logging
 import sys
 import sqlite3
 import subprocess
+import multiprocessing
 import csv
+import moistureController
 
-
-config_filename='config.json'
-config_logfile='plantomio_start.log'
+olimexIP= 'plantomio-dev.ddns.net'
+configFile='config.json'
+configLog='plantomio_start.log'
 configfile_modification_time=0
 pumpingCycle=0 
 
-logging.basicConfig(filename=config_logfile, encoding='utf-8', level=logging.INFO, format='%(asctime)s %(message)s  :')
+logging.basicConfig(filename=configLog, encoding='utf-8', level=logging.INFO, format='%(asctime)s %(message)s  :')
 logging.info('******** Plantomio_control started')
     
 # 0. check configuration changes
-def checkChanges():
-    try: 
-        modification_time = os.path.getmtime(config_filename)        
-        local_time = time.ctime(modification_time)
-        logging.info("config file last modification time (local time):", time.ctime(modification_time))
-    except OSError:
-        logging.error("Path '%s' for the config file does not exists or is inaccessible")
-        sys.exit()
-    if (modification_time!=configfile_modification_time):
-        configfile_modification_time=modification_time
-        return True
-    else:
-        return False
+# def checkChanges():
+#     try: 
+#         modification_time = os.path.getmtime(configFile)        
+#         local_time = time.ctime(modification_time)
+#         logging.info("config file last modification time (local time):", time.ctime(modification_time))
+#     except OSError:
+#         logging.error("Path '%s' for the config file does not exists or is inaccessible")
+#         sys.exit()
+#     if (modification_time!=configfile_modification_time):
+#         configfile_modification_time=modification_time
+#         return True
+#     else:
+#         return False
     
 # 1. load system configurations    
 def loadConfig():    
     try:
-        with open(config_filename) as f:
-            configdata = json.load(f)
-        return configdata
-    
+        with open(configFile) as f:
+            return json.load(f)
+       
     except OSError:
-        logging.error("Config file '%s' could not be loaded" %config_filename)
+        logging.error("Config file '%s' could not be loaded" %configFile)
         sys.exit()
-configdata=loadConfig()
+
+configData=loadConfig()
 
 
 # Funktion, um das jüngste "start_grow"-Datum aus der CSV-Datei zu ermitteln
@@ -70,7 +70,7 @@ def get_latest_start_grow_date(csv_file):
                     if latest_date is None or entry_date > latest_date:
                         latest_date = entry_date
         return latest_date
-    except: logging.error("Config file '%s' could not be loaded" %config_filename)
+    except: logging.error("Config file '%s' could not be loaded" %configFile)
 
 # Jüngstes "start_grow"-Datum aus der plantlog_source.csv-Datei ermitteln
 start_date = get_latest_start_grow_date('plantlog_source.csv')
@@ -132,11 +132,11 @@ def loadBiadata():
         to_do = row[to_do_index]
         return phase, target_moisture, target_moisture_hysteresis_top, target_moisture_hysteresis_bot, target_brightness, light_hours, target_ec, target_ec_hysteresis, target_ph, target_ph_hysteresis, target_temperature, target_temperature_hysteresis, target_humidity, target_humidity_hysteresis_top, target_humidity_hysteresis_bot, to_do
 
-    except: logging.error("Config file '%s' could not be loaded" %config_filename)
+    except: logging.error("Config file '%s' could not be loaded" %configFile)
 
 #phase, target_moisture, target_moisture_hysteresis_top, target_moisture_hysteresis_bot, target_brightness, light_hours, target_ec, target_ec_hysteresis, target_ph, target_ph_hysteresis, target_temperature, target_temperature_hysteresis, target_humidity, target_humidity_hysteresis_top, target_humidity_hysteresis_bot, to_do = loadBiadata()
 
-# 2. load devices
+# 2. load devices - ist die Device Datenbank wirklich notwendig? Eine CSV ist kleiner und für den Olimex lokal dementsprechend sinnvoller + kürzt den Code massiv
 def loadDevices():
     # Verbindung zur SQLite-Datenbank herstellen
     conn = sqlite3.connect('devicelist.db')
@@ -218,7 +218,7 @@ def configLight_supply():
             light_on_json={
                 "Enable":1,
                 "Mode":0,
-                "Time":configdata['plant_config'][0]['light_on_time'], 
+                "Time":configData['plant_config'][0]['light_on_time'],
                 "Window":1,
                 "Days":"SMTWTFS",
                 "Repeat":1,
@@ -228,7 +228,7 @@ def configLight_supply():
             light_off_json={
                 "Enable":1,
                 "Mode":0,
-                "Time":configdata['plant_config'][0]['light_off_time'], 
+                "Time":configData['plant_config'][0]['light_off_time'], 
                 "Window":1,
                 "Days":"SMTWTFS",
                 "Repeat":1,
@@ -236,7 +236,7 @@ def configLight_supply():
                 "Action":0
             }
             lightcmd="http://" + device['address'] + '/cm?cmnd=Timers%201'
-            #print(lightcmd)
+            print(lightcmd)
         
         try:
             r=requests.get(lightcmd)
@@ -250,22 +250,30 @@ def configLight_supply():
         except requests.exceptions.RequestException as err:
             logging.error ("OOps: Something Else",err)
 
-        # print(r0.text)
         payload=str(urllib.parse.urlencode({'data':json.dumps(light_on_json)}))
         lightcmd="http://" + device['address'] +'/cm?cmnd=Timer1%20'+payload[5:]
         payload=str(urllib.parse.urlencode({'data':json.dumps(light_off_json)}))
         lightcmd1="http://" + device['address'] +'/cm?cmnd=Timer2%20'+payload[5:]        
         r1=requests.get(lightcmd)
-        # print(r1.text)
         r2=requests.get(lightcmd1,params=json.dumps(light_off_json))
-        # print(r2.url)
-        # print(r2.text)
 
 configLight_supply()
 
+#for groupID in Groups:
+#   moistureController.startMoistureControl(""" moistureSensorIPs[], pumpIPs[], groupID """)
+#   lightController.startLightControl(""" lightIPs[], groupID """) LightController starten
+# if __name__ == '__main__':
+#             moistureProc = multiprocessing.Process(target=moistureController.startMoistureControl, args=())
+#             lightProc = multiprocessing.Process(target=lightController.startLightControl, args=())
+#             moistureProc.daemon = True
+#             lightProc.daemon = True
+#             moistureProc.start()
+#             lightProc.start()
+
+
 def getMoisture(address):
     try:
-        querystring="http://" + "localhost" +':9090/api/v1/query?query=flowercare_moisture_percent{macaddress="'+ str(address) + '"}[60s]'
+        querystring="http://" + olimexIP +':9090/api/v1/query?query=flowercare_moisture_percent{macaddress="'+ str(address) + '"}[60s]'
         #print(querystring)
 
         r = requests.get(querystring)
@@ -294,7 +302,7 @@ def getMoisture(address):
         print("Fehler bei der Anfrage: ", err)
 
 
-# 4.2. config pump supply
+#4.2. config pump supply
 def checkMoisture():
     group_moistures={}
     group_moisture_gaps=[]
@@ -309,7 +317,7 @@ def checkMoisture():
 
     # get values
     for group in plant_monitor_group.values():
-        pump_adress = 'not found'
+        pump_address = 'not found'
 
         for device in group:
             group = device['group']
@@ -318,7 +326,7 @@ def checkMoisture():
             device_id = device['device_id']
 
             if group in pump_plug_group:
-                pump_adress = pump_plug_group[group][0]['address']
+                pump_address = pump_plug_group[group][0]['address']
             else:
                 print(f"Group {group} not found in pump_plug_group")            
             
@@ -356,7 +364,8 @@ def checkMoisture():
             sys.exit()
 
         if irrigationProgram > 0:
-            subprocess.Popen(["python3", "run_pump.py", str(irrigationProgram), str(pump_adress), str(plant_monitor_addresses), str(targetMoisture), str(targetHysteresisTop), str(group)])
+            subprocess.Popen(["python3", "run_pump.py", str(irrigationProgram), str(pump_address), str(plant_monitor_addresses), str(targetMoisture), str(targetHysteresisTop), str(group)])
+
         
 
 checkMoisture()
