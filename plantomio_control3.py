@@ -16,7 +16,7 @@ import sqlite3
 import subprocess
 import multiprocessing
 import csv
-import moistureController
+#import moistureController
 
 olimexIP= 'plantomio-dev.ddns.net'
 configFile='config.json'
@@ -137,78 +137,108 @@ def loadBiadata():
 #phase, target_moisture, target_moisture_hysteresis_top, target_moisture_hysteresis_bot, target_brightness, light_hours, target_ec, target_ec_hysteresis, target_ph, target_ph_hysteresis, target_temperature, target_temperature_hysteresis, target_humidity, target_humidity_hysteresis_top, target_humidity_hysteresis_bot, to_do = loadBiadata()
 
 # 2. load devices - ist die Device Datenbank wirklich notwendig? Eine CSV ist kleiner und für den Olimex lokal dementsprechend sinnvoller + kürzt den Code massiv
-def loadDevices():
-    # Verbindung zur SQLite-Datenbank herstellen
-    conn = sqlite3.connect('devicelist.db')
-    cursor = conn.cursor()
+# def loadDevices():
+#     # Verbindung zur SQLite-Datenbank herstellen
+#     conn = sqlite3.connect('devicelist.db')
+#     cursor = conn.cursor()
 
-    # Daten abrufen
-    cursor.execute(f'SELECT * FROM devices LIMIT 1')
-    column_names = [description[0] for description in cursor.description]
+#     # Daten abrufen
+#     cursor.execute(f'SELECT * FROM devices LIMIT 1')
+#     column_names = [description[0] for description in cursor.description]
 
-    # Finden Sie die Position der relevanten Spalten
-    name_index = column_names.index('name')
-    adress_index = column_names.index('adress')
-    role_index = column_names.index('role')
-    group_index = column_names.index('group')
+#     # Finden Sie die Position der relevanten Spalten
+#     name_index = column_names.index('name')
+#     adress_index = column_names.index('adress')
+#     role_index = column_names.index('role')
+#     group_index = column_names.index('group')
 
-    plant_monitors = {}
-    pump_plugs = {}
-    light_plugs = {}
+#     plant_monitors = {}
+#     pump_plugs = {}
+#     light_plugs = {}
 
-    # devices abrufen      
-    cursor.execute(f'SELECT * FROM devices')  
-    rows = cursor.fetchall() 
-    for row in rows:
-        if row[role_index] == 'plant_monitor':
-            device_count = len(plant_monitors) + 1
-            plant_monitors[f'plant_monitor_{device_count}'] = {
-                'device_id': 'plantmonitor_' + str(device_count) + '_g' + row[group_index] ,
-                'name': row[name_index],
-                'address': row[adress_index],
-                'group': row[group_index]
-            }
+#     # devices abrufen      
+#     cursor.execute(f'SELECT * FROM devices')  
+#     rows = cursor.fetchall() 
+#     for row in rows:
+#         if row[role_index] == 'plant_monitor':
+#             device_count = len(plant_monitors) + 1
+#             plant_monitors[f'plant_monitor_{device_count}'] = {
+#                 'device_id': 'plantmonitor_' + str(device_count) + '_g' + row[group_index] ,
+#                 'name': row[name_index],
+#                 'address': row[adress_index],
+#                 'group': row[group_index]
+#             }
 
-        if row[role_index] == 'pump_plug':
-            device_count = len(pump_plugs) + 1
-            pump_plugs[f'pump_plug_{device_count}'] = {
-                'device_id': 'pump_plug_' + str(device_count) + '_g' + row[group_index] ,
-                'name': row[name_index],
-                'address': row[adress_index],
-                'group': row[group_index]
-            }
+#         if row[role_index] == 'pump_plug':
+#             device_count = len(pump_plugs) + 1
+#             pump_plugs[f'pump_plug_{device_count}'] = {
+#                 'device_id': 'pump_plug_' + str(device_count) + '_g' + row[group_index] ,
+#                 'name': row[name_index],
+#                 'address': row[adress_index],
+#                 'group': row[group_index]
+#             }
     
-        if row[role_index] == 'light_plug':
-            device_count = len(light_plugs) + 1
-            light_plugs[f'light_plug_{device_count}'] = {
-                'device_id': 'light_plug_' + str(device_count) + '_g' + row[group_index] ,
-                'name': row[name_index],
-                'address': row[adress_index],
-                'group': row[group_index]   
-            }
-    print(plant_monitors)            
-    return plant_monitors, pump_plugs, light_plugs
+#         if row[role_index] == 'light_plug':
+#             device_count = len(light_plugs) + 1
+#             light_plugs[f'light_plug_{device_count}'] = {
+#                 'device_id': 'light_plug_' + str(device_count) + '_g' + row[group_index] ,
+#                 'name': row[name_index],
+#                 'address': row[adress_index],
+#                 'group': row[group_index]   
+#             }
+#     print(plant_monitors)            
+#     return plant_monitors, pump_plugs, light_plugs
+
+
+def loadDevices():
+    groups = []
+    with open("devicelist_source.csv") as csvfile:
+        reader = csv.DictReader(csvfile,delimiter=";")
+        csvList = list(reader)
+        for listdct in csvList:
+            if(listdct['group'] not in groups):
+                groups.append(listdct['group'])
+        
+        devices = []
+        for i in range(len(groups)):
+            typeList=[]
+            nameList=[]
+            addressList=[]
+            roleList=[]
+            for dct in csvList:
+                if(int(dct['group']) == i):
+                    typeList.append(dct['type'])
+                    nameList.append(dct['name'])
+                    addressList.append(dct['address'])
+                    roleList.append(dct['role'])
+            groupDict = {'type': typeList, 'name': nameList, 'address': addressList, 'role': roleList}
+            devices.append(groupDict)
+    return devices
+
+            
+        
     
 
 # 3. organise devices
-def groupDevices(devices):
-    device_group = {}
-    for info_type, device_info in devices.items():
-        device_group_value = device_info['group']
-        if device_group_value not in device_group:
-            device_group[device_group_value] = []
-        device_group[device_group_value].append(device_info)
-#    print(device_group)
-    return device_group
+# def groupDevices(devices):
+#     device_group = {}
+#     for info_type, device_info in devices.items():
+#         device_group_value = device_info['group']
+#         if device_group_value not in device_group:
+#             device_group[device_group_value] = []
+#         device_group[device_group_value].append(device_info)
+# #    print(device_group)
+#     return device_group
 
-def organiseDevices():
-    plant_monitors, pump_plugs, light_plugs = loadDevices()
-    plant_monitor_group = groupDevices(plant_monitors)
-    pump_plug_group = groupDevices(pump_plugs)
-    light_plug_group = groupDevices(light_plugs)
-    return plant_monitor_group, pump_plug_group, light_plug_group
+# def organiseDevices():
+#     plant_monitors, pump_plugs, light_plugs = loadDevices()
+#     plant_monitor_group = groupDevices(plant_monitors)
+#     pump_plug_group = groupDevices(pump_plugs)
+#     light_plug_group = groupDevices(light_plugs)
+#     return plant_monitor_group, pump_plug_group, light_plug_group
 
-plant_monitor_group, pump_plug_group, light_plug_group = organiseDevices()
+#plant_monitor_group, pump_plug_group, light_plug_group = organiseDevices()
+groupedDevices = loadDevices()
 
 ######## 4. config supply##########
 # 4.1. config light supply
@@ -257,18 +287,20 @@ def configLight_supply():
         r1=requests.get(lightcmd)
         r2=requests.get(lightcmd1,params=json.dumps(light_off_json))
 
-configLight_supply()
+#configLight_supply()
 
-#for groupID in Groups:
-#   moistureController.startMoistureControl(""" moistureSensorIPs[], pumpIPs[], groupID """)
-#   lightController.startLightControl(""" lightIPs[], groupID """) LightController starten
-# if __name__ == '__main__':
-#             moistureProc = multiprocessing.Process(target=moistureController.startMoistureControl, args=())
-#             lightProc = multiprocessing.Process(target=lightController.startLightControl, args=())
-#             moistureProc.daemon = True
-#             lightProc.daemon = True
-#             moistureProc.start()
-#             lightProc.start()
+# for devices in groupedDevices:
+#    if __name__ == '__main__':
+# #             moistureProc = multiprocessing.Process(target=moistureController.startMoistureControl, args=())
+#    moistureController.startMoistureControl(""" moistureSensorIPs[], pumpIPs[], groupID """)
+# #   lightController.startLightControl(""" lightIPs[], groupID """) LightController starten
+# # if __name__ == '__main__':
+# #             moistureProc = multiprocessing.Process(target=moistureController.startMoistureControl, args=())
+# #             lightProc = multiprocessing.Process(target=lightController.startLightControl, args=())
+# #             moistureProc.daemon = True
+# #             lightProc.daemon = True
+# #             moistureProc.start()
+# #             lightProc.start()
 
 
 def getMoisture(address):
@@ -368,4 +400,4 @@ def checkMoisture():
 
         
 
-checkMoisture()
+#checkMoisture()
