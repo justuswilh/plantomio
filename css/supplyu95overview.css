@@ -929,3 +929,33 @@
   white-space: nowrap;
   width: fit-content;
 }
+
+.no-border {
+  border: none;
+  outline: none; /* Entfernt den Fokusrahmen */
+}
+
+.select-field {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--white);
+  border: 1px solid var(--alto);
+  border-radius: 8px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.dropdown-option {
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background-color: var(--cultured-pearl);
+}
