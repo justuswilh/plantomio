@@ -19,7 +19,7 @@ import multiprocessing
 import csv
 import random
 import string
-import access_point
+import utils.access_point as access_point
 #import moistureController
 
 olimexIP= 'plantomio-dev.ddns.net'

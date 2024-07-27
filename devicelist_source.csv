@@ -1,8 +1,0 @@
-type;name;address;username;password;role;group
-control_device;Olimex;192.168.188.150;olimex;plantomio123;controlunit;0
-messurement_device;flowercare_1;5c:85:7e:b0:7d:33;;;plant_monitor;1
-messurement_device;flowercare_2;5c:85:7e:b0:c2:dd;;;plant_monitor;1
-actuator_device;pump_plug_1;192.168.188.151;;;pump_plug;1
-actuator_device;lightplug_1;192.168.188.152;;;light_plug;1
-messurement_device;Blumi-A;5c:85:7lahdlfh;;;plant_monitor;2
-

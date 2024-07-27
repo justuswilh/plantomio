@@ -11,7 +11,7 @@
 # Built Visual Studio Code Extensions
 *.vsix
 
-plantomio_control3.py
-
 .__pycache__/*
 *.log
+.logs/*
+.old/*
