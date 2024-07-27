@@ -14,3 +14,4 @@
 plantomio_control3.py
 
 .__pycache__/*
+*.log
