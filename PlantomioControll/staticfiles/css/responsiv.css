@@ -1,0 +1,68 @@
+/* responsive.css */
+
+/* Standard-Stile für größere Bildschirme */
+.container-center-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plantu95dashboard {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Anpassungen für Tablets */
+@media (max-width: 768px) {
+    .plantu95dashboard {
+        width: 90%;
+    }
+
+    .navigation-pill-list {
+        flex-direction: column;
+    }
+
+    .flex-row, .flex-row-1 {
+        flex-direction: column;
+    }
+
+    .moisture-container {
+        flex-direction: column;
+    }
+}
+
+/* Anpassungen für Smartphones */
+@media (max-width: 480px) {
+    .plantu95dashboard {
+        width: 100%;
+    }
+
+    .header .block img {
+        width: 50px;
+    }
+
+    .navigation-pill-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation-pill {
+        margin-bottom: 10px;
+    }
+
+    .flex-row, .flex-row-1 {
+        flex-direction: column;
+    }
+
+    .moisture-container {
+        flex-direction: column;
+    }
+
+    .headline-1, .headline-2 {
+        font-size: 18px;
+    }
+
+    .body-small {
+        font-size: 14px;
+    }
+}

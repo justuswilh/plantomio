@@ -4,14 +4,14 @@
   align-items: flex-start;
   background-color: var(--white);
   display: flex;
-  height: 1000px;
-  width: 1200px;
+  min-height: 1000px;
+  min-width: 1200px;
 }
 
 .plantu95overview .pflanzen {
   align-items: flex-start;
   background-color: var(--white);
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   min-height: 1000px;
   overflow-y: scroll;
@@ -34,7 +34,7 @@
   margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
-  width: fit-content;
+  min-width: 100px; /* Replace 'fit-content' with a specific value */
 }
 
 .plantu95overview .navigation-pill-2 {
@@ -53,25 +53,23 @@
   margin-top: -1.00px;
   position: relative;
   white-space: nowrap;
-  width: fit-content;
+  min-width: 100px; /* Replace 'fit-content' with a specific value */
 }
 
 .plantu95overview .general-plants {
-  align-self: stretch;
-  height: 791px;
-  position: relative;
-  width: 100%;
+  display: flex;
+  flex-direction: column; /* Elemente vertikal anordnen */
+  align-items: stretch;
+  /* min-height: 791px; Mindesthöhe festlegen */
+  min-width: 100%;
 }
 
 .plantu95overview .plants {
-  align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px 20px;
-  left: 10px;
-  position: absolute;
-  top: 62px;
-  width: 1180px;
+  margin: 20px;
+  min-width: 100%;
+  position: relative; /* Sicherstellen, dass die Position relativ ist */
 }
 
 .plantu95overview .plantgroup {
@@ -88,7 +86,7 @@
   min-height: 168px;
   position: relative;
   top: 1px;
-  width: 578px;
+  min-height: 578px;
 }
 
 .plantu95overview .flex-row {
@@ -99,13 +97,13 @@
 }
 
 .plantu95overview .overlap-group3 {
-  width: 306px;
+  min-width: 306px;
 }
 
 .plantu95overview .rectangle {
-  height: 30px;
+  min-height: 30px;
   opacity: 0.8;
-  width: 306px;
+  min-width: 306px;
 }
 
 .plantu95overview .xxxxxxxxxxx {
@@ -113,20 +111,20 @@
   font-family: var(--font-family-abel);
   font-size: var(--font-size-xl);
   font-weight: 400;
-  height: 26px;
+  min-height: 26px;
   left: 14px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
+  position: relative;
   top: 2px;
   white-space: nowrap;
-  width: 271px;
+  min-width: 271px;
 }
 
 .plantu95overview .arrow-right {
   cursor: pointer;
-  height: 64px;
-  width: 64px;
+  min-height: 64px;
+  min-width: 64px;
 }
 
 .plantu95overview .overlap-group-container {
@@ -138,13 +136,13 @@
 }
 
 .plantu95overview .overlap-group {
-  width: 100px;
+  min-width: 100px;
 }
 
 .plantu95overview .rectangle-1 {
-  height: 30px;
+  min-height: 30px;
   opacity: 0.8;
-  width: 100px;
+  min-width: 100px;
 }
 
 .plantu95overview .xx {
@@ -152,12 +150,12 @@
   font-family: var(--font-family-manrope);
   font-size: var(--font-size-l);
   font-weight: 600;
-  height: 26px;
+  min-height: 26px;
   top: 2px;
 }
 
 .plantu95overview .xx-xx {
-  height: 19px;
+  min-height: 19px;
   top: 6px;
 }
 
@@ -169,69 +167,69 @@
 }
 
 .plantu95overview .overlap-group1 {
-  width: 152px;
+  min-width: 152px;
 }
 
 .plantu95overview .rectangle-2 {
-  height: 30px;
+  min-height: 30px;
   opacity: 0.8;
-  width: 152px;
+  min-width: 152px;
 }
 
 .plantu95overview .phase {
-  height: 26px;
+  min-height: 26px;
   left: 5px;
   letter-spacing: 1.00px;
   line-height: normal;
-  position: absolute;
+  position: relative;
   text-align: center;
   top: 2px;
-  width: 142px;
+  min-width: 142px;
 }
 
 .plantu95overview .overlap-group2 {
   margin-left: 2px;
-  width: 152px;
+  min-width: 152px;
 }
 
 .plantu95overview .xwxt {
-  height: 26px;
+  min-height: 26px;
   left: 4px;
   letter-spacing: 1.00px;
   line-height: normal;
-  position: absolute;
+  position: relative;
   text-align: center;
   top: 3px;
-  width: 142px;
+  min-width: 142px;
 }
 
 .plantu95overview .overlap-group-1 {
   border-radius: 7px;
-  height: 20px;
+  min-height: 20px;
   position: relative;
-  width: 273px;
+  min-width: 273px;
 }
 
 .plantu95overview .rectangle-3 {
-  height: 20px;
+  min-height: 20px;
   opacity: 0.8;
-  width: 273px;
+  min-width: 273px;
 }
 
 .plantu95overview .to-do {
-  height: 17px;
+  min-height: 17px;
   left: 8px;
   letter-spacing: 1.00px;
   line-height: normal;
-  position: absolute;
+  position: relative;
   text-align: center;
   top: 1px;
-  width: 257px;
+  min-width: 257px;
 }
 
 .plantu95overview .arrow-right-1 {
-  height: 64px;
-  width: 64px;
+  min-height: 64px;
+  min-width: 64px;
 }
 
 .plantu95overview .xx-1 {
@@ -239,7 +237,7 @@
   font-family: var(--font-family-manrope);
   font-size: var(--font-size-l);
   font-weight: 600;
-  height: 26px;
+  min-height: 26px;
   top: 2px;
 }
 
@@ -258,15 +256,15 @@
 
 .plantu95overview .overlap-group-2 {
   border-radius: 7px;
-  height: 30px;
+  min-height: 30px;
   position: relative;
-  width: 308px;
+  min-width: 308px;
 }
 
 .plantu95overview .rectangle-4 {
-  height: 30px;
+  min-height: 30px;
   opacity: 0.9;
-  width: 308px;
+  min-width: 308px;
 }
 
 .plantu95overview .neue-pflanzgruppe {
@@ -274,14 +272,14 @@
   font-family: var(--font-family-abel);
   font-size: var(--font-size-xl);
   font-weight: 400;
-  height: 26px;
+  min-height: 26px;
   left: 14px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
+  position: relative;
   top: 2px;
   white-space: nowrap;
-  width: 273px;
+  min-width: 273px;
 }
 
 .plantu95overview .plus {
@@ -290,7 +288,7 @@
   background-color: var(--eerie-black);
   border-radius: 7px;
   display: flex;
-  height: 77px;
+  min-height: 77px;
   margin-right: 2.3px;
   min-width: 76px;
   opacity: 0.9;
@@ -298,8 +296,8 @@
 }
 
 .plantu95overview .plus-1 {
-  height: 48px;
-  width: 48px;
+  min-height: 48px;
+  min-width: 48px;
 }
 
 .plantu95overview .headline {
@@ -307,11 +305,11 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  height: 50px;
+  min-height: 50px;
   left: 0;
-  position: absolute;
+  position: relative;
   top: 0;
-  width: 1200px;
+  min-width: 1200px;
 }
 
 .plantu95overview .select {
@@ -328,7 +326,6 @@
   min-width: 240px;
   padding: 12px 12px 12px 16px;
   position: relative;
-  width: 100%;
 }
 
 .plantu95overview .berschrift {
@@ -352,15 +349,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px 16px;
-  height: 102px;
+  min-height: 102px;
   padding: 32px 32px 160px;
   position: relative;
-  width: 1200px;
+  min-width: 1200px;
 }
 
 .plantu95overview .plantomio-solutions-1 {
   flex: 1;
-  height: 28px;
+  min-height: 28px;
   letter-spacing: 0;
   line-height: normal;
   margin-bottom: -117.00px;
@@ -376,21 +373,21 @@
 
 .plantu95overview .overlap {
   border-radius: 7px;
-  height: 30px;
+  min-height: 30px;
   position: relative;
 }
 
 .plantu95overview .plantgroup-1 {
-  height: 170px;
+  min-height: 170px;
   position: relative;
-  width: 580px;
+  min-width: 580px;
 }
 
 .plantu95overview .rectangle-5 {
   background-color: var(--eerie-black);
   border-radius: 7px;
   left: 0;
-  position: absolute;
+  position: relative;
   top: 0;
 }
 
@@ -398,7 +395,7 @@
   left: 3px;
   letter-spacing: 1.00px;
   line-height: normal;
-  position: absolute;
+  position: relative;
   text-align: center;
-  width: 94px;
+  min-width: 94px;
 }

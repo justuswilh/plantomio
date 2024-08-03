@@ -1,0 +1,884 @@
+/* screen - plantu95dashboard */
+
+.plantu95dashboard {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 1219px;
+  width: 1200px;
+}
+
+.plantu95dashboard .pflanzen {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  min-height: 1000px;
+  overflow-y: scroll;
+  position: relative;
+  width: 1200px;
+}
+
+.plantu95dashboard .navigation-pill-1 {
+  background-color: var(--cultured-pearl);
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  padding: 8px;
+}
+
+.plantu95dashboard .title {
+  color: var(--japanese-laurel);
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .title-1 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .title-2 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .title-3 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .general-plant-dashboard {
+  align-self: stretch;
+  height: 1000px;
+  position: relative;
+  width: 100%;
+}
+
+.plantu95dashboard .frame-13 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 1200px;
+}
+
+.plantu95dashboard .plantgrop-dashboard-elements {
+  align-self: stretch;
+  height: 260px;
+  position: relative;
+  width: 100%;
+}
+
+.plantu95dashboard .compact-dashboard {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  left: 80px;
+  position: absolute;
+  top: 62px;
+  width: 1040px;
+}
+
+.plantu95dashboard .compact-dashboard-1 {
+  height: 195px;
+  position: relative;
+  width: 535px;
+}
+
+.plantu95dashboard .flex-col {
+  flex-direction: column;
+  min-height: 195px;
+}
+
+.plantu95dashboard .flex-col-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-height: 133px;
+  width: 535px;
+}
+
+.plantu95dashboard .headline-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 40px;
+  position: relative;
+  width: 535px;
+}
+
+.plantu95dashboard .select-4 {
+  align-self: stretch;
+  background-color: var(--apple);
+  border: 1px solid;
+  border-color: var(--apple);
+  border-radius: 4px;
+  height: 40px;
+  min-width: 240px;
+  padding: 12px 12px 12px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.plantu95dashboard .dashboard {
+  flex: 1;
+  letter-spacing: 0;
+  line-height: 30.8px;
+  margin-bottom: -6.50px;
+  margin-top: -8.50px;
+  position: relative;
+  text-align: center;
+}
+
+.plantu95dashboard .info {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 30px;
+  position: relative;
+  width: 535px;
+}
+
+.plantu95dashboard .select {
+  align-self: stretch;
+  background-color: var(--ottoman);
+  border: 1px solid;
+  border-color: var(--apple);
+  border-radius: 4px;
+  flex: 1;
+  flex-grow: 1;
+  justify-content: center;
+  min-width: 240px;
+  padding: 12px 12px 12px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.plantu95dashboard .value-1 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: -3.00px;
+  margin-top: -5.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .flex-row {
+  min-width: 535px;
+}
+
+.plantu95dashboard .age {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 30px;
+  position: relative;
+  width: 267px;
+}
+
+.plantu95dashboard .value-2 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: -3.00px;
+  margin-top: -5.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .start-date {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 30px;
+  position: relative;
+  width: 267px;
+}
+
+.plantu95dashboard .value-3 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: -3.00px;
+  margin-top: -5.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .flex-row-1 {
+  align-items: flex-start;
+  display: flex;
+  gap: 1px;
+  min-width: 535px;
+}
+
+.plantu95dashboard .phase {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 30px;
+  position: relative;
+  width: 267px;
+}
+
+.plantu95dashboard .value-4 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: -3.00px;
+  margin-top: -5.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .supply {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 30px;
+  position: relative;
+  width: 267px;
+}
+
+.plantu95dashboard .value-5 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: -3.00px;
+  margin-top: -5.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .moisture-container {
+  gap: 1px;
+  min-width: 535px;
+}
+
+.plantu95dashboard .moisture {
+  flex-direction: column;
+  gap: 8px;
+  height: 30px;
+  position: relative;
+  width: 178px;
+}
+
+.plantu95dashboard .select-1 {
+  align-self: stretch;
+  background-color: var(--ottoman);
+  border: 1px solid;
+  border-color: var(--apple);
+  border-radius: 4px;
+  flex: 1;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 12px 12px 12px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.plantu95dashboard .value {
+  color: var(--eerie-black);
+  flex: 1;
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: -3.00px;
+  margin-top: -5.00px;
+  position: relative;
+  text-align: center;
+}
+
+.plantu95dashboard .moisture-1 {
+  flex-direction: column;
+  gap: 8px;
+  height: 30px;
+  position: relative;
+  width: 177px;
+}
+
+.plantu95dashboard .setting {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 30px;
+  position: relative;
+  width: 535px;
+}
+
+.plantu95dashboard .value-6 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: -3.00px;
+  margin-top: -5.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .image {
+  height: 244px;
+  margin-bottom: -3.00px;
+  margin-right: -48.00px;
+  margin-top: -46.00px;
+  object-fit: cover;
+  position: relative;
+  width: 551px;
+}
+
+.plantu95dashboard .headline {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1200px;
+}
+
+.plantu95dashboard .select-5 {
+  align-self: stretch;
+  background-color: var(--japanese-laurel);
+  border: 1px solid;
+  border-color: var(--apple);
+  border-radius: 4px;
+  flex: 0 0 auto;
+  margin-bottom: -5.00px;
+  min-width: 240px;
+  padding: 12px 12px 12px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.plantu95dashboard .headline-1 {
+  flex: 1;
+  letter-spacing: 0;
+  line-height: 30.8px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.plantu95dashboard .plantgrop-dashboard-elements-1 {
+  height: 174px;
+}
+
+.plantu95dashboard .select-6 {
+  background-color: var(--ottoman);
+  border: 1px solid;
+  border-color: var(--apple);
+  border-radius: 4px;
+  flex-direction: column;
+  left: 0;
+  padding: 8px 12px 12px 16px;
+  position: absolute;
+  top: 52px;
+  width: 1170px;
+}
+
+.plantu95dashboard .chat {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.plantu95dashboard .select-7 {
+  align-self: stretch;
+  border-radius: 4px;
+  flex: 0 0 auto;
+  flex-direction: column;
+  min-width: 240px;
+  position: relative;
+  width: 100%;
+}
+
+.plantu95dashboard .frame-1 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: center;
+  position: relative;
+}
+
+.plantu95dashboard .gartenassistent {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .nachricht {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .frame-2 {
+  align-items: flex-end;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: flex-end;
+  position: relative;
+  width: 500px;
+}
+
+.plantu95dashboard .textarea-field {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 8px;
+}
+
+.plantu95dashboard .textarea {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--alto);
+  border-radius: 8px;
+  flex: 0 0 auto;
+  margin-bottom: -1.00px;
+  margin-left: -1.00px;
+  margin-right: -1.00px;
+  margin-top: -1.00px;
+  min-height: 80px;
+  min-width: 240px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.plantu95dashboard .icon-button-2 {
+  left: 466px;
+  top: 46px;
+}
+
+.plantu95dashboard .arrow-up {
+  height: 20px;
+  margin-bottom: -6.00px;
+  margin-left: -6.00px;
+  margin-right: -6.00px;
+  margin-top: -6.00px;
+  position: relative;
+  width: 20px;
+}
+
+.plantu95dashboard .frame-1-1 {
+  height: 32px;
+  left: 2px;
+  position: absolute;
+  top: 46px;
+  width: 64px;
+}
+
+.plantu95dashboard .icon-button-3 {
+  left: 0;
+  top: 0;
+}
+
+.plantu95dashboard .image-1 {
+  height: 20px;
+  margin-bottom: -6.00px;
+  margin-left: -6.00px;
+  margin-right: -6.00px;
+  margin-top: -6.00px;
+  position: relative;
+  width: 20px;
+}
+
+.plantu95dashboard .icon-button-4 {
+  left: 32px;
+  top: 0;
+}
+
+.plantu95dashboard .camera {
+  height: 20px;
+  margin-bottom: -6.00px;
+  margin-left: -6.00px;
+  margin-right: -6.00px;
+  margin-top: -6.00px;
+  position: relative;
+  width: 20px;
+}
+
+.plantu95dashboard .value-7 {
+  color: #b3b3b3;
+  font-weight: 400;
+  left: 5px;
+  line-height: 22.4px;
+  position: absolute;
+  top: 4px;
+  width: 208px;
+}
+
+.plantu95dashboard ._headline {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1170px;
+}
+
+.plantu95dashboard .select-2 {
+  align-self: stretch;
+  background-color: var(--apple);
+  border: 1px solid;
+  border-color: var(--apple);
+  border-radius: 8px;
+  flex: 1;
+  flex-grow: 1;
+  margin-bottom: -1.00px;
+  margin-left: -1.00px;
+  margin-right: -1.00px;
+  margin-top: -1.00px;
+  min-width: 240px;
+  padding: 12px 12px 12px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.plantu95dashboard .text {
+  letter-spacing: 0;
+  line-height: 30.8px;
+  margin-bottom: -5.00px;
+  margin-top: -8.00px;
+  position: relative;
+  text-align: center;
+  width: 45px;
+}
+
+.plantu95dashboard .berschrift-2 {
+  flex: 1;
+  letter-spacing: 0;
+  line-height: 30.8px;
+  margin-bottom: -5.00px;
+  margin-top: -8.00px;
+  position: relative;
+  text-align: center;
+}
+
+.plantu95dashboard .chevron-down {
+  height: 38px;
+  margin-bottom: -9.00px;
+  margin-top: -11.00px;
+  position: relative;
+  width: 38px;
+}
+
+.plantu95dashboard .text-1 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  position: relative;
+  transform: rotate(180deg);
+  width: 7px;
+}
+
+.plantu95dashboard .plantgrop-dashboard-elements-2 {
+  height: 286px;
+}
+
+.plantu95dashboard .plantlog {
+  align-items: center;
+  background-color: var(--ottoman);
+  border: 1px solid;
+  border-color: var(--apple);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  left: 0;
+  padding: 8px 12px 8px 16px;
+  position: absolute;
+  top: 52px;
+  width: 1170px;
+}
+
+.plantu95dashboard .entry-1 {
+  align-items: center;
+  height: 26px;
+}
+
+.plantu95dashboard .select-3 {
+  align-self: stretch;
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--alto);
+  border-radius: 8px;
+  flex: 1;
+  flex-grow: 1;
+  margin-bottom: -1.00px;
+  margin-left: -1.00px;
+  margin-right: -1.00px;
+  margin-top: -1.00px;
+  min-width: 240px;
+  padding: 12px 12px 12px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.plantu95dashboard .datum-uhrzeit {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: -3.50px;
+  margin-top: -6.50px;
+  position: relative;
+  width: 160px;
+}
+
+.plantu95dashboard .typ {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: -3.50px;
+  margin-top: -6.50px;
+  position: relative;
+  width: 200px;
+}
+
+.plantu95dashboard .eintrag {
+  color: var(--eerie-black);
+  flex: 1;
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: -3.50px;
+  margin-top: -6.50px;
+  position: relative;
+}
+
+.plantu95dashboard .entry {
+  align-items: flex-start;
+  height: 40px;
+}
+
+.plantu95dashboard .text-2 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  position: relative;
+  width: 160px;
+}
+
+.plantu95dashboard .pflanzung-beginn {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  position: relative;
+  width: 200px;
+}
+
+.plantu95dashboard .xxxxxxxxxxx {
+  color: var(--eerie-black);
+  flex: 1;
+  font-weight: 400;
+  line-height: 14px;
+  position: relative;
+}
+
+.plantu95dashboard .icon-button {
+  align-items: center;
+  background-color: var(--celeste);
+  border-radius: 32px;
+  display: flex;
+  gap: 8px;
+  height: 32px;
+  justify-content: center;
+  left: 1122px;
+  overflow: hidden;
+  padding: 12px;
+  position: absolute;
+  top: 4px;
+  width: 32px;
+}
+
+.plantu95dashboard .icon-button-1 {
+  left: 1087px;
+  top: 4px;
+}
+
+.plantu95dashboard .edit-2 {
+  height: 20px;
+  margin-bottom: -6.00px;
+  margin-left: -6.00px;
+  margin-right: -6.00px;
+  margin-top: -6.00px;
+  position: relative;
+  width: 20px;
+}
+
+.plantu95dashboard .footer {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-bottom-style: none;
+  border-color: var(--alto);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 16px;
+  height: 112px;
+  padding: 32px 32px 160px;
+  position: relative;
+  width: 1200px;
+}
+
+.plantu95dashboard .plantomio-solutions-1 {
+  flex: 1;
+  height: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -107.00px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.plantu95dashboard .title-4 {
+  flex: 0 0 auto;
+  margin-bottom: -104.00px;
+  position: relative;
+}
+
+.plantu95dashboard .edit-2-4 {
+  height: 20px;
+  margin-bottom: -6.00px;
+  margin-left: -6.00px;
+  margin-right: -6.00px;
+  margin-top: -6.00px;
+  position: relative;
+  width: 20px;
+}
+
+.plantu95dashboard .entry-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: -9.00px;
+  margin-right: -9.00px;
+  position: relative;
+  width: 1160px;
+}
+
+.plantu95dashboard .flex {
+  align-items: flex-start;
+  display: flex;
+  gap: 1px;
+}
+
+.plantu95dashboard .icon-button-5 {
+  align-items: center;
+  background-color: var(--celeste);
+  border-radius: 32px;
+  display: flex;
+  gap: 8px;
+  height: 32px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 12px;
+  position: absolute;
+  width: 32px;
+}
+
+.plantu95dashboard .index-6 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-bottom: -3.00px;
+  margin-top: -5.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.plantu95dashboard .moisture-2 {
+  align-items: flex-start;
+  display: flex;
+}
+
+.plantu95dashboard .navigation-pill-2 {
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.plantu95dashboard .plantgrop-dashboard-elements-3 {
+  position: relative;
+  width: 1170px;
+}
+
+.plantu95dashboard .select-8 {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.plantu95dashboard .textarea-1 {
+  align-self: stretch;
+  position: relative;
+}
+
+.plantu95dashboard .trash-4 {
+  height: 20px;
+  margin-bottom: -6.00px;
+  margin-left: -6.00px;
+  margin-right: -6.00px;
+  margin-top: -6.00px;
+  position: relative;
+  width: 20px;
+}
