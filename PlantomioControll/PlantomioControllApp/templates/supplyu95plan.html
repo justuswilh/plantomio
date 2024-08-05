@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
+    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
+    <meta name="viewport" content="width=1200, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" href="{% static 'css/globals.css' %}">
+    <link rel="stylesheet" href="{% static 'css/supplyu95overview.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleguide.css' %}">
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="supplyu95plan" />
+    <div class="container-center-horizontal">
+      <div class="supplyu95overview screen">
+        <div class="versorgung">
+          <header class="header">
+            <img class="logoblock" src="{% static 'img/plantomioLogo.svg' %}" alt="Plantomio Logo" />
+            <div class="navigation-pill-list">
+              <div class="company-name valign-text-middle">Plantomio Solutions</div>
+              <div class="prototyp-name valign-text-bottom">Prototyp: Plantomio Mark 1</div>
+              <a href="plantu95overview.html">
+                <div class="x-navigation-pill">
+                  <div class="title valign-text-middle title-2 body-small">Pflanzen</div>
+                </div>
+              </a> 
+              <a href="supplyu95overview.html"> 
+                <div class="supply-navigation-pill">
+                  <div class="title-1 valign-text-middle title-2 body-small">Versorgung</div>
+                </div>
+              </a>  
+              <div class="x-navigation-pill"><div class="timeline valign-text-middle body-small">Timeline</div></div>
+              <div class="x-navigation-pill"><div class="contact valign-text-middle body-small">Kontakt</div></div>
+            </div>
+          </header>
+
+          <div class="general-supply">
+
+            <div class="groups-headline block">
+              <div class="frame">
+                <div class="x-groups robotomono-bold-white-22px">Pflanzplan</div>
+                <img class="chevron-down" src="{% static 'img/chevronDownWhite.svg' %}" alt="Chevron down" />
+              </div>
+            </div>
+            {% for plantPlan in plantPlans %}
+              <div class="headline block">
+                <div class="body-5 body-small">
+                  <div class="plan">Pflanze:</div>
+                  <div class="x-select-field">
+                    <div class="select-2">
+                      <div class="v-3 body-small">{{ plantPlan.plant }}</div>
+                      <img class="chevron-down-1 chevron-down-3" src="{% static 'img/chevronDownBlack.svg' %}" alt="Chevron down" />
+                    </div>
+                  </div>
+                  <div class="plan">Plan:</div>
+                  <div class="x-select-field">
+                    <div class="select-2">
+                      <div class="v-3 body-small">{{ plantPlan.name }}</div>
+                      <img class="chevron-down-1 chevron-down-3" src="{% static 'img/chevronDownBlack.svg' %}" alt="Chevron down" />
+                    </div>
+                  </div>
+                  <div class="x-button"><img class="search" src="{% static 'img/search.svg' %}" alt="Search" /></div>
+                  <div class="spacer-fill"></div>
+                  <div class="plan">Pflanzplan:</div>
+                  <div class="plan">{{ plantPlan.id }}</div>
+                  <div class="spacer-1 spacer-2"></div>
+                  <div class="x-button"><img class="copy" src="{% static 'img/copy.svg' %}" alt="Copy" /></div>
+                  <div class="x-button"><img class="save" src="{% static 'img/save.svg' %}" alt="Save" /></div>
+                  <div class="x-button"><img class="share" src="{% static 'img/share.svg' %}" alt="Share" /></div>
+                  <div class="x-button">
+                    <img class="more-vertical" src="{% static 'img/moreOptions.svg' %}" alt="More vertical" />
+                  </div>
+                </div>
+              </div>
+              <div class="lists block">
+                <div class="body block">
+                  <div class="index-2">
+                    <div class="select body-small">
+                      <div class="w-2">W</div>
+                      <div class="phase">Phase</div>
+                      <div class="feuchtigkeit-2">Feuchtigkeit</div>
+                      <div class="helligkeit-2">Helligkeit</div>
+                      <div class="lichtstunden-2">Lichtstunden</div>
+                      <div class="ec-wert">EC-Wert</div>
+                      <div class="ph-wert">PH-Wert</div>
+                      <div class="temperatur-2">Temperatur</div>
+                      <div class="luftfeuchtigk-2">Luftfeuchtigk.</div>
+                      <div class="besonderheit-2">Besonderheit</div>
+                    </div>
+                  </div>
+                  <div class="index2">
+                    <div class="select-1">
+                      <div class="text body-small"></div>
+                      <div class="sub-elements">
+                        <div class="select-2 body-small">
+                          <div class="place-14">Soll</div>
+                          <div class="min-14">Min</div>
+                          <div class="name-14">Max</div>
+                        </div>
+                      </div>
+                      <div class="sub-elements">
+                        <div class="select-2 body-small">
+                          <div class="place-14">Soll</div>
+                          <div class="min-14">Min</div>
+                          <div class="name-14">Max</div>
+                        </div>
+                      </div>
+                      <div class="sub-elements">
+                        <div class="select-2 body-small">
+                          <div class="place-14">Soll</div>
+                          <div class="min-14">Min</div>
+                          <div class="name-14">Max</div>
+                        </div>
+                      </div>
+                      <div class="sub-elements">
+                        <div class="select-2 body-small">
+                          <div class="place-14">Soll</div>
+                          <div class="min-14">Min</div>
+                          <div class="name-14">Max</div>
+                        </div>
+                      </div>
+                      <div class="sub-elements">
+                        <div class="select-2 body-small">
+                          <div class="place-14">Soll</div>
+                          <div class="min-14">Min</div>
+                          <div class="name-14">Max</div>
+                        </div>
+                      </div>
+                      <div class="sub-elements">
+                        <div class="select-2 body-small">
+                          <div class="place-14">Soll</div>
+                          <div class="min-14">Min</div>
+                          <div class="name-14">Max</div>
+                        </div>
+                      </div>
+                      <div class="sub-elements">
+                        <div class="select-2 body-small">
+                          <div class="place-14">Soll</div>
+                          <div class="min-14">Min</div>
+                          <div class="name-14">Max</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+              <div class="lists block">
+                <div class="body block">
+                  <article class="index">
+                    <div class="body-1 body-small block">
+                      <div class="gert">Gerät</div>
+                      <div class="place">Name</div>
+                      <div class="text-3"></div>
+                      <div class="gerteadresse">Geräteadresse</div>
+                      <div class="gruppe">Gruppe</div>
+                    </div>
+                  </article>
+                  {% for device in plantGroup.devices.all %}
+                    <article class="device">
+                      <div class="body-2 body-small">
+                        <div class="device-id">{{ device.id }}</div>
+                        <img class="info" src="{% static 'img/infoButton.svg' %}" alt="Info" />
+                        <div class="device-name">
+                            <div class="input"><div class="value body-small">{{ device.name }}</div></div>
+                        </div>
+                        <div class="spacer spacer-7"></div>
+                        <div class="device-address">{{ device.address }}</div>
+                        <div class="x-select-field">
+                          <div class="body-3">
+                            <div class="device-group body-small">{{ device.groupNumber }}</div>
+                            <img class="chevron-down-1 chevron-down-3" src="{% static 'img/chevronDownBlack.svg' %}" alt="Chevron down" />
+                          </div>
+                        </div>  
+                      </div>
+                    </article>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endfor %}
+
+                        
+          </div>
+          
+          <footer class="footer">
+            <div class="plantomio-solutions valign-text-middle">Plantomio Solutions</div>
+            <img class="sovial-media" src="{% static 'img/socialMedia.svg' %}" alt="Sovial Media" />
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

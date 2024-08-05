@@ -1,0 +1,548 @@
+/* screen - plantu95overview */
+
+.plantu95overview {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  min-height: 1000px;
+  min-width: 1200px;
+}
+
+.plantu95overview .pflanzen {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  min-height: 1000px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.plantu95overview .navigation-pill-1 {
+  background-color: var(--cultured-pearl);
+  border-radius: 8px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  padding: 8px;
+}
+
+.plantu95overview .title-1 {
+  color: var(--japanese-laurel);
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  min-width: 100px; /* Replace 'fit-content' with a specific value */
+}
+
+.plantu95overview .navigation-pill-2 {
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  padding: 8px;
+}
+
+.plantu95overview .title {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  min-width: 100px; /* Replace 'fit-content' with a specific value */
+}
+
+.plantu95overview .general-plants {
+  display: flex;
+  flex-direction: column; /* Elemente vertikal anordnen */
+  align-items: stretch;
+  /* min-height: 791px; Mindesthöhe festlegen */
+  min-width: 100%;
+}
+
+.plantu95overview .plants {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  min-width: 100%;
+  position: relative; /* Sicherstellen, dass die Position relativ ist */
+}
+
+.plantu95overview .plantgroup {
+  background-image: url(../img/rectangle.png);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.plantu95overview .infos {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 1px;
+  min-height: 168px;
+  position: relative;
+  top: 1px;
+  min-height: 578px;
+}
+
+.plantu95overview .flex-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 208px;
+  min-width: 578px;
+}
+
+.plantu95overview .overlap-group3 {
+  min-width: 306px;
+}
+
+.plantu95overview .rectangle {
+  min-height: 30px;
+  opacity: 0.8;
+  min-width: 306px;
+}
+
+.plantu95overview .xxxxxxxxxxx {
+  color: var(--white);
+  font-family: var(--font-family-abel);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  min-height: 26px;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  top: 2px;
+  white-space: nowrap;
+  min-width: 271px;
+}
+
+.plantu95overview .arrow-right {
+  cursor: pointer;
+  min-height: 64px;
+  min-width: 64px;
+}
+
+.plantu95overview .overlap-group-container {
+  align-items: flex-start;
+  display: flex;
+  gap: 1px;
+  margin-top: 43px;
+  min-width: 201px;
+}
+
+.plantu95overview .overlap-group {
+  min-width: 100px;
+}
+
+.plantu95overview .rectangle-1 {
+  min-height: 30px;
+  opacity: 0.8;
+  min-width: 100px;
+}
+
+.plantu95overview .xx {
+  color: var(--white);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-l);
+  font-weight: 600;
+  min-height: 26px;
+  top: 2px;
+}
+
+.plantu95overview .xx-xx {
+  min-height: 19px;
+  top: 6px;
+}
+
+.plantu95overview .overlap-group-container-1 {
+  align-items: flex-end;
+  display: flex;
+  margin-top: 1px;
+  min-width: 578px;
+}
+
+.plantu95overview .overlap-group1 {
+  min-width: 152px;
+}
+
+.plantu95overview .rectangle-2 {
+  min-height: 30px;
+  opacity: 0.8;
+  min-width: 152px;
+}
+
+.plantu95overview .phase {
+  min-height: 26px;
+  left: 5px;
+  letter-spacing: 1.00px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  top: 2px;
+  min-width: 142px;
+}
+
+.plantu95overview .overlap-group2 {
+  margin-left: 2px;
+  min-width: 152px;
+}
+
+.plantu95overview .xwxt {
+  min-height: 26px;
+  left: 4px;
+  letter-spacing: 1.00px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  top: 3px;
+  min-width: 142px;
+}
+
+.plantu95overview .overlap-group-1 {
+  border-radius: 7px;
+  min-height: 20px;
+  position: relative;
+  min-width: 273px;
+}
+
+.plantu95overview .rectangle-3 {
+  min-height: 20px;
+  opacity: 0.8;
+  min-width: 273px;
+}
+
+.plantu95overview .to-do {
+  min-height: 17px;
+  left: 8px;
+  letter-spacing: 1.00px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  top: 1px;
+  min-width: 257px;
+}
+
+.plantu95overview .arrow-right-1 {
+  min-height: 64px;
+  min-width: 64px;
+}
+
+.plantu95overview .xx-1 {
+  color: var(--white);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-l);
+  font-weight: 600;
+  min-height: 26px;
+  top: 2px;
+}
+
+.plantu95overview .kacheln {
+  align-items: flex-start;
+  background-color: #f2f2f2;
+  border: 1px solid;
+  border-color: #757575;
+  border-radius: 8px;
+  box-shadow: 0px 2px 48px #0000000a;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 170px;
+}
+
+.plantu95overview .overlap-group-2 {
+  border-radius: 7px;
+  min-height: 30px;
+  position: relative;
+  min-width: 308px;
+}
+
+.plantu95overview .rectangle-4 {
+  min-height: 30px;
+  opacity: 0.9;
+  min-width: 308px;
+}
+
+.plantu95overview .neue-pflanzgruppe {
+  color: var(--cultured-pearl);
+  font-family: var(--font-family-abel);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  min-height: 26px;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  top: 2px;
+  white-space: nowrap;
+  min-width: 273px;
+}
+
+.plantu95overview .plus {
+  align-items: flex-start;
+  align-self: center;
+  background-color: var(--eerie-black);
+  border-radius: 7px;
+  display: flex;
+  min-height: 77px;
+  margin-right: 2.3px;
+  min-width: 76px;
+  opacity: 0.9;
+  padding: 14.3px 13.4px;
+}
+
+.plantu95overview .plus-1 {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+.plantu95overview .headline {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 50px;
+  left: 0;
+  position: relative;
+  top: 0;
+  min-width: 1200px;
+}
+
+.plantu95overview .select {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--japanese-laurel);
+  border: 1px solid;
+  border-color: var(--apple);
+  border-radius: 4px;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  margin-bottom: -5.00px;
+  min-width: 240px;
+  padding: 12px 12px 12px 16px;
+  position: relative;
+}
+
+.plantu95overview .berschrift {
+  flex: 1;
+  letter-spacing: 0;
+  line-height: 30.8px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+}
+
+.plantu95overview .footer {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-bottom-style: none;
+  border-color: var(--alto);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 16px;
+  min-height: 102px;
+  padding: 32px 32px 160px;
+  position: relative;
+  min-width: 1200px;
+}
+
+.plantu95overview .plantomio-solutions-1 {
+  flex: 1;
+  min-height: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-bottom: -117.00px;
+  margin-top: -1.00px;
+  position: relative;
+}
+
+.plantu95overview .title-2 {
+  flex: 0 0 auto;
+  margin-bottom: -114.00px;
+  position: relative;
+}
+
+.plantu95overview .overlap {
+  border-radius: 7px;
+  min-height: 30px;
+  position: relative;
+}
+
+.plantu95overview .plantgroup-1 {
+  min-height: 170px;
+  position: relative;
+  min-width: 580px;
+}
+
+.plantu95overview .rectangle-5 {
+  background-color: var(--eerie-black);
+  border-radius: 7px;
+  left: 0;
+  position: relative;
+  top: 0;
+}
+
+.plantu95overview .xx-2 {
+  left: 3px;
+  letter-spacing: 1.00px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  min-width: 94px;
+}
+
+.supplyu95plan .x-button {
+  align-items: center;
+  background-color: var(--snow-flurry);
+  border: 1px solid;
+  border-color: var(--apple);
+  border-radius: 32px;
+  display: flex;
+  gap: 8px;
+  height: 40px;
+  justify-content: center;
+  margin-bottom: -10.00px;
+  margin-top: -12.00px;
+  overflow: hidden;
+  padding: 12px;
+  position: relative;
+  width: 40px;
+}
+
+.supplyu95plan .search {
+  height: 20px;
+  margin-bottom: -2.00px;
+  margin-left: -2.00px;
+  margin-right: -2.00px;
+  margin-top: -2.00px;
+  position: relative;
+  width: 20px;
+}
+
+.supplyu95plan .body-2 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--apple);
+  border: 1px solid;
+  border-color: var(--apple);
+  border-radius: 8px;
+  flex: 1;
+  flex-grow: 1;
+  margin-bottom: -1.00px;
+  margin-left: -1.00px;
+  margin-right: -1.00px;
+  margin-top: -1.00px;
+  min-width: 240px;
+  padding: 12px 12px 12px 16px;
+  position: relative;
+  width: 100%;
+}
+
+.supplyu95plan .body-3 {
+  display: flex;
+  gap: 8px;
+}
+
+.supplyu95plan .plan-1 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: -10.00px;
+  margin-top: -12.00px;
+  position: relative;
+}
+
+.supplyu95plan .select-5 {
+  align-items: center;
+  background-color: #e8ffcb80;
+  border: 2px solid;
+  border-color: var(--apple);
+  border-radius: 8px;
+  display: inline-flex;
+  gap: 8px;
+  height: 40px;
+  padding: 12px 11px;
+  position: relative;
+}
+
+.supplyu95plan .v-2 {
+  color: var(--brand);
+  font-weight: 400;
+  line-height: 14px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.supplyu95plan .spacer-1 {
+  width: 10px;
+}
+.supplyu95plan .spacer-2 {
+  color: var(--eerie-black);
+  font-weight: 400;
+  line-height: 14px;
+  position: relative;
+}
+
+.supplyu95plan .general-supply-plan {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 973px;
+  overflow-y: scroll;
+  position: relative;
+  width: 1170px;
+}
+
+.supplyu95plan .plan {
+  color: var(--brand);
+  font-weight: 400;
+  line-height: 14px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.supplyu95overview .body-5 {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--apple);
+  border: 1px solid;
+  border-color: var(--apple);
+  border-radius: 8px;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 8px;
+  margin-bottom: -1.00px;
+  margin-left: -1.00px;
+  margin-right: -1.00px;
+  margin-top: -1.00px;
+  min-width: 240px;
+  padding: 12px 12px 12px 16px;
+  position: relative;
+  width: 100%;
+}
+.supplyu95overview .block {
+  display: block; /* Sicherstellen, dass die Blöcke als Block-Elemente angezeigt werden */
+  width: 100%; /* Breite auf 100% setzen */
+}
+
+
+.supplyu95overview .spacer-fill {
+  flex-grow: 1;
+}

@@ -17,11 +17,12 @@ conn = sqlite3.connect(sqlite_path)
 cursor = conn.cursor()
 
 # Tabelle plantplanvalue löschen, falls sie existiert
-cursor.execute('DROP TABLE IF EXISTS PlantomioControllApp_plantplanvalue')
+cursor.execute('DROP TABLE IF EXISTS PlantomioControllApp_planvalue')
 
 # Erstelle eine Tabelle in der Datenbank (angepasst an das PlantPlanValue-Modell)
 cursor.execute('''
-CREATE TABLE IF NOT EXISTS PlantomioControllApp_plantplanvalue (
+CREATE TABLE IF NOT EXISTS PlantomioControllApp_planvalue (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     planId TEXT,
     week TEXT,
     phase TEXT,
@@ -87,7 +88,7 @@ except Exception as e:
 # Füge die Daten in die SQLite-Datenbank ein
 try:
     cursor.executemany('''
-    INSERT INTO PlantomioControllApp_plantplanvalue (
+    INSERT INTO PlantomioControllApp_planvalue (
         planId, week, phase, moistureTarget, moistureMinimum, moistureMaximum, brightnessTarget, brightnessMinimum, brightnessMaximum,
         lighthoursTarget, lighthoursMinimum, lighthoursMaximum, ecTarget, ecMinimum, ecMaximum, phTarget, phMinimum, phMaximum,
         temperatureTarget, temperatureMinimum, temperatureMaximum, humidityTarget, humidityMinimum, humidityMaximum, information

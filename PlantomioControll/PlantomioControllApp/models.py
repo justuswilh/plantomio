@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models.signals import post_save
+from django.db.models.signals import pre_save, post_save
 from django.dispatch import receiver
 from dirtyfields import DirtyFieldsMixin
 
@@ -23,7 +23,6 @@ class PlantGroup(models.Model):
     activClimateGroup = models.CharField(max_length=100, default='none')
     activTankGroup = models.CharField(max_length=100, default='none')
 
-
     def __str__(self):
         return f"Group Number: {self.number}, Group Name: {self.name}, ActivPlantPlan: {self.activPlantPlan}, ActivClimateGroup: {self.activClimateGroup}, ActivTankGroup: {self.activTankGroup}"
     
@@ -43,21 +42,9 @@ class ClimateGroup(models.Model):
     def __str__(self):
         return f"Group Number: {self.number}, Group Name: {self.name}"
     
-@receiver(post_save, sender=Device)
-def add_device_to_group(sender, instance, created, **kwargs):
-    if created or 'groupType' in instance.get_dirty_fields() or 'groupNumber' in instance.get_dirty_fields():
-        if instance.groupType == 'plant':
-            group, created = PlantGroup.objects.get_or_create(number=instance.groupNumber)
-        elif instance.groupType == 'tank':
-            group, created = TankGroup.objects.get_or_create(number=instance.groupNumber)
-        elif instance.groupType == 'climate':
-            group, created = ClimateGroup.objects.get_or_create(number=instance.groupNumber)
-        else:
-            return  # Unbekannter Gerätetyp, nichts tun
 
-        group.devices.add(instance)
-
-class PlanValue(models.Model): 
+class PlanValue(DirtyFieldsMixin, models.Model): 
+    id = models.AutoField(primary_key=True)    
     planId = models.CharField(max_length=100, default='none')
     week = models.CharField(max_length=100, default='none')
     phase = models.CharField(max_length=100, default='none')
@@ -90,11 +77,71 @@ class PlanValue(models.Model):
 class PlantPlan(models.Model):
     id = models.CharField(max_length=100, primary_key=True, default='none')
     plant = models.CharField(max_length=100, default='none')
-    name = models.CharField(max_length=100, unique=True, default='none')
+    name = models.CharField(max_length=100, default='none')
     weeks = models.CharField(max_length=100, default='none')
+    values = models.ManyToManyField(PlanValue)
 
 
 
     def __str__(self):
         return f"Id: {self.id}, Plant: {self.plant}, Name: {self.name}, Weeks: {self.weeks}"
 
+
+@receiver(pre_save, sender=Device)
+def store_old_group_info(sender, instance, **kwargs):
+    if instance.pk:
+        old_instance = Device.objects.get(pk=instance.pk)
+        instance._old_group_type = old_instance.groupType
+        instance._old_group_number = old_instance.groupNumber
+    else:
+        instance._old_group_type = None
+        instance._old_group_number = None
+
+@receiver(post_save, sender=Device)
+def add_device_to_group(sender, instance, created, **kwargs):
+    if created or 'groupType' in instance.get_dirty_fields() or 'groupNumber' in instance.get_dirty_fields():
+        # Entferne das Gerät aus der alten Gruppe, falls vorhanden
+        if not created and instance._old_group_type and instance._old_group_number:
+            if instance._old_group_type == 'plant':
+                old_group = PlantGroup.objects.get(number=instance._old_group_number)
+            elif instance._old_group_type == 'tank':
+                old_group = TankGroup.objects.get(number=instance._old_group_number)
+            elif instance._old_group_type == 'climate':
+                old_group = ClimateGroup.objects.get(number=instance._old_group_number)
+            else:
+                old_group = None
+
+            if old_group:
+                old_group.devices.remove(instance)
+
+        # Füge das Gerät zur neuen Gruppe hinzu
+        if instance.groupType == 'plant':
+            group, created = PlantGroup.objects.get_or_create(number=instance.groupNumber)
+        elif instance.groupType == 'tank':
+            group, created = TankGroup.objects.get_or_create(number=instance.groupNumber)
+        elif instance.groupType == 'climate':
+            group, created = ClimateGroup.objects.get_or_create(number=instance.groupNumber)
+        else:
+            return  # Unbekannter Gerätetyp, nichts tun
+
+        group.devices.add(instance)
+
+
+@receiver(pre_save, sender=PlanValue)
+def store_old_plan_id(sender, instance, **kwargs):
+    if instance.pk:
+        instance._old_plan_id = PlanValue.objects.get(pk=instance.pk).planId
+    else:
+        instance._old_plan_id = None
+
+@receiver(post_save, sender=PlanValue)
+def add_value_to_plantPlan(sender, instance, created, **kwargs):
+    if created or 'planId' in instance.get_dirty_fields():
+        if not created and instance._old_plan_id and instance._old_plan_id != instance.planId:
+            old_plan = PlantPlan.objects.get(id=instance._old_plan_id)
+            old_plan.values.remove(instance)
+        
+        plan, created = PlantPlan.objects.get_or_create(id=instance.planId)
+        plan.values.add(instance)
+    else:
+        return  # Unbekannter Gerätetyp, nichts tun

@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from PlantomioControllApp.models import Device, PlantGroup, TankGroup, ClimateGroup
+from PlantomioControllApp.models import Device, PlantGroup, TankGroup, ClimateGroup, PlantPlan, PlanValue
 
 class Command(BaseCommand):
     help = 'Assigns existing devices to their respective groups'
