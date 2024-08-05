@@ -1,3 +1,5 @@
+## TODO: getConnectedIPs func returns IP-List
+
 import os
 import subprocess
 import random
@@ -32,22 +34,22 @@ rsn_pairwise=CCMP
 def create_dnsmasq_conf():
     dhcp_host_conf = ""
     for i,mac in enumerate(whitelist):
-        if i < 98:
+        if i < 254:
             dhcp_host_conf = dhcp_host_conf+"\ndhcp-host="+ mac + ",192.168.150."+ str(i+2)
 
     dnsmasq_conf = f"""
 interface={network_i}
 dhcp-range=192.168.150.2,192.168.150.30,255.255.255.0,24h
     """
-
+#evtl dhcp-range kicken
     print(dnsmasq_conf+dhcp_host_conf)
     with open('/etc/dnsmasq.conf', 'w') as file:
         file.write(dnsmasq_conf+dhcp_host_conf)
 
-def configure_network(network_interface):
+def configure_network():
     # Set up the network interface
-    subprocess.run(['ifconfig', network_interface, 'up'], check=True)
-    subprocess.run(['ifconfig', network_interface, '192.168.150.1'], check=True)
+    subprocess.run(['ifconfig', network_i, 'up'], check=True)
+    subprocess.run(['ifconfig', network_i, '192.168.150.1'], check=True)
     subprocess.run(['systemctl', 'restart', 'hostapd'], check=True)
     subprocess.run(['systemctl', 'restart', 'dnsmasq'], check=True)
 
@@ -56,7 +58,8 @@ def create_mac_file (whitelist):
     os.makedirs("/etc/hostapd/", exist_ok=True)
 
     with open("/etc/hostapd/hostapd.accept", 'w') as file:
-        file.write(whitelist)
+        for mac in whitelist:
+            file.write(mac)
 
 def start_access_point():   #reqirements: sudo apt-get install hostapd dnsmasq
 
@@ -73,3 +76,6 @@ def start_access_point():   #reqirements: sudo apt-get install hostapd dnsmasq
     create_dnsmasq_conf()
     configure_network() #only works on linux
     print(f'Access Point {ssid} wurde erstellt.')
+
+def getConnectedIPs():
+    return ["192.168.188.151","192.168.188.152"]

@@ -14,16 +14,13 @@ import urllib.parse
 import logging
 import sys
 import sqlite3
-import subprocess
 import multiprocessing
 import csv
-import random
-import string
 import utils.access_point as access_point
-#import moistureController
+import controller.moistureController as moistureControl
 
 olimexIP= 'plantomio-dev.ddns.net'
-configFile='config.json'
+configFile='configs/config.json'
 configLog='plantomio_start.log'
 configfile_modification_time=0
 pumpingCycle=0 
@@ -43,8 +40,8 @@ pumpingCycle=0
 
 # createAP(networkName)
 
-# 0.1 open wifi Access Point on Linux (requirements: sudo apt-get install hostapd dnsmasq)
-access_point.start_access_point()
+# 1. open wifi Access Point on Linux (requirements: sudo apt-get install hostapd dnsmasq)
+#access_point.start_access_point()
 
 
 
@@ -97,7 +94,7 @@ def get_latest_start_grow_date(csv_file):
     except: logging.error("Config file '%s' could not be loaded" %configFile)
 
 # Jüngstes "start_grow"-Datum aus der plantlog_source.csv-Datei ermitteln
-start_date = get_latest_start_grow_date('plantlog_source.csv')
+start_date = get_latest_start_grow_date('data/plantlog_source.csv')
 today = datetime.date.today()
 delta = today - start_date
 current_week = delta.days // 7
@@ -213,10 +210,17 @@ def loadBiadata():
 #     print(plant_monitors)            
 #     return plant_monitors, pump_plugs, light_plugs
 
+#get IPs from AP and map connected Devices - store info
 
-def loadDevices():
+def loadDeviceData():
+    with open("data/devicelist_source.csv") as csvfile:
+        reader = csv.DictReader(csvfile,delimiter=";")
+        deviceData = list(reader)
+    return deviceData
+
+def loadGroups():
     groups = []
-    with open("devicelist_source.csv") as csvfile:
+    with open("data/devicelist_source.csv") as csvfile:
         reader = csv.DictReader(csvfile,delimiter=";")
         csvList = list(reader)
         for listdct in csvList:
@@ -239,9 +243,32 @@ def loadDevices():
             devices.append(groupDict)
     return devices
 
-            
-        
+def getDevices():
+    devices = access_point.getConnectedIPs() #IP List
+
+    if devices is not None:
+        deviceData = loadDeviceData()
+        #Erkenne welche Geräte angemeldet sind
+        for device in deviceData:
+            if device['name'] != "Olimex":
+                device['connected'] = 0
+        for ip in devices:
+            for device in deviceData:
+                if device['address'] == ip:
+                    device['connected'] = 1
+        with open("data/devicelist_source.csv", "w",newline='', encoding='utf-8') as csvfile:
+            fieldnames = deviceData[0].keys()
+            print(fieldnames)
+            writer = csv.DictWriter(csvfile,fieldnames, delimiter=";")
+            writer.writeheader()
+            writer.writerows(deviceData)
+        return deviceData
     
+    else:
+        return None           
+
+
+groupedDevices = loadGroups()     
 
 # 3. organise devices
 # def groupDevices(devices):
@@ -262,7 +289,7 @@ def loadDevices():
 #     return plant_monitor_group, pump_plug_group, light_plug_group
 
 #plant_monitor_group, pump_plug_group, light_plug_group = organiseDevices()
-groupedDevices = loadDevices()
+
 
 ######## 4. config supply##########
 # 4.1. config light supply
@@ -313,115 +340,11 @@ def configLight_supply():
 
 #configLight_supply()
 
-# for devices in groupedDevices:
-#    if __name__ == '__main__':
-# #             moistureProc = multiprocessing.Process(target=moistureController.startMoistureControl, args=())
-#    moistureController.startMoistureControl(""" moistureSensorIPs[], pumpIPs[], groupID """)
-# #   lightController.startLightControl(""" lightIPs[], groupID """) LightController starten
-# # if __name__ == '__main__':
-# #             moistureProc = multiprocessing.Process(target=moistureController.startMoistureControl, args=())
-# #             lightProc = multiprocessing.Process(target=lightController.startLightControl, args=())
-# #             moistureProc.daemon = True
-# #             lightProc.daemon = True
-# #             moistureProc.start()
-# #             lightProc.start()
-
-
-def getMoisture(address):
-    try:
-        querystring="http://" + olimexIP +':9090/api/v1/query?query=flowercare_moisture_percent{macaddress="'+ str(address) + '"}[60s]'
-        #print(querystring)
-
-        r = requests.get(querystring)
-        #print(r.text)
-
-        if ((r.status_code>=200) & (r.status_code<230)):           
-            logging.info(r.text)
-            try:
-                results=r.json()['data']['result']
-            except ValueError:  # includes simplejson.decoder.JSONDecodeError
-                logging.error("Error decoding JSON response from database")    
-                results=''   
-            if (len(results)>0):
-                try:
-                    vals=r.json()['data']['result'][0]['values']
-                    logging.info(datetime.datetime.fromtimestamp(int(vals[0][0])).strftime('%Y-%m-%d %H:%M:%S'))
-                    sensor_moisture=int(vals[0][1])
-                    #print(sensor_moisture)
-                    return(sensor_moisture)
-                
-                except Exception as e:
-                    logging.error("Fehler beim Verarbeiten der Ergebnisse: ", e)
-                    print("Fehler beim Verarbeiten der Ergebnisse: ", e)
-    except requests.exceptions.RequestException as err:
-        logging.error("Fehler bei der Anfrage: ", err)
-        print("Fehler bei der Anfrage: ", err)
-
-
-#4.2. config pump supply
-def checkMoisture():
-    group_moistures={}
-    group_moisture_gaps=[]
-    sensorCount=0
-    moistureDefizit=0
-    targetMoisture=45
-    targetHysteresisBot= -5   
-    targetHysteresisTop= +10
-    dry_soil_border= int (35)
-    irrigationProgram= 0 # 1-4 slow to fast irrigation
-    plant_monitor_addresses = []
-
-    # get values
-    for group in plant_monitor_group.values():
-        pump_address = 'not found'
-
-        for device in group:
-            group = device['group']
-            address = device['address']
-            plant_monitor_addresses.append(address)
-            device_id = device['device_id']
-
-            if group in pump_plug_group:
-                pump_address = pump_plug_group[group][0]['address']
-            else:
-                print(f"Group {group} not found in pump_plug_group")            
-            
-            sensor_moisture = getMoisture(address)
-            print(device_id, ': ', sensor_moisture)
-            sensorCount+=1
-            if (sensor_moisture is None):
-                logging.error("Couldn't get sensor data")
-            else:
-                logging.info("Moisture:"+str(sensor_moisture))
-#                print("Moisture:"+str(sensor_moisture))
-                group_moistures[device_id] = sensor_moisture
-                group_moisture_gaps.append(sensor_moisture-targetMoisture)
-
-        # check values
-        if sensorCount == 0:
-            print("No sensor data available")
-            logging.error("No sensor data available")
-            sys.exit()
-        
-        if sensorCount > 0:
-            #print (group_moistures)
-            for device, value in group_moistures.items():
-                #print(device, value)
-                if (value<(dry_soil_border)):
-                    irrigationProgram=4
-                if (value<(targetMoisture + targetHysteresisBot)):    
-                    moistureDefizit+=1
-            if (moistureDefizit >= sensorCount/2) and irrigationProgram < 1:
-                    irrigationProgram=1
-
-        if irrigationProgram == 0:
-            print("Keine Bewässerung erforderlich")
-            logging.info("No irrigation required")
-            sys.exit()
-
-        if irrigationProgram > 0:
-            subprocess.Popen(["python3", "run_pump.py", str(irrigationProgram), str(pump_address), str(plant_monitor_addresses), str(targetMoisture), str(targetHysteresisTop), str(group)])
-
-        
-
-#checkMoisture()
+for devices in groupedDevices:
+    if __name__ == '__main__':
+            moistureProc = multiprocessing.Process(target=moistureControl.startMoistureControl, args=())
+            #lightProc = multiprocessing.Process(target=lightController.startLightControl, args=())
+            moistureProc.daemon = True
+            #lightProc.daemon = True
+            moistureProc.start()
+            #lightProc.start()

@@ -1,8 +1,16 @@
+import requests
+import datetime
+import sys
+import logging
+
+
 def startMoistureControl(moistureSensorIPs, pumpIPs, groupID):
 
-def getMoisture(address):
+
+
+def getMoisture(address, mac):
     try:
-        querystring="http://" + olimexIP +':9090/api/v1/query?query=flowercare_moisture_percent{macaddress="'+ str(address) + '"}[60s]'
+        querystring="http://" + address +':9090/api/v1/query?query=flowercare_moisture_percent{macaddress="'+ str(mac) + '"}[60s]'
         #print(querystring)
 
         r = requests.get(querystring)
@@ -29,6 +37,8 @@ def getMoisture(address):
     except requests.exceptions.RequestException as err:
         logging.error("Fehler bei der Anfrage: ", err)
         print("Fehler bei der Anfrage: ", err)
+
+
 
 def runPump(irrigationProgram, pump_address, plant_monitor_addresses, targetMoisture, targetHysteresisTop, group):
     ####### irrigationProgram= 1 normal, 4 langsam #######
@@ -167,5 +177,4 @@ def checkMoisture():
             sys.exit()
 
         if irrigationProgram > 0:
-
-runPump(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
+            #subprocess.Popen(["python3", "run_pump.py", str(irrigationProgram), str(pump_address), str(plant_monitor_addresses), str(targetMoisture), str(targetHysteresisTop), str(group)])
